@@ -5,7 +5,7 @@ import CurriculumVersionSwitch from '../../components/academico/CurriculumVersio
 import EnConstruccion from '../../components/layout/EnConstruccion';
 
 export default function PlanEstudios() {
-  const [version, setVersion] = useState('2018');
+  const [version, setVersion] = useState('2027');
 
   return (
     <div className="bg-white py-16 md:py-20">

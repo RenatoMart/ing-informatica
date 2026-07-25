@@ -8,7 +8,7 @@ import CurriculumVersionSwitch from '../../components/academico/CurriculumVersio
  * "Objetivos académicos" por separado; ambos llevan aquí (#educativos / #academicos).
  */
 export default function Objetivos() {
-  const [version, setVersion] = useState('2018');
+  const [version, setVersion] = useState('2027');
 
   return (
     <>

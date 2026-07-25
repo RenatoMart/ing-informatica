@@ -81,8 +81,10 @@ export interface BrandingConfig {
     bolsaTrabajo: string;
     libroReclamaciones: string;
   };
-  /** Imágenes de fondo del hero (carrusel, máx. recomendado 3). */
-  heroImages: string[];
+  /** Imágenes de fondo del hero (carrusel, máx. recomendado 3). `position` es
+   *  el CSS object-position de esa foto (ej. 'center 25%'); opcional, cada
+   *  foto puede necesitar un encuadre distinto según dónde quede lo importante. */
+  heroImages: { src: string; position?: string }[];
   /** Textos alternativos de las marcas (accesibilidad). */
   alt: {
     universidad: string;

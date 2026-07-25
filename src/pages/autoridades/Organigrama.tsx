@@ -7,7 +7,7 @@ export default function Organigrama() {
   return (
     <div className="bg-white py-16 md:py-20 overflow-hidden">
       <div className="container mx-auto px-4 md:px-8">
-        <SectionTitle title="Organigrama **Estructural**" center subtitle={`Estructura jerárquica y organizacional del ${site.denominacion}.`} />
+        <SectionTitle title="MAPA DE PROCESOS DEL **SISTEMA DE GESTIÓN DE CALIDAD**" center subtitle={`Organización de Procesos Estratégicos, Misionales y de Apoyo de la UNT`} />
 
         <div className="mt-12">
           <a

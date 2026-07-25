@@ -18,7 +18,7 @@ export const branding: BrandingConfig = {
     bolsaTrabajo: '', // logoBolsa,
     libroReclamaciones: '', // libroReclamaciones,
   },
-  heroImages: [], // [hero1, hero2, hero3],
+  heroImages: [], // [{ src: hero1, position: 'center 25%' }, { src: hero2, position: 'center 25%' }, { src: hero3, position: 'center 25%' }],
   alt: {
     universidad: '[Universidad]',
     escuela: '[Escuela]',

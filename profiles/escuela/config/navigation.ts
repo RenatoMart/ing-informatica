@@ -39,56 +39,6 @@ export const NAV_LINKS: NavSection[] = [
     ],
   },
   {
-    name: 'Académico',
-    path: '/academico',
-    groups: [
-      // "Formación" (Objetivos + Perfiles) movida desde Nosotros y puesta ARRIBA:
-      // sigue la cadena de acreditación objetivos → perfil → malla.
-      {
-        label: 'Formación',
-        items: [
-          {
-            name: 'Objetivos',
-            path: '/academico/objetivos',
-            navAs: [
-              { name: 'Objetivos académicos', path: '/academico/objetivos#academicos' },
-              { name: 'Objetivos educacionales', path: '/academico/objetivos#educativos' },
-            ],
-          },
-          {
-            name: 'Perfiles',
-            path: '/academico/perfiles',
-            navAs: [
-              { name: 'Perfil de ingreso', path: '/academico/perfiles#ingreso' },
-              { name: 'Perfil de egreso', path: '/academico/perfiles#egreso' },
-            ],
-          },
-        ],
-      },
-      {
-        label: 'Plan de estudios',
-        items: [
-          { name: 'Malla curricular', path: '/academico/malla-curricular' },
-        ],
-      },
-      {
-        label: 'Recursos',
-        items: [
-          { name: 'Laboratorios', path: '/academico/laboratorios' },
-          { name: 'Bienestar', path: '#', external: true },
-        ],
-      },
-      {
-        label: 'Vinculación',
-        items: [
-          { name: 'Responsabilidad social', path: '/academico/responsabilidad-social' },
-          { name: 'Convenios', path: '/academico/convenios' },
-          { name: 'Movilidad', path: '/academico/movilidad' },
-        ],
-      },
-    ],
-  },
-  {
     name: 'Organización',
     path: '/organizacion',
     groups: [
@@ -146,7 +96,57 @@ export const NAV_LINKS: NavSection[] = [
       {
         label: 'Estructura',
         items: [
-          { name: 'Estructura organizacional', path: '/organizacion/estructura' },
+          { name: 'Mapa de procesos', path: '/organizacion/estructura' },
+        ],
+      },
+    ],
+  },
+  {
+    name: 'Académico',
+    path: '/academico',
+    groups: [
+      // "Formación" (Objetivos + Perfiles) movida desde Nosotros y puesta ARRIBA:
+      // sigue la cadena de acreditación objetivos → perfil → malla.
+      {
+        label: 'Formación',
+        items: [
+          {
+            name: 'Objetivos',
+            path: '/academico/objetivos',
+            navAs: [
+              { name: 'Objetivos académicos', path: '/academico/objetivos#academicos' },
+              { name: 'Objetivos educacionales', path: '/academico/objetivos#educativos' },
+            ],
+          },
+          {
+            name: 'Perfiles',
+            path: '/academico/perfiles',
+            navAs: [
+              { name: 'Perfil de ingreso', path: '/academico/perfiles#ingreso' },
+              { name: 'Perfil de egreso', path: '/academico/perfiles#egreso' },
+            ],
+          },
+        ],
+      },
+      {
+        label: 'Plan de estudios',
+        items: [
+          { name: 'Malla curricular', path: '/academico/malla-curricular' },
+        ],
+      },
+      {
+        label: 'Recursos',
+        items: [
+          { name: 'Laboratorios', path: '/academico/laboratorios' },
+          { name: 'Bienestar', path: '#', external: true },
+        ],
+      },
+      {
+        label: 'Vinculación',
+        items: [
+          { name: 'Responsabilidad social', path: '/academico/responsabilidad-social' },
+          { name: 'Convenios', path: '/academico/convenios' },
+          { name: 'Movilidad', path: '/academico/movilidad' },
         ],
       },
     ],

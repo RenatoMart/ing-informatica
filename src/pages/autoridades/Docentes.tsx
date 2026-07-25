@@ -13,10 +13,18 @@ export default function Docentes() {
   const [query, setQuery] = useState('');
 
   // Filtros disponibles: "Todos" + departamentos + (si hay) "Investigadores".
+  // Se muestran como "Filtro 1", "Filtro 2"... en vez del nombre real: es una
+  // plantilla reutilizable por cualquier escuela y no todas tendrán la misma
+  // cantidad ni tipo de categorías.
   const filtros = useMemo(() => {
-    const departamentos = new Set(docentes.map((d) => d.departamento).filter(Boolean));
-    const base = ['Todos', ...departamentos];
-    return docentes.some((d) => d.investigador) ? [...base, FILTRO_INVESTIGADORES] : base;
+    const departamentos = [...new Set(docentes.map((d) => d.departamento).filter(Boolean))];
+    const valores = docentes.some((d) => d.investigador)
+      ? [...departamentos, FILTRO_INVESTIGADORES]
+      : departamentos;
+    return [
+      { valor: 'Todos', etiqueta: 'Todos' },
+      ...valores.map((valor, i) => ({ valor, etiqueta: `Filtro ${i + 1}` })),
+    ];
   }, []);
 
   const filtrados = useMemo(() => {
@@ -44,17 +52,17 @@ export default function Docentes() {
           <div className="flex flex-wrap gap-2" role="group" aria-label="Filtrar docentes">
             {filtros.map((f) => (
               <button
-                key={f}
+                key={f.valor}
                 type="button"
-                onClick={() => setFiltro(f)}
-                aria-pressed={filtro === f}
+                onClick={() => setFiltro(f.valor)}
+                aria-pressed={filtro === f.valor}
                 className={`px-4 py-2.5 rounded-full text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 ${
-                  filtro === f
+                  filtro === f.valor
                     ? 'bg-primary text-white'
                     : 'bg-white text-primary border border-gray-200 hover:border-gold/50'
                 }`}
               >
-                {f}
+                {f.etiqueta}
               </button>
             ))}
           </div>

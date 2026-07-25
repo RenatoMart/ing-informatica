@@ -16,6 +16,7 @@ dist-ssr
 .vscode/*
 !.vscode/extensions.json
 .idea
+.claude
 .DS_Store
 *.suo
 *.ntvs*
@@ -51,6 +52,7 @@ PRODUCT.md
 
 # Documento interno de recolección de contenido (no se publica)
 CONTENIDO-REQUERIDO.md
+Contenido-Web-Ing-Ambiental.doc
 
 # Guía de colaboración interna (referencia del equipo, no se publica)
 GUIA-COLABORACION.md

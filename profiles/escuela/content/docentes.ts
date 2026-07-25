@@ -4,11 +4,18 @@
 //   - cursoPrincipal: el curso/área principal que aparece en el FRENTE de la card
 //   - especialidades: lista que aparece al voltear la card (reverso). Agrega 2-3 por docente.
 //   - foto: ruta de la foto o null (muestra silueta placeholder)
+//   - fotoPosicion: (opcional) encuadre de la foto (CSS object-position, ej. "center 25%").
+//     Súbelo (menos %) si la foto tapa lo importante por abajo, bájalo (más %) si lo tapa
+//     por arriba. Si no se define, usa "center 25%" por defecto.
 //   - investigador: true si el docente es investigador (habilita el filtro "Investigadores")
 //   - categoriaInvestigacion: categoría/nivel de investigación (p. ej. RENACYT). Solo aplica
 //     si investigador === true; se muestra como distintivo en la card.
 //   - condicion: régimen laboral del docente, "Nombrado" o "Contratado". Se muestra como
 //     etiqueta en la card.
+
+
+import IMG2 from '../assets/docentes/IMG_7617_resultado.webp';
+
 export const docentes = [
   {
     nombre: "Nombre del Docente 1",
@@ -16,7 +23,8 @@ export const docentes = [
     departamento: "Departamento Académico 1",
     cursoPrincipal: "Curso o área principal",
     especialidades: ["Especialidad 1", "Especialidad 2", "Especialidad 3"],
-    foto: null,
+    foto: IMG2,
+    fotoPosicion: "center 15%",
     investigador: true,
     categoriaInvestigacion: "RENACYT · Nivel I",
     condicion: "Nombrado"

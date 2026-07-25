@@ -18,7 +18,14 @@ export const branding: BrandingConfig = {
     bolsaTrabajo: logoBolsa,
     libroReclamaciones,
   },
-  heroImages: [hero1, hero2, hero3],
+  // "position" ajusta el encuadre de cada foto (CSS object-position). Súbela
+  // (menos %) si tapa lo importante por abajo, bájala (más %) si lo tapa por
+  // arriba. 'center 25%' = 25% de la altura de la foto desde arriba.
+  heroImages: [
+    { src: hero1, position: 'center 25%' },
+    { src: hero2, position: 'center 25%' },
+    { src: hero3, position: 'center 50%' },
+  ],
   alt: {
     universidad: 'Nombre de la Universidad',
     escuela: 'Nombre del Programa de Estudios',

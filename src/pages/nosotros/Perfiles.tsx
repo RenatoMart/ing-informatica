@@ -11,7 +11,7 @@ import EnConstruccion from '../../components/layout/EnConstruccion';
  * contenido existente de cada perfil.
  */
 export default function Perfiles() {
-  const [version, setVersion] = useState('2018');
+  const [version, setVersion] = useState('2027');
 
   return (
     <>
