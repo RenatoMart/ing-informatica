@@ -1,9 +1,25 @@
+// Fuente: dato confirmado directamente por el usuario (2026). El "Currículo del
+// Programa de Estudios de Informática" (R.C.U. No. 065-2018/UNT) listaba a otra
+// persona como Director de Escuela; ese documento quedó desactualizado en este cargo.
+// No se confirmó un correo directo del Mg. Mendoza: se usa el correo general de la
+// escuela como marcador de posición; reemplázalo por el suyo cuando lo tengas.
 export const director = {
-  nombre: "Nombre del Director(a)",
-  cargo: "Director(a) de Escuela",
-  correo: "direccion@universidad.edu.pe",
-  bio: "Breve reseña del director(a): grado académico, especialidad y experiencia. Reemplaza este texto por la del director(a) de tu programa.",
+  nombre: "Mg. Edwin Ricardo Mendoza Torres",
+  cargo: "Director de la Escuela Profesional de Informática",
+  correo: "informatica@unitru.edu.pe",
+  bio: "Magíster, docente del Departamento Académico de Informática de la Universidad Nacional de Trujillo.",
   foto: null // Reemplaza por la ruta de la foto o deja null para la silueta
+};
+
+// Director del Departamento Académico de Informática (distinto de la Dirección de
+// Escuela). Se muestra en /organizacion/direccion#departamento, vía
+// src/pages/autoridades/DireccionDepartamento.tsx.
+export const directorDepartamento = {
+  nombre: "Dr. Jorge Luis Gutiérrez Gutiérrez",
+  cargo: "Director del Departamento Académico de Informática",
+  correo: "informatica@unitru.edu.pe",
+  bio: "Doctor, docente del Departamento Académico de Informática de la Universidad Nacional de Trujillo.",
+  foto: null
 };
 
 export const coordinadores = [

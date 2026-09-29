@@ -1,18 +1,37 @@
+// Fuente: Anexo A del "Currículo del Programa de Estudios de Informática"
+// (R.C.U. No. 065-2018/UNT) — áreas de investigación/competencia en las que se
+// agrupan los cursos de especialidad. No se ubicó un responsable nombrado por
+// área; reemplaza "Docentes del área" por el nombre real cuando lo tengas.
 export const lineasInvestigacion = [
   {
-    nombre: "Línea de investigación 1",
-    descripcion: "Descripción breve de la primera línea de investigación del programa.",
-    responsable: "Nombre del Responsable"
+    nombre: "Algoritmos y Complejidad",
+    descripcion: "Diseño y análisis de algoritmos, estrategias algorítmicas, lenguajes formales y autómatas, y compiladores.",
+    responsable: "Docentes del área"
   },
   {
-    nombre: "Línea de investigación 2",
-    descripcion: "Descripción breve de la segunda línea de investigación del programa.",
-    responsable: "Nombre del Responsable"
+    nombre: "Ingeniería de Software",
+    descripcion: "Métodos, procesos y herramientas para el desarrollo, arquitectura y calidad de sistemas de software.",
+    responsable: "Docentes del área"
   },
   {
-    nombre: "Línea de investigación 3",
-    descripcion: "Descripción breve de la tercera línea de investigación del programa.",
-    responsable: "Nombre del Responsable"
+    nombre: "Administración de la Información",
+    descripcion: "Diseño, optimización y administración de bases de datos, incluyendo bases de datos avanzadas y distribuidas.",
+    responsable: "Docentes del área"
+  },
+  {
+    nombre: "Sistemas Inteligentes",
+    descripcion: "Inteligencia artificial, aprendizaje automático, percepción y visión por computadora, y robótica.",
+    responsable: "Docentes del área"
+  },
+  {
+    nombre: "Arquitectura de Computadoras, Redes y Comunicaciones",
+    descripcion: "Organización de computadoras, redes de datos, sistemas operativos y seguridad informática.",
+    responsable: "Docentes del área"
+  },
+  {
+    nombre: "Gráficos, Visualización e Interacción Humano-Computador",
+    descripcion: "Computación gráfica, interacción humano-computador y tecnologías inmersivas.",
+    responsable: "Docentes del área"
   }
 ];
 

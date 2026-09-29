@@ -12,120 +12,145 @@
 //     si investigador === true; se muestra como distintivo en la card.
 //   - condicion: régimen laboral del docente, "Nombrado" o "Contratado". Se muestra como
 //     etiqueta en la card.
+//
+// Fuente: fotos, correos y áreas de investigación tomados de inf.unitru.edu.pe (plana
+// docente publicada); grados académicos y nombres completos verificados contra el
+// "Currículo del Programa de Estudios de Informática" (R.C.U. No. 065-2018/UNT).
+// `investigador` se deja en `false` por defecto (sin fuente confiable por docente) y
+// no se consigna `categoriaInvestigacion`/`condicion`: ajústalos cuando tengas el dato
+// exacto de cada uno.
 
-
-import IMG2 from '../assets/docentes/IMG_7617_resultado.webp';
+import cruzSilva from '../assets/docentes/cruz-silva.jpg';
+import sifuentesDiaz from '../assets/docentes/sifuentes-diaz.jpg';
+import cruzFlorian from '../assets/docentes/cruz-florian.jpg';
+import pedroHuaman from '../assets/docentes/pedro-huaman.jpg';
+import castilloDiestra from '../assets/docentes/castillo-diestra.jpg';
 
 export const docentes = [
   {
-    nombre: "Nombre del Docente 1",
-    grado: "Doctor",
-    departamento: "Departamento Académico 1",
-    cursoPrincipal: "Curso o área principal",
-    especialidades: ["Especialidad 1", "Especialidad 2", "Especialidad 3"],
-    foto: IMG2,
-    fotoPosicion: "center 15%",
-    investigador: true,
-    categoriaInvestigacion: "RENACYT · Nivel I",
-    condicion: "Nombrado"
-  },
-  {
-    nombre: "Nombre del Docente 2",
-    grado: "Doctora",
-    departamento: "Departamento Académico 1",
-    cursoPrincipal: "Curso o área principal",
-    especialidades: ["Especialidad 1", "Especialidad 2"],
+    nombre: "José Antonio Rodríguez Melquiades",
+    grado: "Dr.",
+    departamento: "Departamento Académico de Informática",
+    cursoPrincipal: "Algoritmos, Complejidad y Lenguajes de Programación",
+    especialidades: ["Algoritmos, complejidad y lenguajes de programación", "Optimización combinatoria"],
     foto: null,
     investigador: false,
-    categoriaInvestigacion: null,
-    condicion: "Nombrado"
   },
   {
-    nombre: "Nombre del Docente 3",
-    grado: "Magíster",
-    departamento: "Departamento Académico 1",
-    cursoPrincipal: "Curso o área principal",
-    especialidades: ["Especialidad 1", "Especialidad 2"],
+    nombre: "José Gabriel Cruz Silva",
+    grado: "Mg.",
+    departamento: "Departamento Académico de Informática",
+    cursoPrincipal: "Arquitectura y Organización de Computadoras",
+    especialidades: ["Arquitectura y organización de computadoras"],
+    foto: cruzSilva,
+    investigador: false,
+  },
+  {
+    nombre: "Yenny Milagritos Sifuentes Díaz",
+    grado: "Mg.",
+    departamento: "Departamento Académico de Informática",
+    cursoPrincipal: "Ingeniería de Software",
+    especialidades: ["Ingeniería de Software", "Lenguajes de Programación", "Simulación"],
+    foto: sifuentesDiaz,
+    investigador: false,
+  },
+  {
+    nombre: "Iris Áurea Cruz Florián",
+    grado: "Ing.",
+    departamento: "Departamento Académico de Informática",
+    cursoPrincipal: "Ingeniería de Software",
+    especialidades: ["Ingeniería de Software", "Lenguajes de Programación", "Optimización Combinatoria"],
+    foto: cruzFlorian,
+    investigador: false,
+  },
+  {
+    nombre: "Liz Sofía Raymunda Pedro Huamán",
+    grado: "Mg.",
+    departamento: "Departamento Académico de Informática",
+    cursoPrincipal: "Sistemas Inteligentes",
+    especialidades: ["Sistemas Inteligentes", "Ingeniería de software"],
+    foto: pedroHuaman,
+    investigador: false,
+  },
+  {
+    nombre: "Carlos Enrique Castillo Diestra",
+    grado: "Mg.",
+    departamento: "Departamento Académico de Informática",
+    cursoPrincipal: "Ingeniería de Software",
+    especialidades: ["Ingeniería de Software", "Procesadores de Lenguajes", "Auditoría Informática"],
+    foto: castilloDiestra,
+    investigador: false,
+  },
+  {
+    nombre: "Jorge Luis Alvarado Ramos",
+    grado: "Ing.",
+    departamento: "Departamento Académico de Informática",
+    cursoPrincipal: "Departamento de Informática",
     foto: null,
     investigador: false,
-    categoriaInvestigacion: null,
-    condicion: "Contratado"
   },
   {
-    nombre: "Nombre del Docente 4",
-    grado: "Doctor",
-    departamento: "Departamento Académico 1",
-    cursoPrincipal: "Curso o área principal",
-    especialidades: ["Especialidad 1", "Especialidad 2"],
-    foto: null,
-    investigador: true,
-    categoriaInvestigacion: "RENACYT · Nivel II",
-    condicion: "Nombrado"
-  },
-  {
-    nombre: "Nombre del Docente 5",
-    grado: "Magíster",
-    departamento: "Departamento Académico 2",
-    cursoPrincipal: "Curso o área principal",
-    especialidades: ["Especialidad 1", "Especialidad 2"],
+    nombre: "Jorge Luis Gutiérrez Gutiérrez",
+    grado: "Dr.",
+    departamento: "Departamento Académico de Informática",
+    cursoPrincipal: "Director del Departamento Académico de Informática",
     foto: null,
     investigador: false,
-    categoriaInvestigacion: null,
-    condicion: "Contratado"
   },
   {
-    nombre: "Nombre del Docente 6",
-    grado: "Doctora",
-    departamento: "Departamento Académico 2",
-    cursoPrincipal: "Curso o área principal",
-    especialidades: ["Especialidad 1", "Especialidad 2", "Especialidad 3"],
-    foto: null,
-    investigador: true,
-    categoriaInvestigacion: "RENACYT · Nivel III",
-    condicion: "Nombrado"
-  },
-  {
-    nombre: "Nombre del Docente 7",
-    grado: "Magíster",
-    departamento: "Departamento Académico 2",
-    cursoPrincipal: "Curso o área principal",
-    especialidades: ["Especialidad 1", "Especialidad 2"],
+    nombre: "Edwin Ricardo Mendoza Torres",
+    grado: "Mg.",
+    departamento: "Departamento Académico de Informática",
+    cursoPrincipal: "Director de la Escuela Profesional de Informática",
     foto: null,
     investigador: false,
-    categoriaInvestigacion: null,
-    condicion: "Contratado"
   },
   {
-    nombre: "Nombre del Docente 8",
-    grado: "Doctor",
-    departamento: "Departamento Académico 2",
-    cursoPrincipal: "Curso o área principal",
-    especialidades: ["Especialidad 1", "Especialidad 2"],
-    foto: null,
-    investigador: true,
-    categoriaInvestigacion: "RENACYT · Nivel I",
-    condicion: "Nombrado"
-  },
-  {
-    nombre: "Nombre del Docente 9",
-    grado: "Doctor",
-    departamento: "Departamento Académico 2",
-    cursoPrincipal: "Curso o área principal",
-    especialidades: ["Especialidad 1", "Especialidad 2"],
-    foto: null,
-    investigador: true,
-    categoriaInvestigacion: "RENACYT · Nivel IV",
-    condicion: "Nombrado"
-  },
-  {
-    nombre: "Nombre del Docente 10",
-    grado: "Doctor",
-    departamento: "Departamento Académico 1",
-    cursoPrincipal: "Curso o área principal",
-    especialidades: ["Especialidad 1", "Especialidad 2"],
+    nombre: "Christian Araujo González",
+    grado: "Ing.",
+    departamento: "Departamento Académico de Informática",
+    cursoPrincipal: "Departamento de Informática",
     foto: null,
     investigador: false,
-    categoriaInvestigacion: null,
-    condicion: "Contratado"
-  }
+  },
+  {
+    nombre: "Ricardo Martín Guevara Ruíz",
+    grado: "Mg.",
+    departamento: "Departamento Académico de Informática",
+    cursoPrincipal: "Departamento de Informática",
+    foto: null,
+    investigador: false,
+  },
+  {
+    nombre: "Anthony Junior Gómez Morales",
+    grado: "Mg.",
+    departamento: "Departamento Académico de Informática",
+    cursoPrincipal: "Departamento de Informática",
+    foto: null,
+    investigador: false,
+  },
+  {
+    nombre: "Jorge David Bravo Escalante",
+    grado: "Mg.",
+    departamento: "Departamento Académico de Informática",
+    cursoPrincipal: "Departamento de Informática",
+    foto: null,
+    investigador: false,
+  },
+  {
+    nombre: "José Andrés Díaz Pulido",
+    grado: "Mg.",
+    departamento: "Departamento Académico de Informática",
+    cursoPrincipal: "Departamento de Informática",
+    foto: null,
+    investigador: false,
+  },
+  {
+    nombre: "José Luis Peralta Luján",
+    grado: "Mg.",
+    departamento: "Departamento Académico de Informática",
+    cursoPrincipal: "Departamento de Informática",
+    foto: null,
+    investigador: false,
+  },
 ];

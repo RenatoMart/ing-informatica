@@ -1,7 +1,7 @@
 import React from 'react';
 import AnchoredSection from '../../components/layout/AnchoredSection';
-import EnConstruccion from '../../components/layout/EnConstruccion';
 import DireccionEscuela from '../autoridades/Direccion';
+import DireccionDepartamento from '../autoridades/DireccionDepartamento';
 
 /**
  * Página agrupada "Dirección". El navbar muestra "Director de escuela" y "Director
@@ -14,7 +14,7 @@ export default function Direccion() {
         <DireccionEscuela />
       </AnchoredSection>
       <AnchoredSection id="departamento">
-        <EnConstruccion titulo="Director de **departamento**" bg="bg-gray-50" />
+        <DireccionDepartamento />
       </AnchoredSection>
     </>
   );

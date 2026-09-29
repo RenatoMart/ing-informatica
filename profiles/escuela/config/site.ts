@@ -1,68 +1,72 @@
 import type { SiteConfig } from '@/profile-types';
 
 /**
- * Identidad del programa de estudios. Editar este archivo (y `branding.ts`) cubre
- * la mayor parte de la re-tematización para un programa nuevo.
+ * Identidad de la Escuela Profesional de Informática (UNT).
  *
- * Los textos de abajo son PLANTILLA: describen qué va en cada campo. Reemplázalos
- * por los datos de tu programa.
+ * Fuente: inf.unitru.edu.pe (portada, /nosotros, /acreditacion) y el "Currículo
+ * del Programa de Estudios de Informática" (R.C.U. No. 065-2018/UNT). Algunos
+ * campos (cifras de la franja del hero, mensaje del director) no tienen una
+ * fuente pública exacta: usa datos verificables o dejarlos genéricos hasta
+ * tener el dato real.
  */
 export const site: SiteConfig = {
   programa: {
-    nombre: 'Programa de Estudios de la Carrera',
-    nombreCorto: 'Programa de Estudios',
+    nombre: 'Escuela Profesional de Informática',
+    nombreCorto: 'Informática',
   },
   universidad: {
-    nombre: 'Nombre de la Universidad',
-    siglas: 'SIGLAS',
-    url: '#',
+    nombre: 'Universidad Nacional de Trujillo',
+    siglas: 'UNT',
+    url: 'https://www.unitru.edu.pe',
     // Dominio para acotar el buscador del navbar (site:dominio). Déjalo vacío
     // para una búsqueda general en Google.
-    dominio: '',
+    dominio: 'inf.unitru.edu.pe',
   },
-  facultad: 'Nombre de la Facultad',
+  facultad: 'Facultad de Ciencias Físicas y Matemáticas',
 
   // Denominación del tipo de unidad académica. Se usa en subtítulos genéricos.
-  denominacion: 'Programa de Estudios',
+  denominacion: 'Escuela Profesional',
 
   // Wordmark del navbar: se muestra en dos líneas (línea 1 en azul, línea 2 en dorado).
-  wordmark: { linea1: 'Nombre', linea2: 'Programa' },
+  wordmark: { linea1: 'Informática', linea2: 'UNT' },
 
-  tagline:
-    'Lema o frase que resume el propósito del programa de estudios en una línea. Reemplázalo por el de tu programa.',
+  tagline: 'Desarrolla soluciones innovadoras que impacten al mundo.',
 
   hero: {
-    eyebrow: 'Programa de Estudios de',
-    titulo: { linea1: 'Nombre', linea2: 'Escuela' },
+    eyebrow: 'Escuela Profesional de',
+    titulo: { linea1: 'Ingeniería', linea2: 'Informática' },
     descripcion:
-      'Descripción breve del programa de estudios para el hero: a quién forma y con qué enfoque. Reemplaza este texto por el de tu programa.',
+      'Prepárate para construir soluciones innovadoras en un sector en constante evolución. Sé parte del futuro digital y transforma el mundo con tu conocimiento.',
     ctas: {
       primary: { label: 'Ver Plan de Estudios', to: '/academico/malla-curricular' },
       secondary: { label: 'Perfiles académicos', to: '/academico/perfiles' },
     },
   },
 
-  // Sello de acreditación (badge del hero). Si tu programa no está acreditado,
-  // pon `mostrarSello: false` y ajusta `estado`.
+  // Sello de acreditación (badge del hero). Fuente: inf.unitru.edu.pe/acreditacion
+  // ("logró su primera acreditación internacional otorgada por ICACIT", ciclo de
+  // evaluación 2020).
   acreditacion: {
-    entidad: 'Entidad Acreditadora',
+    entidad: 'ICACIT',
     estado: 'acreditada',
-    texto: 'Acreditada por la Entidad',
+    texto: 'Acreditada internacionalmente por ICACIT',
     mostrarSello: true,
   },
 
-  // Cifras destacadas de la franja del hero. Reemplaza números y etiquetas.
+  // Cifras destacadas de la franja del hero. Se usan solo datos verificables
+  // (fundación, créditos del plan de estudios, acreditación); no hay cifras
+  // públicas de estudiantes/egresados para reemplazar el resto.
   cifras: [
-    { numero: '---', etiqueta: 'Primera cifra destacada', sub: 'Descripción breve de la cifra' },
-    { numero: '---+', etiqueta: 'Segunda cifra destacada', sub: 'Descripción breve de la cifra' },
-    { numero: '---%', etiqueta: 'Tercera cifra destacada', sub: 'Descripción breve de la cifra' },
+    { numero: '30+', etiqueta: 'Años formando profesionales', sub: 'Programa fundado en 1995' },
+    { numero: '215', etiqueta: 'Créditos académicos', sub: 'En 10 ciclos de formación' },
+    { numero: 'ICACIT', etiqueta: 'Acreditación internacional', sub: 'Ciclo de evaluación 2020' },
   ],
 
   decana: {
-    nombre: 'Nombre del Decano(a)',
-    cargo: 'Decano(a) de la Nombre de la Escuela/Carrera Profesional',
+    nombre: 'Mg. Edwin Ricardo Mendoza Torres',
+    cargo: 'Director de la Escuela Profesional de Informática',
     mensaje:
-      'Mensaje de bienvenida del decano(a). Aquí va un párrafo que recibe a los visitantes y resume el espíritu del programa. Reemplazar por texto real del decano(a) de tu programa.',
+      'La Escuela Profesional de Informática forma profesionales en Ciencia de la Computación con bases sólidas, siguiendo el estándar internacional de la ACM, para liderar el desarrollo de la disciplina en el país.',
     // ID del video de YouTube para el mensaje de bienvenida. Déjalo vacío hasta
     // tener el video de tu programa; al ponerlo, el reproductor aparece solo.
     video: { youtubeId: '', start: 0 },
@@ -73,9 +77,10 @@ export const site: SiteConfig = {
     bolsaTrabajo: '#',
   },
 
+  // Fuente: portales institucionales enlazados desde inf.unitru.edu.pe.
   enlacesInstitucionales: [
-    { label: 'Enlace institucional 1', url: '#' },
-    { label: 'Enlace institucional 2', url: '#' },
-    { label: 'Enlace institucional 3', url: '#' },
+    { label: 'Sistema de Gestión Académica (SGA)', url: 'http://aplicaciones.unitru.edu.pe/' },
+    { label: 'Sistema Único de Virtualización (SUV)', url: 'http://suv2.unitru.edu.pe' },
+    { label: 'Aula Virtual', url: 'https://aulavirtual2.unitru.edu.pe' },
   ],
 };

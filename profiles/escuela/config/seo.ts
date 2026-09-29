@@ -1,8 +1,8 @@
 import type { SeoConfig } from '@/profile-types';
 
 export const seo: SeoConfig = {
-  title: 'Nombre del Programa de Estudios de la UNT',
+  title: 'Escuela Profesional de Informática | Universidad Nacional de Trujillo',
   description:
-    'Descripción del programa de estudios para buscadores (meta description). Resume en una o dos frases qué es el programa y a quién forma.',
+    'Escuela Profesional de Informática de la Universidad Nacional de Trujillo (UNT), acreditada internacionalmente por ICACIT. Forma Bachilleres en Ciencias de la Computación e Ingenieros Informáticos desde 1995.',
   lang: 'es',
 };

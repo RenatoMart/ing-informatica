@@ -1,7 +1,9 @@
 export const informacionContacto = {
-  direccion: "Dirección del programa: pabellón, facultad y campus universitario.",
-  telefonos: ["(00) 000-0000 Anexo: 000", "+51 000 000 000"],
-  correo: "contacto@universidad.edu.pe",
+  direccion: "Av. Juan Pablo II S/N, Ciudad Universitaria, Facultad de Ciencias Físicas y Matemáticas, Trujillo - La Libertad, Perú",
+  // No se encontró un teléfono publicado específico de la Escuela de Informática;
+  // reemplaza por el anexo real cuando lo tengas.
+  telefonos: ["(00) 000-0000 Anexo: 000"],
+  correo: "informatica@unitru.edu.pe",
   horarioAtencion: "Lunes a Viernes: 00:00 a 00:00 hrs",
   // Mapa de ubicación: pega aquí la URL "embed" de Google Maps de tu programa
   // (Compartir → Insertar un mapa → copia el atributo src del iframe).
@@ -13,7 +15,7 @@ export const informacionContacto = {
 export const libroReclamacionesUrl = '#';
 
 export const redesSociales = {
-  facebook: "#",
+  facebook: "https://www.facebook.com/profile.php?id=61569647381199",
   instagram: "#",
   youtube: "#",
   twitter: "#"

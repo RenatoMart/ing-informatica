@@ -132,6 +132,7 @@ export const NAV_LINKS: NavSection[] = [
         label: 'Plan de estudios',
         items: [
           { name: 'Malla curricular', path: '/academico/malla-curricular' },
+          { name: 'Titulación', path: '/academico/titulacion' },
         ],
       },
       {

@@ -1,7 +1,12 @@
 import type { Edge } from 'reactflow';
 
-// Datos del plan de estudios de la escuela (contenido del perfil).
+// Datos del plan de estudios de la Escuela Profesional de Informática (UNT).
 // El componente MallaFlow (sistema) consume estos datos vía @profile/content/malla.
+//
+// Fuente: "Currículo del Programa de Estudios de Informática" (R.C.U. No. 065-2018/UNT),
+// sección 12 "Plan de Estudios" (códigos, créditos, horas y requisitos por curso).
+// EG (Estudios Generales) → 'general', EE (Estudios Específicos) → 'especifico',
+// ES (Estudios de Especialidad) → 'especialidad'. Suma total: 215 créditos, 10 ciclos.
 
 // ── Tipos ──────────────────────────────────────────────────────────────────
 export type AreaType = 'general' | 'especifico' | 'especialidad';
@@ -18,115 +23,138 @@ export interface CourseData {
   description: string;
 }
 
-// ── Datos del plan de estudios (EJEMPLO de plantilla: Educación Primaria) ────
+// ── Datos del plan de estudios (Escuela Profesional de Informática) ─────────
 export const CURRICULUM_DATA: CourseData[] = [
-  // CICLO I
-  { id: 'G-1', name: 'Desarrollo Personal', type: 'general', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo I', isElective: false, description: 'Contribuye al logro de capacidades terminales referidas a la inteligencia emocional y principios éticos.' },
-  { id: 'G-2', name: 'Desarrollo del Pensamiento Lógico Matemático', type: 'general', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo I', isElective: false, description: 'Desarrollo de habilidades lógicas y resolución de problemas matemáticos básicos.' },
-  { id: 'G-3', name: 'Gestión de los Aprendizajes y Estrategias de Estudio', type: 'general', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo I', isElective: false, description: 'Estrategias de autoaprendizaje y metaprendizaje colaborativo autónomo.' },
-  { id: 'G-4', name: 'Lectura Crítica y Redacción de Textos Académicos', type: 'general', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo I', isElective: false, description: 'Comprensión lectora y producción de textos académicos con rigor gramatical.' },
-  { id: 'G-5', name: 'Historia de la Cultura (Optativo)', type: 'general', credits: 4, hoursT: 4, hoursP: 2, cycle: 'Ciclo I', isElective: false, description: 'Comprensión de la evolución cultural en el mundo y América.' },
-  { id: 'ES-1', name: 'Psicología del Desarrollo Humano', type: 'especifico', credits: 4, hoursT: 3, hoursP: 2, cycle: 'Ciclo I', isElective: false, description: 'Estudio del ciclo vital con énfasis en la niñez, adolescencia y juventud.' },
-  { id: 'E-1', name: 'Taller de Técnicas de Comunicación Eficaz', type: 'general', credits: 2, hoursT: 0, hoursP: 4, cycle: 'Ciclo I', isElective: true, description: 'Taller electivo enfocado en mejorar las competencias comunicativas y el trabajo en equipo.' },
+  // CICLO I — 22 créditos
+  { id: '13024', name: 'Desarrollo Personal', type: 'general', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo I', isElective: false, description: 'Herramientas de autoconocimiento, inteligencia emocional y proyecto de vida para la etapa universitaria.' },
+  { id: '13029', name: 'Lectura Crítica y Redacción de Textos Académicos', type: 'general', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo I', isElective: false, description: 'Comprensión lectora y producción de textos académicos con rigor gramatical y argumentativo.' },
+  { id: '13027', name: 'Física General', type: 'general', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo I', isElective: false, description: 'Fundamentos de mecánica clásica y magnitudes físicas aplicadas a problemas de ingeniería.' },
+  { id: '13021', name: 'Algoritmos y Programación', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo I', isElective: false, description: 'Fundamentos de lógica de programación, algoritmos y su implementación en un lenguaje de programación.' },
+  { id: '13023', name: 'Desarrollo del Pensamiento Lógico Matemático', type: 'general', credits: 3, hoursT: 1, hoursP: 4, cycle: 'Ciclo I', isElective: false, description: 'Razonamiento lógico-matemático aplicado a la resolución de problemas.' },
+  { id: '13028', name: 'Introducción al Análisis Matemático', type: 'general', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo I', isElective: false, description: 'Funciones, límites y bases del cálculo diferencial como preparación al análisis matemático.' },
+  { id: '13031', name: 'Taller de Liderazgo y Trabajo en Equipo', type: 'general', credits: 1, hoursT: 0, hoursP: 2, cycle: 'Ciclo I', isElective: false, description: 'Habilidades blandas de liderazgo, comunicación y trabajo colaborativo en equipo.' },
 
-  // CICLO II
-  { id: 'G-6', name: 'Sociedad, Cultura y Ecología', type: 'general', credits: 3, hoursT: 4, hoursP: 1, cycle: 'Ciclo II', isElective: false, description: 'Análisis de problemáticas sociales, culturales y del medio ambiente.' },
-  { id: 'G-7', name: 'Cultura Investigativa y Pensamiento Crítico', type: 'general', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo II', isElective: false, description: 'Formulación de soluciones viables mediante el método científico.' },
-  { id: 'G-8', name: 'Ética, Convivencia Humana y Ciudadanía', type: 'general', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo II', isElective: false, description: 'Práctica de principios morales y convivencia pacífica democrática.' },
-  { id: 'G-9', name: 'Identidad Cultural Regional, Nacional e Internacional', type: 'general', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo II', isElective: false, description: 'Procesos de construcción de la identidad frente a la diversidad cultural.' },
-  { id: 'G-10', name: 'Fundamentos de Filosofía (Optativo)', type: 'general', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo II', isElective: false, description: 'Corrientes filosóficas contemporáneas y consecuencias éticas de la ciencia.' },
-  { id: 'ES-2', name: 'Psicología del Aprendizaje', type: 'especifico', credits: 3, hoursT: 2, hoursP: 1, cycle: 'Ciclo II', isElective: false, description: 'Explicación y aplicación de las teorías conductistas, cognitivas y humanistas del aprendizaje.' },
-  { id: 'ES-3', name: 'Historia de la Educación', type: 'especifico', credits: 2, hoursT: 2, hoursP: 1, cycle: 'Ciclo II', isElective: false, description: 'Evolución histórica de la educación con eje Perú-Mundo.' },
-  { id: 'E-2', name: 'Taller de Manejo de TIC', type: 'general', credits: 2, hoursT: 0, hoursP: 4, cycle: 'Ciclo II', isElective: true, description: 'Uso creativo de procesadores de texto científicos, LaTeX y herramientas en la nube.' },
+  // CICLO II — 22 créditos
+  { id: '13040', name: 'Ética, Convivencia Humana y Ciudadanía', type: 'general', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo II', isElective: false, description: 'Principios éticos, convivencia democrática y ejercicio de la ciudadanía.' },
+  { id: '13043', name: 'Sociedad, Cultura y Ecología', type: 'general', credits: 3, hoursT: 1, hoursP: 4, cycle: 'Ciclo II', isElective: false, description: 'Relación entre sociedad, cultura y medio ambiente desde una mirada crítica y sostenible.' },
+  { id: '13036', name: 'Cultura Investigativa y Pensamiento Crítico', type: 'general', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo II', isElective: false, description: 'Bases del método científico y del pensamiento crítico aplicados a la investigación.' },
+  { id: '13039', name: 'Estructura de Datos', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo II', isElective: false, description: 'Estructuras de datos lineales y no lineales, y su implementación eficiente.' },
+  { id: '13038', name: 'Estadística General', type: 'general', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo II', isElective: false, description: 'Estadística descriptiva e inferencial aplicada al análisis de datos.' },
+  { id: '13034', name: 'Análisis Matemático', type: 'general', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo II', isElective: false, description: 'Cálculo diferencial e integral de una variable.' },
+  { id: '13046', name: 'Taller de Manejo de TIC', type: 'general', credits: 1, hoursT: 0, hoursP: 2, cycle: 'Ciclo II', isElective: false, description: 'Uso de herramientas ofimáticas y tecnologías de información y comunicación para el trabajo académico.' },
 
-  // CICLO III
-  { id: 'ES-4', name: 'Neurociencia y Aprendizaje', type: 'especifico', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo III', isElective: false, description: 'Procesos neurobiológicos y su implicancia en los modelos instruccionales.' },
-  { id: 'ES-5', name: 'Pedagogía', type: 'especifico', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo III', isElective: false, description: 'Comprensión del carácter científico de la Pedagogía y sus modelos teóricos.' },
-  { id: 'ES-6', name: 'Didáctica General', type: 'especifico', credits: 4, hoursT: 2, hoursP: 3, cycle: 'Ciclo III', isElective: false, description: 'Estrategias metodológicas modernas para optimizar el proceso de enseñanza-aprendizaje.' },
-  { id: 'ES-7', name: 'Políticas Educativas y Realidad Nacional', type: 'especifico', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo III', isElective: false, description: 'Impacto de las políticas globales en la estructura educativa peruana.' },
-  { id: 'ES-8', name: 'Teoría Curricular', type: 'especifico', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo III', isElective: false, description: 'Análisis de enfoques, dimensiones y elementos curriculares.' },
-  { id: 'ES-9', name: 'Evaluación de los Aprendizajes', type: 'especifico', credits: 4, hoursT: 2, hoursP: 3, cycle: 'Ciclo III', isElective: false, description: 'Diseño técnico de criterios, indicadores e instrumentos de evaluación por competencias.' },
-  { id: 'ES-10', name: 'Ludopedagogía', type: 'especifico', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo III', isElective: false, description: 'El juego como eje del bienestar físico, social y emocional infantil.' },
+  // CICLO III — 22 créditos
+  { id: '13629', name: 'Geometría Analítica', type: 'especifico', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo III', isElective: false, description: 'Geometría analítica en el plano y el espacio como herramienta para la computación gráfica.' },
+  { id: '13630', name: 'Paradigmas de Lenguajes de Programación', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo III', isElective: false, description: 'Paradigmas de programación (estructurado, funcional, orientado a objetos) y su aplicación.' },
+  { id: '13631', name: 'Estrategias Algorítmicas', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo III', isElective: false, description: 'Técnicas de diseño de algoritmos: divide y vencerás, voraz, programación dinámica y backtracking.' },
+  { id: '13632', name: 'Matemática Discreta', type: 'especifico', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo III', isElective: false, description: 'Lógica, teoría de conjuntos, combinatoria y teoría de grafos aplicadas a la computación.' },
+  { id: '13633', name: 'Física para Ciencia de la Computación', type: 'especifico', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo III', isElective: false, description: 'Fundamentos de física aplicados al diseño y funcionamiento de sistemas computacionales.' },
+  { id: '13634', name: 'Análisis Numérico', type: 'especifico', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo III', isElective: false, description: 'Métodos numéricos para la resolución aproximada de problemas matemáticos mediante computadora.' },
 
-  // CICLO IV
-  { id: 'EP-1', name: 'Técnicas de Programación Curricular', type: 'especialidad', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo IV', isElective: false, description: 'Diversificación curricular y diseño de unidades y proyectos a corto plazo.' },
-  { id: 'ES-11', name: 'Investigación Integral I', type: 'especifico', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo IV', isElective: false, description: 'Técnicas de fichaje, argumentación y redacción de monografías.' },
-  { id: 'EP-2', name: 'Didáctica de la Lectura y Escritura', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 3, cycle: 'Ciclo IV', isElective: false, description: 'Bases teóricas de la adquisición de la lectoescritura según enfoques actuales.' },
-  { id: 'EP-3', name: 'Didáctica de la Iniciación Matemática', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 3, cycle: 'Ciclo IV', isElective: false, description: 'Matemática lúdica y resolución de problemas para nociones pre-numéricas.' },
-  { id: 'ES-12', name: 'Consejería y Tutoría', type: 'especifico', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo IV', isElective: false, description: 'Modelos de intervención tutorial y planes de acción tutorial en la escuela.' },
-  { id: 'ES-13', name: 'Educación Emocional y Sexual para Niños', type: 'especifico', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo IV', isElective: false, description: 'Orientaciones psicopedagógicas para el soporte emocional infantil.' },
-  { id: 'ES-14', name: 'Nutrición Escolar', type: 'especifico', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo IV', isElective: false, description: 'Salud, alimentación balanceada infantil y prevención de la desnutrición.' },
+  // CICLO IV — 22 créditos
+  { id: '13635', name: 'Computación Gráfica', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo IV', isElective: false, description: 'Fundamentos de gráficos por computadora: modelado, transformaciones y renderizado 2D/3D.' },
+  { id: '13636', name: 'Organización de Archivos', type: 'especialidad', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo IV', isElective: false, description: 'Métodos de organización, acceso y gestión de archivos como base de datos.' },
+  { id: '13637', name: 'Algoritmos y Complejidad', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo IV', isElective: false, description: 'Análisis de complejidad computacional y clasificación de problemas algorítmicos.' },
+  { id: '13638', name: 'Lenguajes Formales y Autómatas', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo IV', isElective: false, description: 'Gramáticas formales, autómatas finitos y su relación con los lenguajes de programación.' },
+  { id: '13639', name: 'Electrónica para Computación', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo IV', isElective: false, description: 'Fundamentos de electrónica digital aplicados al diseño de sistemas computacionales.' },
+  { id: '13640', name: 'Innovación y Emprendimiento', type: 'especialidad', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo IV', isElective: false, description: 'Metodologías de innovación y emprendimiento tecnológico para la creación de soluciones informáticas.' },
 
-  // CICLO V
-  { id: 'ES-15', name: 'Investigación Integral II', type: 'especifico', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo V', isElective: false, description: 'Diseño de proyectos de investigación científica cuantitativa.' },
-  { id: 'EP-4', name: 'Didáctica para la Comprensión de Textos', type: 'especialidad', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo V', isElective: false, description: 'Enfoque del área de comunicación y estrategias de estimulación oral y lectora.' },
-  { id: 'EP-5', name: 'Práctica Pre-profesional I', type: 'especialidad', credits: 3, hoursT: 1, hoursP: 4, cycle: 'Ciclo V', isElective: false, description: 'Conocimiento del contexto escolar urbano marginal y diseño de sesiones básicas.' },
-  { id: 'EP-6', name: 'Didáctica de las Ciencias Sociales I', type: 'especialidad', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo V', isElective: false, description: 'Construcción de la identidad y participación democrática en el nivel primario.' },
-  { id: 'EP-7', name: 'Didáctica de la Matemática I', type: 'especialidad', credits: 4, hoursT: 3, hoursP: 1, cycle: 'Ciclo V', isElective: false, description: 'Problemas de regularidad, equivalencia, cambio, forma y localización.' },
-  { id: 'EP-8', name: 'Atención a Niños con Habilidades Diferentes', type: 'especialidad', credits: 4, hoursT: 3, hoursP: 2, cycle: 'Ciclo V', isElective: false, description: 'Enfoques inclusivos, adaptaciones curriculares y necesidades educativas especiales.' },
-  { id: 'E-3', name: 'Didáctica del Idioma Inglés para Niños I', type: 'especialidad', credits: 3, hoursT: 1, hoursP: 4, cycle: 'Ciclo V', isElective: true, description: 'Módulos de didáctica comunicativa de lenguas extranjeras aplicadas a infantes.' },
+  // CICLO V — 22 créditos
+  { id: '13641', name: 'Base de Datos I', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo V', isElective: false, description: 'Modelado, diseño relacional y consultas SQL en bases de datos.' },
+  { id: '13642', name: 'Ingeniería de Software I', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo V', isElective: false, description: 'Fundamentos del ciclo de vida del software: análisis, diseño y modelado de requerimientos.' },
+  { id: '13643', name: 'Inteligencia Artificial I', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo V', isElective: false, description: 'Fundamentos de inteligencia artificial: búsqueda, representación del conocimiento y agentes.' },
+  { id: '13644', name: 'Compiladores', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo V', isElective: false, description: 'Fases de construcción de un compilador: análisis léxico, sintáctico y semántico.' },
+  { id: '13645', name: 'Técnicas Digitales para Computación', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo V', isElective: false, description: 'Diseño de circuitos digitales aplicados a la arquitectura de computadoras.' },
+  { id: '13646', name: 'Metodología de la Investigación Científica', type: 'especialidad', credits: 2, hoursT: 2, hoursP: 0, cycle: 'Ciclo V', isElective: false, description: 'Proceso y diseño de investigación científica aplicados a proyectos en informática.' },
 
-  // CICLO VI
-  { id: 'EP-9', name: 'Didáctica de la Ciencia y Tecnología I', type: 'especialidad', credits: 4, hoursT: 3, hoursP: 2, cycle: 'Ciclo VI', isElective: false, description: 'Estudio y aplicación de metodologías para la enseñanza de las ciencias.' },
-  { id: 'EP-10', name: 'Didáctica de la Producción de Textos', type: 'especialidad', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo VI', isElective: false, description: 'Estrategias para el desarrollo de la escritura y producción textual en primaria.' },
-  { id: 'ES-16', name: 'Investigación Integral III', type: 'especifico', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo VI', isElective: false, description: 'Desarrollo de competencias investigativas y metodologías cuantitativas/cualitativas.' },
-  { id: 'EP-11', name: 'Práctica Pre-Profesional II', type: 'especialidad', credits: 3, hoursT: 1, hoursP: 4, cycle: 'Ciclo VI', isElective: false, description: 'Práctica en instituciones educativas para la observación y diseño de sesiones.' },
-  { id: 'EP-12', name: 'Didáctica de la Matemática II', type: 'especialidad', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo VI', isElective: false, description: 'Estrategias metodológicas para la enseñanza de operaciones y problemas complejos.' },
-  { id: 'EP-13', name: 'Didáctica de las Ciencias Sociales II', type: 'especialidad', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo VI', isElective: false, description: 'Profundización en la enseñanza de la historia, geografía y economía.' },
-  { id: 'E-4', name: 'Didáctica del Idioma Inglés para Niños II', type: 'especialidad', credits: 3, hoursT: 1, hoursP: 4, cycle: 'Ciclo VI', isElective: true, description: 'Metodologías para la enseñanza del inglés como segunda lengua en niños.' },
-  { id: 'E-5', name: 'Didáctica de la Danza para Niños II', type: 'especialidad', credits: 3, hoursT: 1, hoursP: 4, cycle: 'Ciclo VI', isElective: true, description: 'Uso de la danza y expresión corporal como recurso pedagógico.' },
-  { id: 'E-6', name: 'Didáctica de las TICs para Niños II', type: 'especialidad', credits: 0, hoursT: 1, hoursP: 4, cycle: 'Ciclo VI', isElective: true, description: 'Integración de tecnologías de la información en el proceso de enseñanza.' },
+  // CICLO VI — 22 créditos
+  { id: '14068', name: 'Computación Gráfica Avanzada', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo VI', isElective: false, description: 'Técnicas avanzadas de renderizado, iluminación y animación por computadora.' },
+  { id: '14069', name: 'Base de Datos II', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo VI', isElective: false, description: 'Optimización, transacciones, concurrencia y administración avanzada de bases de datos.' },
+  { id: '14070', name: 'Ingeniería de Software II', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo VI', isElective: false, description: 'Patrones de diseño, arquitectura de software y prácticas de construcción de sistemas.' },
+  { id: '14071', name: 'Inteligencia Artificial II', type: 'especialidad', credits: 2, hoursT: 0, hoursP: 4, cycle: 'Ciclo VI', isElective: false, description: 'Aprendizaje automático y modelos de aprendizaje supervisado y no supervisado.' },
+  { id: '14072', name: 'Comunicación de Datos', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo VI', isElective: false, description: 'Fundamentos de transmisión de datos y protocolos de comunicación.' },
+  { id: '14073', name: 'Arquitectura y Organización de Computadoras', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo VI', isElective: false, description: 'Organización interna del hardware: procesador, memoria y buses del sistema.' },
 
-  // CICLO VII
-  { id: 'ES-17', name: 'Informática Educativa', type: 'especifico', credits: 3, hoursT: 1, hoursP: 4, cycle: 'Ciclo VII', isElective: false, description: 'Uso de herramientas informáticas aplicadas a la gestión y procesos educativos.' },
-  { id: 'EP-14', name: 'Educación Básica Alternativa', type: 'especialidad', credits: 3, hoursT: 4, hoursP: 1, cycle: 'Ciclo VII', isElective: false, description: 'Fundamentos y didáctica para la educación de jóvenes y adultos.' },
-  { id: 'ES-18', name: 'Investigación Integral IV', type: 'especifico', credits: 4, hoursT: 3, hoursP: 2, cycle: 'Ciclo VII', isElective: false, description: 'Elaboración y ejecución de proyectos de investigación educativa.' },
-  { id: 'EP-15', name: 'Práctica Pre-Profesional III', type: 'especialidad', credits: 3, hoursT: 1, hoursP: 4, cycle: 'Ciclo VII', isElective: false, description: 'Intervención directa en el aula de nivel primaria, diseño y conducción del aprendizaje.' },
-  { id: 'EP-16', name: 'Proyectos Productivos', type: 'especialidad', credits: 3, hoursT: 4, hoursP: 1, cycle: 'Ciclo VII', isElective: false, description: 'Diseño e implementación de proyectos productivos escolares.' },
-  { id: 'EP-17', name: 'Didáctica de la Ciencia y Tecnología II', type: 'especialidad', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo VII', isElective: false, description: 'Estrategias avanzadas y proyectos de experimentación científica escolar.' },
-  { id: 'E-7', name: 'Didáctica del Idioma Inglés para Niños III', type: 'especialidad', credits: 3, hoursT: 4, hoursP: 1, cycle: 'Ciclo VII', isElective: true, description: 'Práctica y aplicación de estrategias avanzadas de inglés para primaria.' },
-  { id: 'E-8', name: 'Didáctica de la Danza para Niños III', type: 'especialidad', credits: 3, hoursT: 4, hoursP: 1, cycle: 'Ciclo VII', isElective: true, description: 'Desarrollo de proyectos coreográficos y su evaluación pedagógica.' },
-  { id: 'E-9', name: 'Didáctica de la Enseñanza de las TICs para Niños III', type: 'especialidad', credits: 0, hoursT: 3, hoursP: 1, cycle: 'Ciclo VII', isElective: true, description: 'Creación de recursos educativos digitales e interactivos.' },
+  // CICLO VII — 22 créditos
+  { id: '14074', name: 'Base de Datos Avanzada', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo VII', isElective: false, description: 'Bases de datos distribuidas, NoSQL y almacenamiento a gran escala.' },
+  { id: '14075', name: 'Desarrollo de Software', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo VII', isElective: false, description: 'Construcción de aplicaciones de software siguiendo buenas prácticas de ingeniería.' },
+  { id: '14076', name: 'Percepción y Visión por Computadora', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo VII', isElective: false, description: 'Procesamiento digital de imágenes y técnicas de visión artificial.' },
+  { id: '14077', name: 'Redes de Computadoras I', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo VII', isElective: false, description: 'Modelo OSI/TCP-IP, direccionamiento y fundamentos de redes de computadoras.' },
+  { id: '14078', name: 'Sistemas Operativos I', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo VII', isElective: false, description: 'Gestión de procesos, memoria y concurrencia en sistemas operativos.' },
+  { id: '14079', name: 'Gestión de Proyectos Informáticos', type: 'especialidad', credits: 2, hoursT: 0, hoursP: 4, cycle: 'Ciclo VII', isElective: false, description: 'Planificación, ejecución y control de proyectos de tecnologías de la información.' },
 
-  // CICLO VIII
-  { id: 'ES-19', name: 'Entornos Virtuales para la Enseñanza Aprendizaje', type: 'especifico', credits: 3, hoursT: 1, hoursP: 4, cycle: 'Ciclo VIII', isElective: false, description: 'Gestión de plataformas virtuales, e-learning y recursos online.' },
-  { id: 'EP-18', name: 'Educación Rural', type: 'especialidad', credits: 4, hoursT: 4, hoursP: 2, cycle: 'Ciclo VIII', isElective: false, description: 'Características, desafíos y adaptaciones curriculares para la escuela rural.' },
-  { id: 'ES-20', name: 'Investigación Integral V', type: 'especifico', credits: 3, hoursT: 3, hoursP: 1, cycle: 'Ciclo VIII', isElective: false, description: 'Sistematización de resultados y redacción del informe de investigación.' },
-  { id: 'EP-19', name: 'Práctica Pre-Profesional IV', type: 'especialidad', credits: 3, hoursT: 0, hoursP: 4, cycle: 'Ciclo VIII', isElective: false, description: 'Consolidación de la práctica docente en diversas realidades y contextos.' },
-  { id: 'EP-20', name: 'Didáctica de Educación Física', type: 'especialidad', credits: 3, hoursT: 2, hoursP: 4, cycle: 'Ciclo VIII', isElective: false, description: 'Psicomotricidad, juegos y deportes adaptados al nivel primario.' },
-  { id: 'ES-21', name: 'Proyectos de Inversión e Innovación Educativa', type: 'especifico', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo VIII', isElective: false, description: 'Formulación de proyectos orientados a la mejora continua y obtención de fondos.' },
-  { id: 'E-10', name: 'Práctica en Instituciones Educativas Bilingüe: Español Inglés', type: 'especialidad', credits: 0, hoursT: 1, hoursP: 4, cycle: 'Ciclo VIII', isElective: true, description: 'Práctica preprofesional en aulas bilingües.' },
-  { id: 'E-11', name: 'Práctica en la II.EE: Taller de Danzas', type: 'especialidad', credits: 3, hoursT: 1, hoursP: 4, cycle: 'Ciclo VIII', isElective: true, description: 'Aplicación práctica de talleres artísticos en el centro educativo.' },
-  { id: 'E-12', name: 'Práctica en II.EE. Laboratorio de Cómputo / Aula de Innovación', type: 'especialidad', credits: 0, hoursT: 1, hoursP: 4, cycle: 'Ciclo VIII', isElective: true, description: 'Gestión y docencia en el aula de innovación pedagógica.' },
+  // CICLO VIII — 22 créditos
+  { id: '14080', name: 'Robótica', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo VIII', isElective: false, description: 'Fundamentos de robótica: cinemática, sensórica y control de robots.' },
+  { id: '14081', name: 'Redes de Computadoras II', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo VIII', isElective: false, description: 'Enrutamiento, conmutación y administración avanzada de redes.' },
+  { id: '14082', name: 'Sistemas Operativos II', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo VIII', isElective: false, description: 'Sistemas de archivos, entrada/salida y administración avanzada de sistemas operativos.' },
+  { id: '14083', name: 'Prácticas Pre-Profesionales', type: 'especialidad', credits: 10, hoursT: 1, hoursP: 18, cycle: 'Ciclo VIII', isElective: false, description: 'Experiencia práctica en organizaciones aplicando los conocimientos adquiridos hasta el ciclo VI.' },
 
-  // CICLO IX
-  { id: 'ES-22', name: 'Gestión Educativa', type: 'especifico', credits: 3, hoursT: 1, hoursP: 4, cycle: 'Ciclo IX', isElective: false, description: 'Administración escolar, liderazgo directivo y documentos de gestión institucional.' },
-  { id: 'ES-23', name: 'Seminario de Tesis I', type: 'especifico', credits: 3, hoursT: 1, hoursP: 4, cycle: 'Ciclo IX', isElective: false, description: 'Elaboración y sustentación del proyecto de tesis para obtención del título.' },
-  { id: 'EP-21', name: 'Práctica Preprofesional V', type: 'especialidad', credits: 16, hoursT: 0, hoursP: 32, cycle: 'Ciclo IX', isElective: false, description: 'Inmersión total en la institución educativa asumiendo el rol docente a tiempo completo.' },
+  // CICLO IX — 22 créditos
+  { id: '14084', name: 'Interacción Humano-Computador', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo IX', isElective: false, description: 'Principios de diseño de experiencia e interfaz de usuario centrados en la persona.' },
+  { id: '14085', name: 'Tópicos en Base de Datos', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo IX', isElective: false, description: 'Temas avanzados y de actualidad en el diseño y administración de bases de datos.' },
+  { id: 'INF34', name: 'Tópicos en Ingeniería de Software', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo IX', isElective: false, description: 'Temas avanzados y de actualidad en metodologías y prácticas de ingeniería de software.' },
+  { id: '14087', name: 'Ingeniería de Software Avanzada', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo IX', isElective: false, description: 'Arquitecturas de software modernas y desarrollo de sistemas de gran escala.' },
+  { id: '14088', name: 'Seguridad Informática', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo IX', isElective: false, description: 'Principios de ciberseguridad, criptografía y protección de sistemas de información.' },
+  { id: '14089', name: 'Proyecto de Tesis', type: 'especialidad', credits: 2, hoursT: 1, hoursP: 2, cycle: 'Ciclo IX', isElective: false, description: 'Formulación del proyecto de investigación para la tesis de titulación.' },
 
-  // CICLO X
-  { id: 'ES-24', name: 'Ética Profesional', type: 'especifico', credits: 3, hoursT: 4, hoursP: 1, cycle: 'Ciclo X', isElective: false, description: 'Deontología docente, valores profesionales y responsabilidad social.' },
-  { id: 'ES-25', name: 'Seminario de Tesis II', type: 'especifico', credits: 3, hoursT: 4, hoursP: 1, cycle: 'Ciclo X', isElective: false, description: 'Desarrollo, culminación y defensa de la tesis de grado.' },
-  { id: 'EP-22', name: 'Práctica Pre Profesional VI', type: 'especialidad', credits: 16, hoursT: 0, hoursP: 28, cycle: 'Ciclo X', isElective: false, description: 'Culminación de la práctica preprofesional con evaluación integral de desempeño docente.' },
+  // CICLO X — 17 créditos
+  { id: '14090', name: 'Tópicos en Tecnologías Inmersivas', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo X', isElective: false, description: 'Realidad virtual, realidad aumentada y otras tecnologías inmersivas emergentes.' },
+  { id: '14091', name: 'Sistemas de Información', type: 'especialidad', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo X', isElective: false, description: 'Análisis, diseño e implementación integral de sistemas de información organizacionales.' },
+  { id: '14092', name: 'Ética para Profesionales en Informática', type: 'especialidad', credits: 3, hoursT: 2, hoursP: 2, cycle: 'Ciclo X', isElective: false, description: 'Deontología profesional, responsabilidad social y ética aplicada a la informática.' },
+  { id: '14093', name: 'Proyecto de Competencia', type: 'especialidad', credits: 2, hoursT: 0, hoursP: 4, cycle: 'Ciclo X', isElective: false, description: 'Proyecto final en el área de competencia elegida por el estudiante.' },
+  { id: '14094', name: 'Proyecto Integrador', type: 'especialidad', credits: 4, hoursT: 2, hoursP: 4, cycle: 'Ciclo X', isElective: false, description: 'Proyecto que integra los conocimientos de redes, gestión de proyectos, innovación y desarrollo de software.' },
+  { id: 'INF43', name: 'Tesis', type: 'especialidad', credits: 1, hoursT: 0, hoursP: 2, cycle: 'Ciclo X', isElective: false, description: 'Desarrollo, sustentación y culminación de la tesis de titulación.' },
 ];
 
-// Líneas de prerrequisitos (muestra de flujos lógicos)
+// Líneas de prerrequisitos, según la columna "Requisitos" del Plan de Estudios.
 export const PREREQUISITES_EDGES: Edge[] = [
-  { id: 'e-1', source: 'ES-1', target: 'ES-2', style: { stroke: '#f97316', strokeWidth: 2 } },
-  { id: 'e-2', source: 'ES-3', target: 'ES-5', style: { stroke: '#f97316', strokeWidth: 2 } },
-  { id: 'e-3', source: 'ES-8', target: 'EP-1', style: { stroke: '#38bdf8', strokeWidth: 2 } },
-  { id: 'e-4', source: 'EP-2', target: 'EP-4', style: { stroke: '#38bdf8', strokeWidth: 2 } },
-  { id: 'e-5', source: 'EP-3', target: 'EP-7', style: { stroke: '#38bdf8', strokeWidth: 2 } },
-  { id: 'e-6', source: 'ES-15', target: 'ES-16', style: { stroke: '#f97316', strokeWidth: 2 } },
-  { id: 'e-7', source: 'ES-16', target: 'ES-18', style: { stroke: '#f97316', strokeWidth: 2 } },
-  { id: 'e-8', source: 'ES-18', target: 'ES-20', style: { stroke: '#f97316', strokeWidth: 2 } },
-  { id: 'e-9', source: 'ES-20', target: 'ES-23', style: { stroke: '#f97316', strokeWidth: 2 } },
-  { id: 'e-10', source: 'ES-23', target: 'ES-25', style: { stroke: '#f97316', strokeWidth: 2 } },
-  { id: 'e-11', source: 'EP-5', target: 'EP-11', style: { stroke: '#38bdf8', strokeWidth: 2 } },
-  { id: 'e-12', source: 'EP-11', target: 'EP-15', style: { stroke: '#38bdf8', strokeWidth: 2 } },
-  { id: 'e-13', source: 'EP-15', target: 'EP-19', style: { stroke: '#38bdf8', strokeWidth: 2 } },
-  { id: 'e-14', source: 'EP-19', target: 'EP-21', style: { stroke: '#38bdf8', strokeWidth: 2 } },
-  { id: 'e-15', source: 'EP-21', target: 'EP-22', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-1', source: '13021', target: '13039', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-2', source: '13028', target: '13034', style: { stroke: '#f97316', strokeWidth: 2 } },
+  { id: 'e-3', source: '13034', target: '13629', style: { stroke: '#f97316', strokeWidth: 2 } },
+  { id: 'e-4', source: '13039', target: '13631', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-5', source: '13027', target: '13633', style: { stroke: '#f97316', strokeWidth: 2 } },
+  { id: 'e-6', source: '13034', target: '13634', style: { stroke: '#f97316', strokeWidth: 2 } },
+  { id: 'e-7', source: '13629', target: '13635', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-8', source: '13039', target: '13635', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-9', source: '13039', target: '13636', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-10', source: '13631', target: '13637', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-11', source: '13632', target: '13637', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-12', source: '13632', target: '13638', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-13', source: '13633', target: '13639', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-14', source: '13636', target: '13641', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-15', source: '13630', target: '13642', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-16', source: '13637', target: '13643', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-17', source: '13638', target: '13644', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-18', source: '13639', target: '13645', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-19', source: '13635', target: '14068', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-20', source: '13641', target: '14069', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-21', source: '13642', target: '14070', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-22', source: '13643', target: '14071', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-23', source: '13645', target: '14072', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-24', source: '13645', target: '14073', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-25', source: '14069', target: '14074', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-26', source: '14070', target: '14075', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-27', source: '14071', target: '14076', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-28', source: '14072', target: '14077', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-29', source: '14073', target: '14078', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-30', source: '14070', target: '14079', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-31', source: '14071', target: '14080', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-32', source: '14077', target: '14081', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-33', source: '14078', target: '14082', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-34', source: '14070', target: '14084', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-35', source: '14069', target: '14085', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-36', source: '14070', target: 'INF34', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-37', source: '14070', target: '14087', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-38', source: '14081', target: '14088', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-39', source: '14084', target: '14090', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-40', source: '14074', target: '14091', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-41', source: '14087', target: '14091', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-42', source: '13040', target: '14092', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-43', source: '14081', target: '14094', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-44', source: '14079', target: '14094', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-45', source: '13640', target: '14094', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-46', source: '14075', target: '14094', style: { stroke: '#38bdf8', strokeWidth: 2 } },
+  { id: 'e-47', source: '14089', target: 'INF43', style: { stroke: '#38bdf8', strokeWidth: 2 } },
 ];
 
 export const CYCLE_COLUMNS: Record<string, number> = {
