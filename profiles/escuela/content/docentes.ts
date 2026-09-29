@@ -13,18 +13,12 @@
 //   - condicion: régimen laboral del docente, "Nombrado" o "Contratado". Se muestra como
 //     etiqueta en la card.
 //
-// Fuente: fotos, correos y áreas de investigación tomados de inf.unitru.edu.pe (plana
+// Fuente: correos y áreas de investigación tomados de inf.unitru.edu.pe (plana
 // docente publicada); grados académicos y nombres completos verificados contra el
 // "Currículo del Programa de Estudios de Informática" (R.C.U. No. 065-2018/UNT).
-// `investigador` se deja en `false` por defecto (sin fuente confiable por docente) y
-// no se consigna `categoriaInvestigacion`/`condicion`: ajústalos cuando tengas el dato
-// exacto de cada uno.
-
-import cruzSilva from '../assets/docentes/cruz-silva.jpg';
-import sifuentesDiaz from '../assets/docentes/sifuentes-diaz.jpg';
-import cruzFlorian from '../assets/docentes/cruz-florian.jpg';
-import pedroHuaman from '../assets/docentes/pedro-huaman.jpg';
-import castilloDiestra from '../assets/docentes/castillo-diestra.jpg';
+// `foto` se deja en `null` a propósito (silueta placeholder para todos); `investigador`
+// se deja en `false` por defecto (sin fuente confiable por docente) y no se consigna
+// `categoriaInvestigacion`/`condicion`: ajústalos cuando tengas el dato exacto de cada uno.
 
 export const docentes = [
   {
@@ -42,7 +36,7 @@ export const docentes = [
     departamento: "Departamento Académico de Informática",
     cursoPrincipal: "Arquitectura y Organización de Computadoras",
     especialidades: ["Arquitectura y organización de computadoras"],
-    foto: cruzSilva,
+    foto: null,
     investigador: false,
   },
   {
@@ -51,7 +45,7 @@ export const docentes = [
     departamento: "Departamento Académico de Informática",
     cursoPrincipal: "Ingeniería de Software",
     especialidades: ["Ingeniería de Software", "Lenguajes de Programación", "Simulación"],
-    foto: sifuentesDiaz,
+    foto: null,
     investigador: false,
   },
   {
@@ -60,7 +54,7 @@ export const docentes = [
     departamento: "Departamento Académico de Informática",
     cursoPrincipal: "Ingeniería de Software",
     especialidades: ["Ingeniería de Software", "Lenguajes de Programación", "Optimización Combinatoria"],
-    foto: cruzFlorian,
+    foto: null,
     investigador: false,
   },
   {
@@ -69,7 +63,7 @@ export const docentes = [
     departamento: "Departamento Académico de Informática",
     cursoPrincipal: "Sistemas Inteligentes",
     especialidades: ["Sistemas Inteligentes", "Ingeniería de software"],
-    foto: pedroHuaman,
+    foto: null,
     investigador: false,
   },
   {
@@ -78,7 +72,7 @@ export const docentes = [
     departamento: "Departamento Académico de Informática",
     cursoPrincipal: "Ingeniería de Software",
     especialidades: ["Ingeniería de Software", "Procesadores de Lenguajes", "Auditoría Informática"],
-    foto: castilloDiestra,
+    foto: null,
     investigador: false,
   },
   {
