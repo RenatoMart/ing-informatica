@@ -85,3 +85,17 @@ ESLint (`eslint.config.js`) is intentionally warn-only (react-hooks rules, jsx-a
 
 ## Seguridad (backend/panel)
 Las reglas de seguridad AppSec/OWASP (cookies HttpOnly, sin tokens en el frontend, anti-IDOR, DTOs estrictos, bcrypt ≥12, timeouts, CORS estricto) están en `/home/renatomr/GolandProjects/portal-unt-back/CLAUDE.md`: seguirlas siempre que se toque el backend o el panel, y no poner secretos ni lógica de permisos en este sitio.
+
+## Convención de commits
+Se usa **Conventional Commits**, en español y a nombre único del autor (sin líneas `Co-Authored-By`).
+
+- Formato: `tipo(ámbito): resumen` — en imperativo, minúscula inicial, sin punto final, máximo ~72 caracteres.
+- Tipos: `feat` (función nueva), `fix` (corrección), `perf` (rendimiento), `refactor`, `style` (formato), `docs`, `test`, `build` (Docker, dependencias, compilados), `ci` (GitHub Actions), `chore` (mantenimiento).
+- Ámbito: el módulo tocado (`contacto`, `perfil`, `panel`, `auth`, `noticias`, `railway`…).
+- **Un commit = un cambio lógico.** No mezclar una función nueva con formato o documentación ajena.
+- Cada commit debe compilar y pasar las comprobaciones del proyecto.
+- El cuerpo (opcional, tras una línea en blanco) explica el **porqué**, no el cómo.
+- Cambios incompatibles: `tipo(ámbito)!: …` y una línea `BREAKING CHANGE: …` en el cuerpo.
+- No reescribir el historial ya subido (`push --force`) salvo acuerdo expreso.
+
+Ejemplos: `feat(contacto): validar las transiciones de estado`, `fix(auth): renovar la sesión al cambiar la clave`, `docs: guía de despliegue en Railway`.
