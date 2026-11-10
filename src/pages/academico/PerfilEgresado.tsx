@@ -12,7 +12,7 @@ export default function PerfilEgresado() {
           <SectionTitle
             title="Perfil del Egresado"
             center
-            subtitle={`Al término de la carrera, el egresado del ${site.programa.nombre} tendrá las siguientes competencias.`}
+            subtitle={`Al término de la carrera, el egresado de la ${site.programa.nombre} tendrá las siguientes competencias.`}
           />
           <div className="mt-8 grid gap-4">
             {perfilEgresado.map((comp, idx) => (

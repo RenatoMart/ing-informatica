@@ -7,7 +7,7 @@ export default function NosotrosIndex() {
   return (
     <SectionLayout
       title="Sobre Nosotros"
-      subtitle={`Conoce la identidad, valores e historia del ${site.programa.nombre}.`}
+      subtitle={`Conoce la identidad, valores e historia de la ${site.programa.nombre}.`}
       icon={BookHeart}
       basePath="/nosotros"
       breadcrumbs={[{ label: 'Nosotros' }]}

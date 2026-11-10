@@ -44,9 +44,9 @@ No necesitas configurar nada más: el sitio toma por defecto la carpeta
 
 ## Publicar (deploy)
 
-El build sale a un theme de WordPress definido en **`vite.config.ts`**
-(`outDir` y `base`). Si tu escuela se publica en otra carpeta/theme, ajusta ahí
-el slug antes de `npm run build`.
+`npm run build` deja el sitio estático en la carpeta `dist/`: publícala en tu
+hosting. El servidor debe devolver `index.html` para las rutas que no existan
+como archivo (SPA).
 
 ## Reglas
 
@@ -57,6 +57,14 @@ el slug antes de `npm run build`.
   `profiles/escuela/` ya viene lleno de ejemplo: cópialo y reemplaza los datos.
 
 ---
+
+### Contenido desde el panel
+
+Si el sitio está conectado al portal (`VITE_API_URL`), el contenido que se edita en el
+panel **sobrescribe** el de esta carpeta al cargar la página; esta carpeta queda como
+**respaldo** (se muestra si la API no responde). Para dejar un perfil listo como
+respaldo basta con mantenerlo actualizado; el script `scripts/export-profile.mjs`
+lo vuelca al formato del backend.
 
 ### Nota técnica (avanzado)
 

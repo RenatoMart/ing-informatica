@@ -85,12 +85,10 @@ Si una escuela necesita otra paleta, se ajustan ahí.
 
 ## Despliegue
 
-El destino del build se decide en `vite.config.ts`:
-
-- **WordPress (por defecto):** sale a `../wp-content/themes/educacion-primaria/dist/`
-  con `base` `/wp-content/themes/educacion-primaria/dist/`. Si tu escuela se publica
-  en otro theme, ajusta `outDir` y `base` antes de construir.
-- **Vercel:** con `VERCEL=1`, el build sale a `dist/` con `base` `/`.
+`npm run build` genera el sitio estático en `dist/` (con `base` `/`). Publica esa
+carpeta en cualquier hosting de archivos estáticos; debe devolver `index.html` para
+las rutas que no existan como archivo (SPA). `vercel.json` ya trae esa regla para
+quien use Vercel.
 
 ## Convenciones
 

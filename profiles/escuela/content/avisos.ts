@@ -10,23 +10,4 @@ export interface Aviso {
   externo: boolean;
 }
 
-export const avisos: Aviso[] = [
-  {
-    id: 1,
-    texto: 'Texto del primer aviso institucional. Reemplázalo por una novedad de tu programa.',
-    link: '/noticias',
-    externo: false,
-  },
-  {
-    id: 2,
-    texto: 'Texto del segundo aviso institucional. Reemplázalo por una novedad de tu programa.',
-    link: '/noticias',
-    externo: false,
-  },
-  {
-    id: 3,
-    texto: 'Texto del tercer aviso institucional. Reemplázalo por una novedad de tu programa.',
-    link: '/noticias',
-    externo: false,
-  },
-];
+export const avisos: Aviso[] = [];

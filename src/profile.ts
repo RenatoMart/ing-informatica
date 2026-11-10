@@ -14,4 +14,10 @@ export const { site, branding, seo } = profile;
  * Nombre corto del sitio para títulos de pestaña (`document.title`), p. ej.
  * "Nombre de la Escuela · SIGLAS". Derivado del perfil, no hardcodeado.
  */
-export const siteName = `${site.programa.nombreCorto} · ${site.universidad.siglas}`;
+const componerSiteName = () => `${site.programa.nombreCorto} · ${site.universidad.siglas}`;
+export let siteName = componerSiteName();
+
+/** Lo llama el cargador remoto (src/data) tras aplicar datos nuevos. */
+export function actualizarSiteName(): void {
+  siteName = componerSiteName();
+}

@@ -12,10 +12,7 @@ export default function Docentes() {
   const [filtro, setFiltro] = useState('Todos');
   const [query, setQuery] = useState('');
 
-  // Filtros disponibles: "Todos" + departamentos + (si hay) "Investigadores".
-  // Se muestran como "Filtro 1", "Filtro 2"... en vez del nombre real: es una
-  // plantilla reutilizable por cualquier escuela y no todas tendrán la misma
-  // cantidad ni tipo de categorías.
+  // Filtros disponibles: "Todos" + departamentos + (si hay) "Investigadores", con su nombre real.
   const filtros = useMemo(() => {
     const departamentos = [...new Set(docentes.map((d) => d.departamento).filter(Boolean))];
     const valores = docentes.some((d) => d.investigador)
@@ -23,7 +20,7 @@ export default function Docentes() {
       : departamentos;
     return [
       { valor: 'Todos', etiqueta: 'Todos' },
-      ...valores.map((valor, i) => ({ valor, etiqueta: `Filtro ${i + 1}` })),
+      ...valores.map((valor) => ({ valor, etiqueta: valor })),
     ];
   }, []);
 

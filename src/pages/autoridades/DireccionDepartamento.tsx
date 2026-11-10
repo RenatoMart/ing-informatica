@@ -1,6 +1,6 @@
 import React from 'react';
 import { SectionTitle } from '../../components/ui/SectionTitle';
-import AutoridadCard from '../../components/personas/AutoridadCard';
+import AutoridadFicha from '../../components/personas/AutoridadFicha';
 import { directorDepartamento } from '@profile/content/autoridades';
 import { site } from '@/profile';
 
@@ -14,8 +14,8 @@ export default function DireccionDepartamento() {
           subtitle={`Autoridad encargada de la gestión académica del Departamento Académico de ${site.programa.nombreCorto}.`}
         />
 
-        <div className="max-w-3xl mx-auto mt-8">
-          <AutoridadCard autoridad={directorDepartamento} principal={true} />
+        <div className="max-w-5xl mx-auto mt-10">
+          <AutoridadFicha autoridad={directorDepartamento} />
         </div>
       </div>
     </div>

@@ -19,7 +19,7 @@ export default function Organigrama() {
           >
             <img
               src={mapaProcesos}
-              alt={`Organigrama estructural del ${site.denominacion}`}
+              alt={`Organigrama estructural de la ${site.programa.nombre}`}
               loading="lazy"
               className="w-full h-auto object-contain"
             />

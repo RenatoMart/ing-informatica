@@ -7,7 +7,7 @@ export default function OrganizacionIndex() {
   return (
     <SectionLayout
       title="Organización"
-      subtitle={`Autoridades, personal y comités que dirigen y aseguran la calidad del ${site.denominacion}.`}
+      subtitle={`Autoridades, personal y comités que dirigen y aseguran la calidad de la ${site.programa.nombre}.`}
       icon={Building2}
       basePath="/organizacion"
       breadcrumbs={[{ label: 'Organización' }]}

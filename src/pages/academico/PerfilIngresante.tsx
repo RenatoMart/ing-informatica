@@ -12,7 +12,7 @@ export default function PerfilIngresante() {
           <SectionTitle
             title="Perfil del Ingresante"
             center
-            subtitle={`Competencias del ingresante del ${site.programa.nombre}.`}
+            subtitle={`Competencias del ingresante de la ${site.programa.nombre}.`}
           />
           <div className="mt-8 bg-white p-6 md:p-8 rounded-xl shadow-md border border-gray-100">
             <ul className="space-y-4">

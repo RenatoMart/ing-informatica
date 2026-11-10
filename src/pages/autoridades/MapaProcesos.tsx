@@ -22,7 +22,7 @@ export default function MapaProcesos() {
           >
             <img
               src={mapaProcesos}
-              alt={`Mapa de procesos del ${site.denominacion}`}
+              alt={`Mapa de procesos de la ${site.programa.nombre}`}
               loading="lazy"
               className="w-full h-auto object-contain"
             />

@@ -1,39 +1,18 @@
 // Noticias y eventos institucionales — editar aquí para actualizar el feed
-export const noticias = [
-  {
-    id: 1,
-    categoria: 'Categoría',
-    categoriaColor: 'bg-[#12377B] text-white',
-    titulo: 'Título de la noticia 1',
-    resumen:
-      'Resumen breve de la noticia 1. Aquí va una o dos frases que describen la novedad. Reemplaza este texto por el de tu programa.',
-    fecha: '2025-01-01',
-    fechaFormateada: '01 Ene 2025',
-    link: '/noticias',
-    imagen: 'https://picsum.photos/seed/noticia-1/600/400',
-  },
-  {
-    id: 2,
-    categoria: 'Categoría',
-    categoriaColor: 'bg-gold text-ink',
-    titulo: 'Título de la noticia 2',
-    resumen:
-      'Resumen breve de la noticia 2. Aquí va una o dos frases que describen la novedad. Reemplaza este texto por el de tu programa.',
-    fecha: '2025-01-01',
-    fechaFormateada: '01 Ene 2025',
-    link: '/noticias',
-    imagen: 'https://picsum.photos/seed/noticia-2/600/400',
-  },
-  {
-    id: 3,
-    categoria: 'Categoría',
-    categoriaColor: 'bg-primary text-white',
-    titulo: 'Título de la noticia 3',
-    resumen:
-      'Resumen breve de la noticia 3. Aquí va una o dos frases que describen la novedad. Reemplaza este texto por el de tu programa.',
-    fecha: '2025-01-01',
-    fechaFormateada: '01 Ene 2025',
-    link: '/noticias',
-    imagen: 'https://picsum.photos/seed/noticia-3/600/400',
-  },
-];
+/** Una noticia tal como la usa el sitio. El panel la entrega con estos campos (contenido con formato sencillo: ver components/noticias/Prosa.tsx). */
+export interface Noticia {
+  id: number;
+  categoria: string;
+  categoriaColor: string;
+  titulo: string;
+  resumen: string;
+  /** Cuerpo completo con formato: ## títulos, **negrita**, [enlaces](url), listas, > citas, ![imagen](url "pie"). */
+  contenido?: string;
+  fecha: string;
+  fechaFormateada: string;
+  link: string;
+  imagen: string | null;
+}
+
+/** Respaldo si la API no responde: vacío a propósito (las noticias reales se administran desde el panel). */
+export const noticias: Noticia[] = [];

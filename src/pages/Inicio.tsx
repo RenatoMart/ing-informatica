@@ -313,7 +313,7 @@ export default function Inicio() {
       <section className="py-16 md:py-20 bg-gray-50">
         <div className="container mx-auto px-4 md:px-8">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
-            <SectionTitle title="Noticias y **Actualidad**" subtitle={`Últimas novedades, eventos y comunicados del ${site.denominacion}.`} />
+            <SectionTitle title="Noticias y **Actualidad**" subtitle={`Últimas novedades, eventos y comunicados de la ${site.programa.nombre}.`} />
             <Link
               to="/noticias"
               className="inline-flex items-center gap-2 text-sm font-bold text-primary hover:text-gold transition-colors whitespace-nowrap shrink-0"
@@ -339,7 +339,7 @@ export default function Inicio() {
                     {/* Imagen de la noticia */}
                     <div className="h-48 w-full overflow-hidden shrink-0">
                       <img
-                        src={noticia.imagen}
+                        src={noticia.imagen ?? undefined}
                         alt={noticia.titulo}
                         loading="lazy"
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

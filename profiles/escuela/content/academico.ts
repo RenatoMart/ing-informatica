@@ -10,8 +10,8 @@
 // Ciencias de la Computación". Se mantiene esta última (coincide en 2 de 3 fuentes y
 // es la que fija el currículo vigente); confírmalo con la escuela si puedes.
 
-export const gradoAcademico = "Bachiller en Ciencias de la Computación";
-export const tituloProfesional = "Ingeniero Informático";
+export let gradoAcademico = "Bachiller en Ciencias de la Computación";
+export let tituloProfesional = "Ingeniero Informático";
 
 export const perfilIngresante = [
   { area: "Formación General", descripcion: "Posee información básica en las ciencias naturales, sociales y formales, así como de la cultura humanística en perspectiva histórica a nivel del Perú y del mundo." },
@@ -109,3 +109,9 @@ export const movilidad = [
     modalidad: "Apoyo financiero externo",
   },
 ];
+
+/** Lo llama el cargador remoto (src/data) para actualizar estos textos con los del panel. */
+export function __aplicar(d: Partial<{ gradoAcademico: string; tituloProfesional: string }>): void {
+  if (d.gradoAcademico !== undefined) gradoAcademico = d.gradoAcademico;
+  if (d.tituloProfesional !== undefined) tituloProfesional = d.tituloProfesional;
+}

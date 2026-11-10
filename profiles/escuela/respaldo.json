@@ -1,0 +1,2112 @@
+{
+  "academico": {
+    "gradoAcademico": "Bachiller en Ciencias de la Computación",
+    "movilidad": [
+      {
+        "descripcion": "Convenio para el intercambio de estudiantes del 4.° año de la EPI, aprobado por Resolución de Consejo Universitario N° 009-2014/UNT. Desde 2015, los tres primeros estudiantes de cada promoción son beneficiarios de esta movilidad en São Paulo, Brasil.",
+        "institucion": "Instituto de Ciencias Matemáticas y de Computación (ICMC), Universidad de São Paulo, Brasil",
+        "modalidad": "Anual",
+        "tipo": "Movilidad estudiantil"
+      },
+      {
+        "descripcion": "La EPI no cuenta actualmente con convenios propios de movilidad docente; sin embargo, el CONCYTEC fomenta la movilidad de docentes con apoyo financiero.",
+        "institucion": "CONCYTEC",
+        "modalidad": "Apoyo financiero externo",
+        "tipo": "Movilidad docente"
+      }
+    ],
+    "perfilEgresado": [
+      {
+        "area": "Unidad de Competencia 1",
+        "descripcion": "Participa en proyectos multidisciplinarios para resolver problemas computacionales en diferentes ámbitos de la sociedad, demostrando su competencia profesional e integridad. Capacidades terminales: maneja e integra la abstracción, el pensamiento sistémico, la experimentación y el trabajo en equipo; desarrolla proyectos con iniciativa y espíritu emprendedor; aprende de forma autónoma a lo largo de su vida; se desenvuelve y comunica eficazmente en equipo para alcanzar una meta común; comprende su responsabilidad profesional, ética, legal, de seguridad y social; realiza investigaciones con rigor científico; y contribuye con los resultados de la investigación a resolver problemas de la comunidad nacional e internacional."
+      },
+      {
+        "area": "Unidad de Competencia 2",
+        "descripcion": "Aplica con ética profesional conocimientos computacionales teórico-práctico-aplicación, involucrándose como actor principal del desarrollo de la sociedad. Capacidades terminales: aplica fundamentos matemáticos, principios algorítmicos y teoría de ciencia de la computación en el modelamiento y diseño de sistemas basados en computadora; aplica principios de diseño y desarrollo computacional en la construcción de sistemas de software y nuevas arquitecturas de cómputo; realiza proyectos computacionales multidisciplinarios; desarrolla métodos y modelos eficientes para resolver problemas computacionales; diseña algoritmos eficientes para sistemas gestores de bases de datos, redes, inteligencia artificial y procesamiento gráfico; proyecta y construye software base y de aplicación de alta calidad y bajo costo; y reconoce y valora las relaciones entre Informática y Sociedad."
+      }
+    ],
+    "perfilIngresante": [
+      {
+        "area": "Formación General",
+        "descripcion": "Posee información básica en las ciencias naturales, sociales y formales, así como de la cultura humanística en perspectiva histórica a nivel del Perú y del mundo."
+      },
+      {
+        "area": "Comunicación",
+        "descripcion": "Posee habilidades de registro, uso y reelaboración de la información y el uso correcto del lenguaje, con el propósito de expresar y comprender sus ideas y las que recibe de su entorno."
+      },
+      {
+        "area": "Lógico-Matemática",
+        "descripcion": "Reconoce y aplica nociones fundamentales de lógica matemática para resolver problemas en el contexto computacional y ciencias afines."
+      },
+      {
+        "area": "Idioma Inglés",
+        "descripcion": "Maneja el idioma inglés a nivel básico, que le permita asimilar los conceptos informáticos que fortalecerán su formación."
+      },
+      {
+        "area": "Habilidades Interpersonales",
+        "descripcion": "Denota en sus relaciones intra e interpersonales autodominio y compañerismo para integrarse y desempeñarse en equipo, así como interés permanente en los estudios."
+      },
+      {
+        "area": "Ética",
+        "descripcion": "Denota conducta ética en lo personal y social."
+      },
+      {
+        "area": "Pensamiento Abstracto",
+        "descripcion": "Denota capacidad de abstracción para la elaboración de modelos de la realidad y para la solución de problemas."
+      }
+    ],
+    "perspectivasOcupacionales": [
+      "Desarrollo de software inteligente y de aplicaciones móviles",
+      "Entrenamiento de modelos computacionales de procesamiento gráfico",
+      "Análisis y diseño de software empresarial",
+      "Gestión de proyectos informáticos",
+      "Asesoría y/o administración de empresas dedicadas a la Informática",
+      "Aplicación de modelos matemáticos, heurísticos, estadísticos e informáticos",
+      "Participación en centros de investigación"
+    ],
+    "titulacion": [
+      {
+        "descripcion": "Elaboración y sustentación de una tesis de investigación inédita, conforme a la Directiva y el reglamento del Comité de Dirección de la EPI, aprobados por el Consejo de Facultad.",
+        "modalidad": "Tesis de Investigación",
+        "requisitos": [
+          "Tener el grado académico de Bachiller en Ciencias de la Computación",
+          "Elaborar una tesis de investigación inédita",
+          "Sustentar la tesis ante el jurado designado"
+        ]
+      },
+      {
+        "descripcion": "Elaboración y sustentación de un trabajo de suficiencia profesional inédito, conforme a la Directiva y el reglamento del Comité de Dirección de la EPI, aprobados por el Consejo de Facultad.",
+        "modalidad": "Trabajo de Suficiencia Profesional",
+        "requisitos": [
+          "Tener el grado académico de Bachiller en Ciencias de la Computación",
+          "Elaborar un trabajo de suficiencia profesional inédito",
+          "Sustentar el trabajo ante el jurado designado"
+        ]
+      }
+    ],
+    "tituloProfesional": "Ingeniero Informático",
+    "tramites": [
+      {
+        "descripcion": "Requisitos para ser declarado expedito para optar el Grado de Bachiller, según el Art. 45.1 de la Ley Universitaria N° 30220.",
+        "id": "bachiller",
+        "pdfUrl": "/media/7.pdf",
+        "requisitos": [
+          "Aprobar un total de 213 créditos entre estudios generales, específicos y de especialidad del currículo de la EPI",
+          "Aprobar un trabajo de investigación, según la Directiva del Comité de Dirección de Escuela aprobada por el Consejo de Facultad",
+          "Acreditar, con certificado de aprobación, el conocimiento del idioma inglés en los niveles básico e intermedio"
+        ],
+        "titulo": "Grado de Bachiller en Ciencias de la Computación"
+      },
+      {
+        "descripcion": "Requisitos para ser declarado expedito para optar el Título Profesional, según el Art. 45.2 de la Ley Universitaria N° 30220.",
+        "id": "titulo",
+        "pdfUrl": "",
+        "requisitos": [
+          "Tener el grado académico de Bachiller en Ciencias de la Computación",
+          "Aprobar una tesis de investigación inédita o un trabajo de suficiencia profesional inédito",
+          "Cumplir la Directiva y el reglamento de elaboración y sustentación aprobados por el Consejo de Facultad"
+        ],
+        "titulo": "Título Profesional de Ingeniero Informático"
+      }
+    ]
+  },
+  "administrativos": {
+    "items": [
+      {
+        "area": "Secretaría de Escuela",
+        "cargo": "Técnico administrativo",
+        "nombre": "Ms. Nombre Apellido (ejemplo)"
+      },
+      {
+        "area": "Secretaría de Departamento Académico",
+        "cargo": "Técnico administrativo",
+        "nombre": "Tec. Nombre Apellido (ejemplo)"
+      },
+      {
+        "area": "Laboratorio de Cómputo",
+        "cargo": "Técnico de laboratorio",
+        "nombre": "Ing. Nombre Apellido (ejemplo)"
+      },
+      {
+        "area": "Laboratorio de Redes",
+        "cargo": "Técnico de laboratorio",
+        "nombre": "Ing. Nombre Apellido (ejemplo)"
+      },
+      {
+        "area": "Laboratorio de Investigación",
+        "cargo": "Técnico de laboratorio",
+        "nombre": "Ing. Nombre Apellido (ejemplo)"
+      }
+    ]
+  },
+  "admision": {
+    "infoUtil": [
+      {
+        "detalle": "Comunes a la mayoría de modalidades: foto pasaporte a color, DNI o carné de extranjería (anverso y reverso) y declaración jurada de veracidad, además del documento propio de cada modalidad (constancia de estudios, certificado de discapacidad, título profesional, etc.) y el comprobante de pago correspondiente.",
+        "titulo": "Requisitos"
+      },
+      {
+        "detalle": "Inscripción virtual (Ordinario y Quinto de Secundaria): 15 de junio al 08 de agosto de 2026. Examen presencial: 22 y 23 de agosto de 2026, según área. CEPUNT-I: sumativos el 24 de mayo, 28 de junio y 02 de agosto de 2026.",
+        "titulo": "Fechas (Admisión 2027-I)"
+      },
+      {
+        "detalle": "Examen Ordinario, Quinto de Secundaria, Premios de Excelencia, Discapacidad, Deportistas y Víctimas de la Violencia: S/ 400. Traslado interno: S/ 280. Traslado externo: S/ 540. Segunda profesión: S/ 1,000. Acreditación de ingresantes: S/ 50 (+S/ 400 adicional para CEPUNT).",
+        "titulo": "Costos de inscripción"
+      }
+    ],
+    "modalidades": [
+      {
+        "descripcion": "Ingreso mediante examen de admisión presencial. Costo de inscripción: S/ 400. Examen: 22 o 23 de agosto de 2026, según área.",
+        "dirigidoA": "Egresados de educación secundaria del país o del extranjero.",
+        "titulo": "Examen Ordinario",
+        "vacantes": "18 vacantes en Ing. Informática (Admisión 2027-I)"
+      },
+      {
+        "descripcion": "Ingreso mediante tres evaluaciones sumativas a lo largo del ciclo (24 de mayo, 28 de junio y 02 de agosto de 2026). Más información en cepunt.edu.pe.",
+        "dirigidoA": "Egresados del Centro Preuniversitario de la UNT (CEPUNT).",
+        "titulo": "CEPUNT-I",
+        "vacantes": "14 vacantes en Ing. Informática (Admisión 2027-I)"
+      },
+      {
+        "descripcion": "Reserva de vacante con constancia de estudios y autorización del padre o apoderado; la acreditación final se completa al egresar de secundaria. Costo de inscripción: S/ 400.",
+        "dirigidoA": "Estudiantes que cursan el quinto año de secundaria.",
+        "titulo": "Quinto de Secundaria",
+        "vacantes": "3 vacantes en Ing. Informática (Admisión 2027-I)"
+      },
+      {
+        "descripcion": "Modalidad para estudiantes con el mejor orden de mérito de los cinco grados de secundaria. Costo de inscripción: S/ 400.",
+        "dirigidoA": "Los dos primeros puestos de su promoción escolar (egresados desde 2025).",
+        "titulo": "Premios de Excelencia",
+        "vacantes": "3 vacantes en Ing. Informática (Admisión 2027-I)"
+      },
+      {
+        "descripcion": "Modalidad inclusiva; requiere certificado de discapacidad emitido por una institución prestadora de salud. Costo de inscripción: S/ 400.",
+        "dirigidoA": "Postulantes con discapacidad certificada.",
+        "titulo": "Personas con Discapacidad",
+        "vacantes": "2 vacantes en Ing. Informática (Admisión 2027-I)"
+      }
+    ],
+    "portal": {
+      "label": "Portal de Admisión UNT",
+      "url": "https://www.admisionunt.info/carreraDetalle/27"
+    }
+  },
+  "autoridades": {
+    "coordinadores": [],
+    "decano": {
+      "cargo": "Decano",
+      "facultad": "Facultad de Ciencias Físicas y Matemáticas",
+      "nombre": "Dr. Mario Elder Chávez Bacilio"
+    },
+    "director": {
+      "bio": "Magíster, docente del Departamento Académico de Informática de la Universidad Nacional de Trujillo.",
+      "cargo": "Director de la Escuela Profesional de Informática",
+      "correo": "informatica@unitru.edu.pe",
+      "nombre": "Mg. Edwin Ricardo Mendoza Torres"
+    },
+    "directorDepartamento": {
+      "bio": "Doctor, docente del Departamento Académico de Informática de la Universidad Nacional de Trujillo.",
+      "cargo": "Director del Departamento Académico de Informática",
+      "correo": "informatica@unitru.edu.pe",
+      "nombre": "Dr. Jorge Luis Gutiérrez Gutiérrez"
+    },
+    "organigrama": {
+      "cargo": "Decano(a)",
+      "hijos": [
+        {
+          "cargo": "Director(a) de Escuela",
+          "nombre": "Escuela Profesional"
+        },
+        {
+          "cargo": "Jefe(s) de Departamento",
+          "nombre": "Departamentos Académicos"
+        },
+        {
+          "cargo": "",
+          "nombre": "Unidad de Segunda Especialidad"
+        },
+        {
+          "cargo": "",
+          "nombre": "Unidad de Investigación"
+        },
+        {
+          "cargo": "",
+          "nombre": "Unidad de Posgrado"
+        }
+      ],
+      "nombre": "Facultad"
+    }
+  },
+  "avisos": {
+    "items": []
+  },
+  "branding": {
+    "alt": {
+      "bolsaTrabajo": "Bolsa de trabajo",
+      "escuela": "Escuela Profesional de Informática - UNT",
+      "universidad": "Universidad Nacional de Trujillo"
+    },
+    "heroImages": [
+      {
+        "position": "center 40%",
+        "src": "/media/5.webp"
+      },
+      {
+        "position": "center 40%",
+        "src": "/media/6.webp"
+      }
+    ],
+    "logos": {
+      "bolsaTrabajo": "/media/3.png",
+      "escuela": "/media/4.svg",
+      "libroReclamaciones": "/media/2.svg",
+      "universidad": "/media/1.png"
+    }
+  },
+  "comites": {
+    "items": [
+      {
+        "descripcion": "Autoevaluación y acreditación de la calidad del programa.",
+        "id": "calidad",
+        "titulo": "Comité de **Calidad**"
+      },
+      {
+        "id": "curriculo",
+        "titulo": "Comité Técnico de **Currículo**"
+      },
+      {
+        "id": "tutoria",
+        "titulo": "Comité de **Tutoría y Consejería**"
+      },
+      {
+        "id": "egresado",
+        "titulo": "Comité de **Seguimiento al Egresado**"
+      },
+      {
+        "id": "investigacion",
+        "titulo": "Comité de **Investigación**"
+      },
+      {
+        "id": "responsabilidad",
+        "titulo": "Comité de **Responsabilidad Social**"
+      }
+    ]
+  },
+  "contacto": {
+    "informacion": {
+      "correo": "informatica@unitru.edu.pe",
+      "direccion": "Av. Juan Pablo II S/N, Ciudad Universitaria, Facultad de Ciencias Físicas y Matemáticas, Trujillo - La Libertad, Perú",
+      "horarioAtencion": "Lunes a Viernes: 00:00 a 00:00 hrs",
+      "mapaEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.8639416386454!2d-79.04060262392989!3d-8.115333091913945!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ad3d9fb3467261%3A0x752547ad9a204df6!2sUniversidad%20Nacional%20de%20Trujillo%20(UNT)!5e0!3m2!1ses!2spe!4v1783007550403!5m2!1ses!2spe",
+      "mapaTitulo": "Universidad Nacional de Trujillo (UNT)",
+      "telefonos": [
+        "(00) 000-0000 Anexo: 000"
+      ]
+    },
+    "redes": {
+      "facebook": "https://www.facebook.com/profile.php?id=61569647381199",
+      "instagram": "#",
+      "twitter": "#",
+      "youtube": "#"
+    }
+  },
+  "docentes": [
+    {
+      "categoriaInvestigacion": "RENACYT · Nivel VI",
+      "cursoPrincipal": "Algoritmos, Complejidad y Lenguajes de Programación",
+      "departamento": "Departamento Académico de Informática",
+      "especialidades": [
+        "Algoritmos, complejidad y lenguajes de programación",
+        "Optimización combinatoria"
+      ],
+      "foto": null,
+      "grado": "Dr.",
+      "investigador": true,
+      "nombre": "José Antonio Rodríguez Melquiades"
+    },
+    {
+      "cursoPrincipal": "Arquitectura y Organización de Computadoras",
+      "departamento": "Departamento Académico de Informática",
+      "especialidades": [
+        "Arquitectura y organización de computadoras"
+      ],
+      "foto": null,
+      "fotoPosicion": "30% 25%",
+      "grado": "Mg.",
+      "investigador": false,
+      "nombre": "José Gabriel Cruz Silva"
+    },
+    {
+      "cursoPrincipal": "Ingeniería de Software",
+      "departamento": "Departamento Académico de Informática",
+      "especialidades": [
+        "Ingeniería de Software",
+        "Lenguajes de Programación",
+        "Simulación"
+      ],
+      "foto": null,
+      "grado": "Mg.",
+      "investigador": false,
+      "nombre": "Yenny Milagritos Sifuentes Díaz"
+    },
+    {
+      "cursoPrincipal": "Ingeniería de Software",
+      "departamento": "Departamento Académico de Informática",
+      "especialidades": [
+        "Ingeniería de Software",
+        "Lenguajes de Programación",
+        "Optimización Combinatoria"
+      ],
+      "foto": null,
+      "grado": "Ing.",
+      "investigador": false,
+      "nombre": "Iris Áurea Cruz Florián"
+    },
+    {
+      "cursoPrincipal": "Sistemas Inteligentes",
+      "departamento": "Departamento Académico de Informática",
+      "especialidades": [
+        "Sistemas Inteligentes",
+        "Ingeniería de software"
+      ],
+      "foto": null,
+      "grado": "Mg.",
+      "investigador": false,
+      "nombre": "Liz Sofía Raymunda Pedro Huamán"
+    },
+    {
+      "cursoPrincipal": "Ingeniería de Software",
+      "departamento": "Departamento Académico de Informática",
+      "especialidades": [
+        "Ingeniería de Software",
+        "Procesadores de Lenguajes",
+        "Auditoría Informática"
+      ],
+      "foto": null,
+      "grado": "Mg.",
+      "investigador": false,
+      "nombre": "Carlos Enrique Castillo Diestra"
+    },
+    {
+      "cursoPrincipal": "Departamento de Informática",
+      "departamento": "Departamento Académico de Informática",
+      "especialidades": [],
+      "foto": null,
+      "grado": "Ing.",
+      "investigador": false,
+      "nombre": "Jorge Luis Alvarado Ramos"
+    },
+    {
+      "categoriaInvestigacion": "RENACYT · Nivel VI",
+      "cursoPrincipal": "Director del Departamento Académico de Informática",
+      "departamento": "Departamento Académico de Informática",
+      "especialidades": [],
+      "foto": null,
+      "grado": "Dr.",
+      "investigador": true,
+      "nombre": "Jorge Luis Gutiérrez Gutiérrez"
+    },
+    {
+      "cursoPrincipal": "Director de la Escuela Profesional de Informática",
+      "departamento": "Departamento Académico de Informática",
+      "especialidades": [],
+      "foto": null,
+      "grado": "Mg.",
+      "investigador": false,
+      "nombre": "Edwin Ricardo Mendoza Torres"
+    },
+    {
+      "cursoPrincipal": "Departamento de Informática",
+      "departamento": "Departamento Académico de Informática",
+      "especialidades": [],
+      "foto": null,
+      "grado": "Ing.",
+      "investigador": false,
+      "nombre": "Christian Araujo González"
+    },
+    {
+      "cursoPrincipal": "Departamento de Informática",
+      "departamento": "Departamento Académico de Informática",
+      "especialidades": [],
+      "foto": null,
+      "grado": "Mg.",
+      "investigador": false,
+      "nombre": "Ricardo Martín Guevara Ruíz"
+    },
+    {
+      "cursoPrincipal": "Departamento de Informática",
+      "departamento": "Departamento Académico de Informática",
+      "especialidades": [],
+      "foto": null,
+      "grado": "Mg.",
+      "investigador": false,
+      "nombre": "Anthony Junior Gómez Morales"
+    },
+    {
+      "cursoPrincipal": "Departamento de Informática",
+      "departamento": "Departamento Académico de Informática",
+      "especialidades": [],
+      "foto": null,
+      "grado": "Mg.",
+      "investigador": false,
+      "nombre": "Jorge David Bravo Escalante"
+    },
+    {
+      "cursoPrincipal": "Departamento de Informática",
+      "departamento": "Departamento Académico de Informática",
+      "especialidades": [],
+      "foto": null,
+      "grado": "Mg.",
+      "investigador": false,
+      "nombre": "José Andrés Díaz Pulido"
+    },
+    {
+      "cursoPrincipal": "Departamento de Informática",
+      "departamento": "Departamento Académico de Informática",
+      "especialidades": [],
+      "foto": null,
+      "grado": "Mg.",
+      "investigador": false,
+      "nombre": "José Luis Peralta Luján"
+    },
+    {
+      "categoriaInvestigacion": "RENACYT · Nivel VII",
+      "condicion": "Contratado",
+      "cursoPrincipal": "Departamento de Informática",
+      "departamento": "Departamento Académico de Informática",
+      "especialidades": [],
+      "foto": null,
+      "grado": "",
+      "investigador": true,
+      "nombre": "Wilmer Aufredy Apaza Chávez"
+    }
+  ],
+  "escuela": {
+    "dominio": "",
+    "facultadId": 1,
+    "facultadNombre": "Facultad de Ciencias Físicas y Matemáticas",
+    "id": 1,
+    "nombre": "Escuela Profesional de Informática",
+    "slug": "informatica",
+    "universidadId": 1,
+    "universidadNombre": "Universidad Nacional de Trujillo"
+  },
+  "estadisticas": {},
+  "home": {
+    "accesosRapidos": [
+      {
+        "descripcion": "Perfil de ingreso y de egreso del programa.",
+        "icono": "UserCheck",
+        "link": "/academico/perfiles",
+        "titulo": "Perfiles Académicos"
+      },
+      {
+        "descripcion": "Malla curricular actualizada por ciclos.",
+        "icono": "BookOpen",
+        "link": "/academico/malla-curricular",
+        "titulo": "Plan de Estudios"
+      },
+      {
+        "descripcion": "Profesores e investigadores comprometidos.",
+        "icono": "Users",
+        "link": "/organizacion/docentes",
+        "titulo": "Plana Docente"
+      },
+      {
+        "descripcion": "Líneas, proyectos y publicaciones activas.",
+        "icono": "FlaskConical",
+        "link": "/investigacion/proyectos",
+        "titulo": "Investigación"
+      },
+      {
+        "descripcion": "Pasos y requisitos para tu titulación.",
+        "icono": "GraduationCap",
+        "link": "/academico/titulacion",
+        "titulo": "Grados y Títulos"
+      },
+      {
+        "descripcion": "Alianzas con instituciones y empresas aliadas.",
+        "icono": "Handshake",
+        "link": "/academico/convenios",
+        "titulo": "Convenios"
+      }
+    ],
+    "ambientes": [
+      {
+        "alt": "Laboratorios de la Escuela de Informática",
+        "badge": "Ambiente",
+        "descripcion": "Espacios equipados con computadoras donde se desarrollan las prácticas de las experiencias curriculares teórico-práctico-laboratorio de la formación en Informática.",
+        "imagen": "https://picsum.photos/seed/laboratorios/800/600",
+        "titulo": "Laboratorios"
+      }
+    ]
+  },
+  "identidad": {
+    "historia": {
+      "fundacion": 1995,
+      "hitos": [
+        {
+          "año": 1995,
+          "descripcion": "Fundación del programa de estudios el 12 de septiembre, impulsado por docentes del Departamento de Matemáticas. Primeras clases en el aula F9 de la Escuela de Física, con un laboratorio de 8 computadoras Olivetti. Prof. Oswaldo Sánchez Rosales, primer coordinador."
+        },
+        {
+          "año": 1996,
+          "descripcion": "El Dr. Ausberto Castro asume como primer Director de Escuela. El 25 de abril, el Consejo Universitario aprueba ajustes al currículo del programa."
+        },
+        {
+          "año": 1997,
+          "descripcion": "Aprobación oficial del currículo mediante Resolución Rectoral No. 1037-97/UNT, del 29 de mayo."
+        },
+        {
+          "año": 2018,
+          "descripcion": "Aprobación del currículo vigente del programa de estudios de Informática mediante Resolución de Consejo Universitario No. 065-2018/UNT, alineado al estándar internacional de la ACM (Association for Computing Machinery)."
+        }
+      ],
+      "resena": "El programa de estudios de la Escuela Profesional de Informática (EPI) de la Universidad Nacional de Trujillo hace ciencia de la computación desde 1995, impulsado por docentes del Departamento de Matemáticas. Sus primeras clases se dictaron en el aula F9 de la Escuela de Física, con un laboratorio de 8 computadoras Olivetti."
+    },
+    "mision": "Formación académica de recursos humanos en computación a nivel de pregrado, con el objetivo de generar y difundir el conocimiento comprometido con los desafíos nacionales e internacionales, que llevan al avance científico y tecnológico de la computación.",
+    "misionUnt": "Somos la primera universidad republicana del Perú, formamos profesionales y académicos competitivos, con calidad, críticos, éticos y socialmente responsables; creamos valor generando y transfiriendo conocimiento científico, tecnológico, humanístico e innovador, para el desarrollo sostenible de la Región La Libertad y del país.",
+    "objetivosAcademicos": {
+      "especificas": [
+        "Participa en proyectos multidisciplinarios para resolver problemas computacionales en diferentes ámbitos de la sociedad demostrando su competencia profesional e integridad.",
+        "Aplica con ética profesional conocimientos computacionales teórico-práctico-aplicación involucrándose como actor principal del desarrollo de la sociedad."
+      ],
+      "generica": "Demuestra conocimientos teóricos-prácticos del campo de la informática que lo habilitan para desenvolverse como profesionales e investigadores en ciencia computacional, competentes e íntegros con responsabilidad social, capaces de resolver problemas computacionales en diferentes ámbitos de la sociedad, con calidad y rigor científico para lograr el desarrollo sostenible de la región y del país."
+    },
+    "objetivosEducacionales": [
+      {
+        "codigo": "OE1",
+        "descripcion": "Hayan participado en proyectos multidisciplinarios para resolver problemas computacionales en diferentes ámbitos de la sociedad demostrando su competencia profesional e integridad."
+      },
+      {
+        "codigo": "OE2",
+        "descripcion": "Haya mejorado sus competencias profesionales o de investigación a lo largo de su vida."
+      },
+      {
+        "codigo": "OE3",
+        "descripcion": "Hayan sido un agente de cambio haciendo uso de la computación, con responsabilidad social y ética para lograr el desarrollo sostenible de la región y del país."
+      }
+    ],
+    "objetivosEducacionalesUnt": [
+      {
+        "codigo": "4.1",
+        "descripcion": "Garantizar la calidad del proceso de formación integral de los estudiantes mediante el logro de las competencias previstas en el perfil de egreso y la satisfacción de los grupos de interés."
+      },
+      {
+        "codigo": "4.2",
+        "descripcion": "Implementar estrategias de mejora curricular como resultado de la evaluación de la gestión académica al programa de formación, dando cuenta del cumplimiento de la misión y objetivos de calidad, en el marco del modelo educativo institucional."
+      },
+      {
+        "codigo": "4.3",
+        "descripcion": "Contribuir socialmente al desarrollo y competitividad del país, desde la acción formadora de alta calidad."
+      }
+    ],
+    "valores": [
+      {
+        "descripcion": "Búsqueda y comunicación honesta del conocimiento en la formación y la práctica profesional.",
+        "nombre": "Verdad"
+      },
+      {
+        "descripcion": "Coherencia entre lo que se piensa, se dice y se hace en la vida académica y profesional.",
+        "nombre": "Honestidad"
+      },
+      {
+        "descripcion": "Rectitud e integridad en el actuar personal, académico y de investigación.",
+        "nombre": "Honradez"
+      },
+      {
+        "descripcion": "Autonomía de pensamiento y de acción, ejercida con responsabilidad.",
+        "nombre": "Libertad"
+      },
+      {
+        "descripcion": "Compromiso con el bienestar de la comunidad universitaria y de la sociedad.",
+        "nombre": "Solidaridad"
+      },
+      {
+        "descripcion": "Cumplimiento consciente de los deberes académicos, profesionales y sociales.",
+        "nombre": "Responsabilidad"
+      }
+    ],
+    "vision": "La Escuela Profesional de Informática (EPI) será líder nacional en la enseñanza e investigación, preparando ciudadanos que puedan contribuir con la creatividad, la humanidad y la innovación para una sociedad global justa y con éxito.",
+    "visionUnt": "Al 2024, ubicada entre las cinco primeras universidades del Perú, reconocida por su calidad, por su vocación democrática, por la formación integral del talento humano, la investigación científica, tecnológica, humanística y la innovación; con responsabilidad social satisface a los grupos de interés y contribuye al desarrollo sostenible de la Región La Libertad y el país."
+  },
+  "investigacion": {
+    "convenios": [],
+    "conveniosOrni": {
+      "becasYRedes": "https://orni.unitru.edu.pe/convenios/becas-y-redes/",
+      "comoSuscribir": "https://orni.unitru.edu.pe/como-suscribir-un-convenio-con-la-unt/",
+      "internacionales": [
+        {
+          "pais": "Estados Unidos",
+          "url": "https://orni.unitru.edu.pe/estados-unidos/"
+        },
+        {
+          "pais": "México",
+          "url": "https://orni.unitru.edu.pe/mexico/"
+        },
+        {
+          "pais": "Brasil",
+          "url": "https://orni.unitru.edu.pe/brasil/"
+        },
+        {
+          "pais": "Uruguay",
+          "url": "https://orni.unitru.edu.pe/urugay/"
+        },
+        {
+          "pais": "Paraguay",
+          "url": "https://orni.unitru.edu.pe/paraguay/"
+        },
+        {
+          "pais": "Argentina",
+          "url": "https://orni.unitru.edu.pe/argentina/"
+        },
+        {
+          "pais": "Colombia",
+          "url": "https://orni.unitru.edu.pe/colombia/"
+        },
+        {
+          "pais": "Ecuador",
+          "url": "https://orni.unitru.edu.pe/ecuador/"
+        },
+        {
+          "pais": "Cuba",
+          "url": "https://orni.unitru.edu.pe/cuba/"
+        },
+        {
+          "pais": "Chile",
+          "url": "https://orni.unitru.edu.pe/chile/"
+        },
+        {
+          "pais": "Costa Rica",
+          "url": "https://orni.unitru.edu.pe/costa-rica/"
+        },
+        {
+          "pais": "Puerto Rico",
+          "url": "https://orni.unitru.edu.pe/puerto-rico/"
+        },
+        {
+          "pais": "España",
+          "url": "https://orni.unitru.edu.pe/espana/"
+        },
+        {
+          "pais": "Nigeria",
+          "url": "https://orni.unitru.edu.pe/nigeria/"
+        },
+        {
+          "pais": "Italia",
+          "url": "https://orni.unitru.edu.pe/italia/"
+        },
+        {
+          "pais": "República Checa",
+          "url": "https://orni.unitru.edu.pe/republica-checa/"
+        },
+        {
+          "pais": "Alemania",
+          "url": "https://orni.unitru.edu.pe/alemania/"
+        },
+        {
+          "pais": "Francia",
+          "url": "https://orni.unitru.edu.pe/francia/"
+        },
+        {
+          "pais": "Rusia",
+          "url": "https://orni.unitru.edu.pe/rusia/"
+        },
+        {
+          "pais": "Israel",
+          "url": "https://orni.unitru.edu.pe/israel/"
+        },
+        {
+          "pais": "Bolivia",
+          "url": "https://orni.unitru.edu.pe/bolivia/"
+        },
+        {
+          "pais": "Austria",
+          "url": "https://orni.unitru.edu.pe/austria/"
+        }
+      ],
+      "nacionales": [
+        {
+          "descripcion": "Convenios con universidades del país, organizados por región.",
+          "nombre": "Universidades",
+          "url": "https://orni.unitru.edu.pe/universidades/"
+        },
+        {
+          "descripcion": "Alianzas con gobiernos regionales.",
+          "nombre": "Gobiernos regionales",
+          "url": "https://orni.unitru.edu.pe/gobiernos-regionales-y-locales/"
+        },
+        {
+          "descripcion": "Alianzas con municipalidades.",
+          "nombre": "Gobiernos locales",
+          "url": "https://orni.unitru.edu.pe/gobiernos-locales/"
+        },
+        {
+          "descripcion": "Convenios con instituciones y redes nacionales.",
+          "nombre": "Instituciones públicas",
+          "url": "https://orni.unitru.edu.pe/instituciones-y-redes-nacionales/"
+        },
+        {
+          "descripcion": "Convenios con empresas e instituciones privadas.",
+          "nombre": "Instituciones privadas",
+          "url": "https://orni.unitru.edu.pe/empresas/"
+        },
+        {
+          "descripcion": "Convenios con organizaciones no gubernamentales.",
+          "nombre": "Organizaciones sin fines de lucro",
+          "url": "https://orni.unitru.edu.pe/organizaciones-sin-fines-de-lucro/"
+        }
+      ],
+      "portal": "https://orni.unitru.edu.pe/convenios/"
+    },
+    "lineasInvestigacion": [
+      {
+        "descripcion": "Diseño y análisis de algoritmos, estrategias algorítmicas, lenguajes formales y autómatas, y compiladores.",
+        "nombre": "Algoritmos y Complejidad",
+        "responsable": "Docentes del área"
+      },
+      {
+        "descripcion": "Métodos, procesos y herramientas para el desarrollo, arquitectura y calidad de sistemas de software.",
+        "nombre": "Ingeniería de Software",
+        "responsable": "Docentes del área"
+      },
+      {
+        "descripcion": "Diseño, optimización y administración de bases de datos, incluyendo bases de datos avanzadas y distribuidas.",
+        "nombre": "Administración de la Información",
+        "responsable": "Docentes del área"
+      },
+      {
+        "descripcion": "Inteligencia artificial, aprendizaje automático, percepción y visión por computadora, y robótica.",
+        "nombre": "Sistemas Inteligentes",
+        "responsable": "Docentes del área"
+      },
+      {
+        "descripcion": "Organización de computadoras, redes de datos, sistemas operativos y seguridad informática.",
+        "nombre": "Arquitectura de Computadoras, Redes y Comunicaciones",
+        "responsable": "Docentes del área"
+      },
+      {
+        "descripcion": "Computación gráfica, interacción humano-computador y tecnologías inmersivas.",
+        "nombre": "Gráficos, Visualización e Interacción Humano-Computador",
+        "responsable": "Docentes del área"
+      }
+    ],
+    "proyectos": [],
+    "publicaciones": [],
+    "revistas": [
+      {
+        "correo": "technologica@unitru.edu.pe",
+        "descripcion": "Difunde investigación científica, tecnológica y profesional en informática, ingeniería de sistemas y áreas afines: ciencia de datos, inteligencia artificial, ciberseguridad, ingeniería de software, IoT, computación en la nube y criptografía. Promueve la investigación, la innovación y el intercambio de conocimiento entre estudiantes, docentes y profesionales.",
+        "direccion": "Calle Ayacucho 282, Jequetepeque, Pacasmayo, La Libertad, Perú",
+        "editorial": "Universidad Nacional de Trujillo · Filial Valle Jequetepeque",
+        "enlaces": [
+          {
+            "etiqueta": "Sitio de la revista",
+            "url": "https://revistas.unitru.edu.pe/index.php/ctech"
+          },
+          {
+            "etiqueta": "Número actual",
+            "url": "https://revistas.unitru.edu.pe/index.php/ctech/issue/current"
+          },
+          {
+            "etiqueta": "Archivo",
+            "url": "https://revistas.unitru.edu.pe/index.php/ctech/issue/archive"
+          },
+          {
+            "etiqueta": "Envíos",
+            "url": "https://revistas.unitru.edu.pe/index.php/ctech/about/submissions"
+          }
+        ],
+        "nombre": "Científica TechNoLogica",
+        "numeroActual": {
+          "articulos": [
+            "Fundamentos matemáticos de las consultas relacionales aplicados a un sistema de gestión de bolsa de trabajo",
+            "Extorsión e inseguridad ciudadana percibida en Chepén: un análisis correlacional con datos simulados",
+            "Diseño e implementación de un sistema de gestión de cine con MySQL y VBA Excel",
+            "Formas normales en bases de datos relacionales: de la Primera a la Quinta Forma Normal y BCNF",
+            "UNITRABAJO: una base de datos para la gestión de ofertas laborales estudiantiles en la Facultad de Ingeniería"
+          ],
+          "tema": "Fundamentos matemáticos y teóricos de las bases de datos: álgebra y cálculo relacional, normalización y forma normal de Boyce-Codd (BCNF).",
+          "titulo": "Vol. 1, N.º 3 (2026) · julio - septiembre"
+        }
+      }
+    ]
+  },
+  "laboratorios": {},
+  "malla": {
+    "anio": 2018,
+    "cursos": [
+      {
+        "credits": 4,
+        "cycle": "Ciclo I",
+        "description": "Fundamentos de lógica de programación, algoritmos y su implementación en un lenguaje de programación.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "13021",
+        "isElective": false,
+        "name": "Algoritmos y Programación",
+        "type": "especialidad"
+      },
+      {
+        "credits": 3,
+        "cycle": "Ciclo I",
+        "description": "Razonamiento lógico-matemático aplicado a la resolución de problemas.",
+        "hoursP": 4,
+        "hoursT": 1,
+        "id": "13023",
+        "isElective": false,
+        "name": "Desarrollo del Pensamiento Lógico Matemático",
+        "type": "general"
+      },
+      {
+        "credits": 3,
+        "cycle": "Ciclo I",
+        "description": "Herramientas de autoconocimiento, inteligencia emocional y proyecto de vida para la etapa universitaria.",
+        "hoursP": 2,
+        "hoursT": 2,
+        "id": "13024",
+        "isElective": false,
+        "name": "Desarrollo Personal",
+        "type": "general"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo I",
+        "description": "Fundamentos de mecánica clásica y magnitudes físicas aplicadas a problemas de ingeniería.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "13027",
+        "isElective": false,
+        "name": "Física General",
+        "type": "general"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo I",
+        "description": "Funciones, límites y bases del cálculo diferencial como preparación al análisis matemático.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "13028",
+        "isElective": false,
+        "name": "Introducción al Análisis Matemático",
+        "type": "general"
+      },
+      {
+        "credits": 3,
+        "cycle": "Ciclo I",
+        "description": "Comprensión lectora y producción de textos académicos con rigor gramatical y argumentativo.",
+        "hoursP": 2,
+        "hoursT": 2,
+        "id": "13029",
+        "isElective": false,
+        "name": "Lectura Crítica y Redacción de Textos Académicos",
+        "type": "general"
+      },
+      {
+        "credits": 1,
+        "cycle": "Ciclo I",
+        "description": "Habilidades blandas de liderazgo, comunicación y trabajo colaborativo en equipo.",
+        "hoursP": 2,
+        "hoursT": 0,
+        "id": "13031",
+        "isElective": false,
+        "name": "Taller de Liderazgo y Trabajo en Equipo",
+        "type": "general"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo II",
+        "description": "Cálculo diferencial e integral de una variable.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "13034",
+        "isElective": false,
+        "name": "Análisis Matemático",
+        "type": "general"
+      },
+      {
+        "credits": 3,
+        "cycle": "Ciclo II",
+        "description": "Bases del método científico y del pensamiento crítico aplicados a la investigación.",
+        "hoursP": 2,
+        "hoursT": 2,
+        "id": "13036",
+        "isElective": false,
+        "name": "Cultura Investigativa y Pensamiento Crítico",
+        "type": "general"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo II",
+        "description": "Estadística descriptiva e inferencial aplicada al análisis de datos.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "13038",
+        "isElective": false,
+        "name": "Estadística General",
+        "type": "general"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo II",
+        "description": "Estructuras de datos lineales y no lineales, y su implementación eficiente.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "13039",
+        "isElective": false,
+        "name": "Estructura de Datos",
+        "type": "especialidad"
+      },
+      {
+        "credits": 3,
+        "cycle": "Ciclo II",
+        "description": "Principios éticos, convivencia democrática y ejercicio de la ciudadanía.",
+        "hoursP": 2,
+        "hoursT": 2,
+        "id": "13040",
+        "isElective": false,
+        "name": "Ética, Convivencia Humana y Ciudadanía",
+        "type": "general"
+      },
+      {
+        "credits": 3,
+        "cycle": "Ciclo II",
+        "description": "Relación entre sociedad, cultura y medio ambiente desde una mirada crítica y sostenible.",
+        "hoursP": 4,
+        "hoursT": 1,
+        "id": "13043",
+        "isElective": false,
+        "name": "Sociedad, Cultura y Ecología",
+        "type": "general"
+      },
+      {
+        "credits": 1,
+        "cycle": "Ciclo II",
+        "description": "Uso de herramientas ofimáticas y tecnologías de información y comunicación para el trabajo académico.",
+        "hoursP": 2,
+        "hoursT": 0,
+        "id": "13046",
+        "isElective": false,
+        "name": "Taller de Manejo de TIC",
+        "type": "general"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo III",
+        "description": "Geometría analítica en el plano y el espacio como herramienta para la computación gráfica.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "13629",
+        "isElective": false,
+        "name": "Geometría Analítica",
+        "type": "especifico"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo III",
+        "description": "Paradigmas de programación (estructurado, funcional, orientado a objetos) y su aplicación.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "13630",
+        "isElective": false,
+        "name": "Paradigmas de Lenguajes de Programación",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo III",
+        "description": "Técnicas de diseño de algoritmos: divide y vencerás, voraz, programación dinámica y backtracking.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "13631",
+        "isElective": false,
+        "name": "Estrategias Algorítmicas",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo III",
+        "description": "Lógica, teoría de conjuntos, combinatoria y teoría de grafos aplicadas a la computación.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "13632",
+        "isElective": false,
+        "name": "Matemática Discreta",
+        "type": "especifico"
+      },
+      {
+        "credits": 3,
+        "cycle": "Ciclo III",
+        "description": "Fundamentos de física aplicados al diseño y funcionamiento de sistemas computacionales.",
+        "hoursP": 2,
+        "hoursT": 2,
+        "id": "13633",
+        "isElective": false,
+        "name": "Física para Ciencia de la Computación",
+        "type": "especifico"
+      },
+      {
+        "credits": 3,
+        "cycle": "Ciclo III",
+        "description": "Métodos numéricos para la resolución aproximada de problemas matemáticos mediante computadora.",
+        "hoursP": 2,
+        "hoursT": 2,
+        "id": "13634",
+        "isElective": false,
+        "name": "Análisis Numérico",
+        "type": "especifico"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo IV",
+        "description": "Fundamentos de gráficos por computadora: modelado, transformaciones y renderizado 2D/3D.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "13635",
+        "isElective": false,
+        "name": "Computación Gráfica",
+        "type": "especialidad"
+      },
+      {
+        "credits": 3,
+        "cycle": "Ciclo IV",
+        "description": "Métodos de organización, acceso y gestión de archivos como base de datos.",
+        "hoursP": 2,
+        "hoursT": 2,
+        "id": "13636",
+        "isElective": false,
+        "name": "Organización de Archivos",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo IV",
+        "description": "Análisis de complejidad computacional y clasificación de problemas algorítmicos.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "13637",
+        "isElective": false,
+        "name": "Algoritmos y Complejidad",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo IV",
+        "description": "Gramáticas formales, autómatas finitos y su relación con los lenguajes de programación.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "13638",
+        "isElective": false,
+        "name": "Lenguajes Formales y Autómatas",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo IV",
+        "description": "Fundamentos de electrónica digital aplicados al diseño de sistemas computacionales.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "13639",
+        "isElective": false,
+        "name": "Electrónica para Computación",
+        "type": "especialidad"
+      },
+      {
+        "credits": 3,
+        "cycle": "Ciclo IV",
+        "description": "Metodologías de innovación y emprendimiento tecnológico para la creación de soluciones informáticas.",
+        "hoursP": 2,
+        "hoursT": 2,
+        "id": "13640",
+        "isElective": false,
+        "name": "Innovación y Emprendimiento",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo V",
+        "description": "Modelado, diseño relacional y consultas SQL en bases de datos.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "13641",
+        "isElective": false,
+        "name": "Base de Datos I",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo V",
+        "description": "Fundamentos del ciclo de vida del software: análisis, diseño y modelado de requerimientos.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "13642",
+        "isElective": false,
+        "name": "Ingeniería de Software I",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo V",
+        "description": "Fundamentos de inteligencia artificial: búsqueda, representación del conocimiento y agentes.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "13643",
+        "isElective": false,
+        "name": "Inteligencia Artificial I",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo V",
+        "description": "Fases de construcción de un compilador: análisis léxico, sintáctico y semántico.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "13644",
+        "isElective": false,
+        "name": "Compiladores",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo V",
+        "description": "Diseño de circuitos digitales aplicados a la arquitectura de computadoras.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "13645",
+        "isElective": false,
+        "name": "Técnicas Digitales para Computación",
+        "type": "especialidad"
+      },
+      {
+        "credits": 2,
+        "cycle": "Ciclo V",
+        "description": "Proceso y diseño de investigación científica aplicados a proyectos en informática.",
+        "hoursP": 0,
+        "hoursT": 2,
+        "id": "13646",
+        "isElective": false,
+        "name": "Metodología de la Investigación Científica",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo VI",
+        "description": "Técnicas avanzadas de renderizado, iluminación y animación por computadora.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "14068",
+        "isElective": false,
+        "name": "Computación Gráfica Avanzada",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo VI",
+        "description": "Optimización, transacciones, concurrencia y administración avanzada de bases de datos.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "14069",
+        "isElective": false,
+        "name": "Base de Datos II",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo VI",
+        "description": "Patrones de diseño, arquitectura de software y prácticas de construcción de sistemas.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "14070",
+        "isElective": false,
+        "name": "Ingeniería de Software II",
+        "type": "especialidad"
+      },
+      {
+        "credits": 2,
+        "cycle": "Ciclo VI",
+        "description": "Aprendizaje automático y modelos de aprendizaje supervisado y no supervisado.",
+        "hoursP": 4,
+        "hoursT": 0,
+        "id": "14071",
+        "isElective": false,
+        "name": "Inteligencia Artificial II",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo VI",
+        "description": "Fundamentos de transmisión de datos y protocolos de comunicación.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "14072",
+        "isElective": false,
+        "name": "Comunicación de Datos",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo VI",
+        "description": "Organización interna del hardware: procesador, memoria y buses del sistema.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "14073",
+        "isElective": false,
+        "name": "Arquitectura y Organización de Computadoras",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo VII",
+        "description": "Bases de datos distribuidas, NoSQL y almacenamiento a gran escala.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "14074",
+        "isElective": false,
+        "name": "Base de Datos Avanzada",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo VII",
+        "description": "Construcción de aplicaciones de software siguiendo buenas prácticas de ingeniería.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "14075",
+        "isElective": false,
+        "name": "Desarrollo de Software",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo VII",
+        "description": "Procesamiento digital de imágenes y técnicas de visión artificial.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "14076",
+        "isElective": false,
+        "name": "Percepción y Visión por Computadora",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo VII",
+        "description": "Modelo OSI/TCP-IP, direccionamiento y fundamentos de redes de computadoras.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "14077",
+        "isElective": false,
+        "name": "Redes de Computadoras I",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo VII",
+        "description": "Gestión de procesos, memoria y concurrencia en sistemas operativos.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "14078",
+        "isElective": false,
+        "name": "Sistemas Operativos I",
+        "type": "especialidad"
+      },
+      {
+        "credits": 2,
+        "cycle": "Ciclo VII",
+        "description": "Planificación, ejecución y control de proyectos de tecnologías de la información.",
+        "hoursP": 4,
+        "hoursT": 0,
+        "id": "14079",
+        "isElective": false,
+        "name": "Gestión de Proyectos Informáticos",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo VIII",
+        "description": "Fundamentos de robótica: cinemática, sensórica y control de robots.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "14080",
+        "isElective": false,
+        "name": "Robótica",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo VIII",
+        "description": "Enrutamiento, conmutación y administración avanzada de redes.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "14081",
+        "isElective": false,
+        "name": "Redes de Computadoras II",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo VIII",
+        "description": "Sistemas de archivos, entrada/salida y administración avanzada de sistemas operativos.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "14082",
+        "isElective": false,
+        "name": "Sistemas Operativos II",
+        "type": "especialidad"
+      },
+      {
+        "credits": 10,
+        "cycle": "Ciclo VIII",
+        "description": "Experiencia práctica en organizaciones aplicando los conocimientos adquiridos hasta el ciclo VI.",
+        "hoursP": 18,
+        "hoursT": 1,
+        "id": "14083",
+        "isElective": false,
+        "name": "Prácticas Pre-Profesionales",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo IX",
+        "description": "Principios de diseño de experiencia e interfaz de usuario centrados en la persona.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "14084",
+        "isElective": false,
+        "name": "Interacción Humano-Computador",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo IX",
+        "description": "Temas avanzados y de actualidad en el diseño y administración de bases de datos.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "14085",
+        "isElective": false,
+        "name": "Tópicos en Base de Datos",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo IX",
+        "description": "Arquitecturas de software modernas y desarrollo de sistemas de gran escala.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "14087",
+        "isElective": false,
+        "name": "Ingeniería de Software Avanzada",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo IX",
+        "description": "Principios de ciberseguridad, criptografía y protección de sistemas de información.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "14088",
+        "isElective": false,
+        "name": "Seguridad Informática",
+        "type": "especialidad"
+      },
+      {
+        "credits": 2,
+        "cycle": "Ciclo IX",
+        "description": "Formulación del proyecto de investigación para la tesis de titulación.",
+        "hoursP": 2,
+        "hoursT": 1,
+        "id": "14089",
+        "isElective": false,
+        "name": "Proyecto de Tesis",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo IX",
+        "description": "Temas avanzados y de actualidad en metodologías y prácticas de ingeniería de software.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "INF34",
+        "isElective": false,
+        "name": "Tópicos en Ingeniería de Software",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo X",
+        "description": "Realidad virtual, realidad aumentada y otras tecnologías inmersivas emergentes.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "14090",
+        "isElective": false,
+        "name": "Tópicos en Tecnologías Inmersivas",
+        "type": "especialidad"
+      },
+      {
+        "credits": 3,
+        "cycle": "Ciclo X",
+        "description": "Análisis, diseño e implementación integral de sistemas de información organizacionales.",
+        "hoursP": 2,
+        "hoursT": 2,
+        "id": "14091",
+        "isElective": false,
+        "name": "Sistemas de Información",
+        "type": "especialidad"
+      },
+      {
+        "credits": 3,
+        "cycle": "Ciclo X",
+        "description": "Deontología profesional, responsabilidad social y ética aplicada a la informática.",
+        "hoursP": 2,
+        "hoursT": 2,
+        "id": "14092",
+        "isElective": false,
+        "name": "Ética para Profesionales en Informática",
+        "type": "especialidad"
+      },
+      {
+        "credits": 2,
+        "cycle": "Ciclo X",
+        "description": "Proyecto final en el área de competencia elegida por el estudiante.",
+        "hoursP": 4,
+        "hoursT": 0,
+        "id": "14093",
+        "isElective": false,
+        "name": "Proyecto de Competencia",
+        "type": "especialidad"
+      },
+      {
+        "credits": 4,
+        "cycle": "Ciclo X",
+        "description": "Proyecto que integra los conocimientos de redes, gestión de proyectos, innovación y desarrollo de software.",
+        "hoursP": 4,
+        "hoursT": 2,
+        "id": "14094",
+        "isElective": false,
+        "name": "Proyecto Integrador",
+        "type": "especialidad"
+      },
+      {
+        "credits": 1,
+        "cycle": "Ciclo X",
+        "description": "Desarrollo, sustentación y culminación de la tesis de titulación.",
+        "hoursP": 2,
+        "hoursT": 0,
+        "id": "INF43",
+        "isElective": false,
+        "name": "Tesis",
+        "type": "especialidad"
+      }
+    ],
+    "nombre": "Plan de estudios 2018",
+    "pdf": null,
+    "prerrequisitos": [
+      {
+        "source": "13028",
+        "target": "13034"
+      },
+      {
+        "source": "13021",
+        "target": "13039"
+      },
+      {
+        "source": "13034",
+        "target": "13629"
+      },
+      {
+        "source": "13039",
+        "target": "13631"
+      },
+      {
+        "source": "13027",
+        "target": "13633"
+      },
+      {
+        "source": "13034",
+        "target": "13634"
+      },
+      {
+        "source": "13039",
+        "target": "13635"
+      },
+      {
+        "source": "13629",
+        "target": "13635"
+      },
+      {
+        "source": "13039",
+        "target": "13636"
+      },
+      {
+        "source": "13631",
+        "target": "13637"
+      },
+      {
+        "source": "13632",
+        "target": "13637"
+      },
+      {
+        "source": "13632",
+        "target": "13638"
+      },
+      {
+        "source": "13633",
+        "target": "13639"
+      },
+      {
+        "source": "13636",
+        "target": "13641"
+      },
+      {
+        "source": "13630",
+        "target": "13642"
+      },
+      {
+        "source": "13637",
+        "target": "13643"
+      },
+      {
+        "source": "13638",
+        "target": "13644"
+      },
+      {
+        "source": "13639",
+        "target": "13645"
+      },
+      {
+        "source": "13635",
+        "target": "14068"
+      },
+      {
+        "source": "13641",
+        "target": "14069"
+      },
+      {
+        "source": "13642",
+        "target": "14070"
+      },
+      {
+        "source": "13643",
+        "target": "14071"
+      },
+      {
+        "source": "13645",
+        "target": "14072"
+      },
+      {
+        "source": "13645",
+        "target": "14073"
+      },
+      {
+        "source": "14069",
+        "target": "14074"
+      },
+      {
+        "source": "14070",
+        "target": "14075"
+      },
+      {
+        "source": "14071",
+        "target": "14076"
+      },
+      {
+        "source": "14072",
+        "target": "14077"
+      },
+      {
+        "source": "14073",
+        "target": "14078"
+      },
+      {
+        "source": "14070",
+        "target": "14079"
+      },
+      {
+        "source": "14071",
+        "target": "14080"
+      },
+      {
+        "source": "14077",
+        "target": "14081"
+      },
+      {
+        "source": "14078",
+        "target": "14082"
+      },
+      {
+        "source": "14070",
+        "target": "14084"
+      },
+      {
+        "source": "14069",
+        "target": "14085"
+      },
+      {
+        "source": "14070",
+        "target": "14087"
+      },
+      {
+        "source": "14081",
+        "target": "14088"
+      },
+      {
+        "source": "14070",
+        "target": "INF34"
+      },
+      {
+        "source": "14084",
+        "target": "14090"
+      },
+      {
+        "source": "14074",
+        "target": "14091"
+      },
+      {
+        "source": "14087",
+        "target": "14091"
+      },
+      {
+        "source": "13040",
+        "target": "14092"
+      },
+      {
+        "source": "13640",
+        "target": "14094"
+      },
+      {
+        "source": "14075",
+        "target": "14094"
+      },
+      {
+        "source": "14079",
+        "target": "14094"
+      },
+      {
+        "source": "14081",
+        "target": "14094"
+      },
+      {
+        "source": "14089",
+        "target": "INF43"
+      }
+    ],
+    "version": "1.0"
+  },
+  "navegacion": {
+    "admision": [
+      {
+        "items": [
+          {
+            "name": "Guía del postulante",
+            "path": "/admision/guia"
+          }
+        ],
+        "label": "Postulantes"
+      },
+      {
+        "items": [
+          {
+            "name": "Matriculados",
+            "path": "/admision/estadisticas#matriculados"
+          },
+          {
+            "name": "Egresados",
+            "path": "/admision/estadisticas#egresados"
+          },
+          {
+            "name": "Graduados (Bachiller)",
+            "path": "/admision/estadisticas#graduados"
+          }
+        ],
+        "label": "Estadísticas"
+      },
+      {
+        "items": [
+          {
+            "name": "Resoluciones",
+            "path": "/admision/resoluciones"
+          },
+          {
+            "external": true,
+            "name": "Política de Gestión de Calidad",
+            "path": "https://drive.google.com/file/d/1frtwwoFOHq9FcjUr88d5axbL-abLF2Ik/view?usp=drive_link"
+          },
+          {
+            "name": "Gestión de la Formación en Pregrado",
+            "path": "/admision/gestion-formacion-pregrado"
+          }
+        ],
+        "label": "Documentos"
+      }
+    ],
+    "menu": [
+      {
+        "name": "Inicio",
+        "path": "/"
+      },
+      {
+        "groups": [
+          {
+            "items": [
+              {
+                "name": "Historia",
+                "path": "/nosotros/historia"
+              },
+              {
+                "name": "Misión y Visión",
+                "navAs": [
+                  {
+                    "name": "Misión",
+                    "path": "/nosotros/mision-vision#mision"
+                  },
+                  {
+                    "name": "Visión",
+                    "path": "/nosotros/mision-vision#vision"
+                  }
+                ],
+                "path": "/nosotros/mision-vision"
+              }
+            ],
+            "label": "Identidad"
+          }
+        ],
+        "name": "Nosotros",
+        "path": "/nosotros"
+      },
+      {
+        "groups": [
+          {
+            "items": [
+              {
+                "name": "Dirección",
+                "navAs": [
+                  {
+                    "name": "Director de escuela",
+                    "path": "/organizacion/direccion#escuela"
+                  },
+                  {
+                    "name": "Director de departamento",
+                    "path": "/organizacion/direccion#departamento"
+                  }
+                ],
+                "path": "/organizacion/direccion"
+              }
+            ],
+            "label": "Autoridades"
+          },
+          {
+            "items": [
+              {
+                "name": "Órganos de Gobierno",
+                "navAs": [
+                  {
+                    "name": "Decano",
+                    "path": "/organizacion/organos-gobierno#decano"
+                  },
+                  {
+                    "name": "Centro Federado",
+                    "path": "/organizacion/organos-gobierno#centro-federado"
+                  }
+                ],
+                "path": "/organizacion/organos-gobierno"
+              }
+            ],
+            "label": "Órganos de Gobierno"
+          },
+          {
+            "items": [
+              {
+                "name": "Docentes",
+                "path": "/organizacion/docentes"
+              },
+              {
+                "name": "Administrativos",
+                "path": "/organizacion/administrativos"
+              }
+            ],
+            "label": "Personal"
+          },
+          {
+            "items": [
+              {
+                "name": "Comités",
+                "navAs": [
+                  {
+                    "name": "Comité de Calidad",
+                    "path": "/organizacion/comites#calidad"
+                  },
+                  {
+                    "name": "Comité Técnico de Currículo",
+                    "path": "/organizacion/comites#curriculo"
+                  },
+                  {
+                    "name": "Comité de Tutoría y Consejería",
+                    "path": "/organizacion/comites#tutoria"
+                  },
+                  {
+                    "name": "Comité de Seguimiento al Egresado",
+                    "path": "/organizacion/comites#egresado"
+                  },
+                  {
+                    "name": "Comité de Investigación",
+                    "path": "/organizacion/comites#investigacion"
+                  },
+                  {
+                    "name": "Comité de Responsabilidad Social",
+                    "path": "/organizacion/comites#responsabilidad"
+                  }
+                ],
+                "path": "/organizacion/comites"
+              }
+            ],
+            "label": "Comités"
+          },
+          {
+            "items": [
+              {
+                "name": "Mapa de procesos",
+                "path": "/organizacion/estructura"
+              }
+            ],
+            "label": "Estructura"
+          }
+        ],
+        "name": "Organización",
+        "path": "/organizacion"
+      },
+      {
+        "groups": [
+          {
+            "items": [
+              {
+                "name": "Objetivos",
+                "navAs": [
+                  {
+                    "name": "Objetivos académicos",
+                    "path": "/academico/objetivos#academicos"
+                  },
+                  {
+                    "name": "Objetivos educacionales",
+                    "path": "/academico/objetivos#educativos"
+                  }
+                ],
+                "path": "/academico/objetivos"
+              },
+              {
+                "name": "Perfiles",
+                "navAs": [
+                  {
+                    "name": "Perfil de ingreso",
+                    "path": "/academico/perfiles#ingreso"
+                  },
+                  {
+                    "name": "Perfil de egreso",
+                    "path": "/academico/perfiles#egreso"
+                  }
+                ],
+                "path": "/academico/perfiles"
+              }
+            ],
+            "label": "Formación"
+          },
+          {
+            "items": [
+              {
+                "name": "Malla curricular",
+                "path": "/academico/malla-curricular"
+              },
+              {
+                "name": "Titulación",
+                "path": "/academico/titulacion"
+              }
+            ],
+            "label": "Plan de estudios"
+          },
+          {
+            "items": [
+              {
+                "name": "Laboratorios",
+                "path": "/academico/laboratorios"
+              }
+            ],
+            "label": "Recursos"
+          },
+          {
+            "items": [
+              {
+                "name": "Convenios",
+                "path": "/academico/convenios"
+              },
+              {
+                "name": "Movilidad",
+                "path": "/academico/movilidad"
+              }
+            ],
+            "label": "Vinculación"
+          }
+        ],
+        "name": "Académico",
+        "path": "/academico"
+      },
+      {
+        "groups": [
+          {
+            "items": [
+              {
+                "name": "Líneas de investigación",
+                "path": "/investigacion/lineas"
+              },
+              {
+                "name": "Publicaciones",
+                "path": "/investigacion/publicaciones"
+              },
+              {
+                "name": "Revistas",
+                "path": "/investigacion/revistas"
+              }
+            ],
+            "label": "Producción"
+          },
+          {
+            "items": [
+              {
+                "name": "Proyectos",
+                "navAs": [
+                  {
+                    "name": "Proyectos de investigación",
+                    "path": "/investigacion/proyectos#investigacion"
+                  },
+                  {
+                    "name": "Proyectos y tesis",
+                    "path": "/investigacion/proyectos#tesis"
+                  }
+                ],
+                "path": "/investigacion/proyectos"
+              }
+            ],
+            "label": "Proyectos"
+          }
+        ],
+        "name": "Investigación",
+        "path": "/investigacion"
+      },
+      {
+        "name": "Contacto",
+        "path": "/contacto"
+      }
+    ]
+  },
+  "noticias": [
+    {
+      "categoria": "Comunicados",
+      "categoriaColor": "bg-gold text-ink",
+      "color": "gold",
+      "contenido": "Esta es una **noticia de ejemplo** para que revises el diseño: cómo se ven la portada, el titular, el resumen, los títulos de sección, las listas, las citas, las imágenes y los enlaces. Cuando la apruebes, puedes borrarla desde el panel.\n\n## Un título de sección\n\nLos párrafos se leen con un tamaño cómodo y un buen espacio entre líneas. Puedes poner palabras en **negrita** o en *cursiva*, y también [enlaces a otras páginas](https://www.unitru.edu.pe) que se subrayan con el color dorado de la institución.\n\n> Una cita destacada sirve para resaltar una frase importante dentro de la noticia.\n\n### Una lista con viñetas\n\n- Cada punto aparece con una viñeta dorada.\n- Sirve para requisitos, fechas o acuerdos.\n- Se escribe con el botón de lista del editor.\n\n![Imagen dentro del texto](/media/6.webp \"Así se ve una imagen con su pie de foto\")\n\n### Pasos numerados\n\n1. Entra a «Noticias» en el panel y pulsa «Nueva noticia».\n2. Sube la imagen de portada y escribe el titular y el resumen.\n3. Elige la categoría, redacta el texto y pulsa «Publicar».\n\nAl final de cada noticia aparecen los botones para compartirla y, al costado, las otras noticias recientes.",
+      "fecha": "2026-11-03",
+      "fechaFormateada": "03 Nov 2026",
+      "id": 10,
+      "imagen": "/media/6.webp",
+      "link": "/noticias/10",
+      "resumen": "Noticia de prueba para revisar el diseño de la portada, el titular, el texto con formato, las imágenes y los enlaces. Puedes borrarla cuando quieras.",
+      "titulo": "Ejemplo: así se verá una noticia en el sitio de la escuela"
+    }
+  ],
+  "paginas": {
+    "academico/laboratorios": false,
+    "academico/responsabilidad-social": false,
+    "admision/guia": false,
+    "admision/resoluciones": false,
+    "organizacion/administrativos": false
+  },
+  "seo": {
+    "description": "Escuela Profesional de Informática de la Universidad Nacional de Trujillo (UNT), acreditada internacionalmente por ICACIT. Forma Bachilleres en Ciencias de la Computación e Ingenieros Informáticos desde 1995.",
+    "lang": "es",
+    "title": "Escuela Profesional de Informática | Universidad Nacional de Trujillo"
+  },
+  "site": {
+    "acreditacion": {
+      "entidad": "ICACIT",
+      "estado": "acreditada",
+      "mostrarSello": true,
+      "texto": "Acreditada internacionalmente por ICACIT"
+    },
+    "cifras": [
+      {
+        "etiqueta": "Años formando profesionales",
+        "numero": "30+",
+        "sub": "Programa fundado en 1995"
+      },
+      {
+        "etiqueta": "Créditos académicos",
+        "numero": "215",
+        "sub": "En 10 ciclos de formación"
+      },
+      {
+        "etiqueta": "Acreditación internacional",
+        "numero": "ICACIT",
+        "sub": "Ciclo de evaluación 2020"
+      }
+    ],
+    "decana": {
+      "cargo": "Director de la Escuela Profesional de Informática",
+      "mensaje": "La Escuela Profesional de Informática forma profesionales en Ciencia de la Computación con bases sólidas, siguiendo el estándar internacional de la ACM, para liderar el desarrollo de la disciplina en el país.",
+      "nombre": "Mg. Edwin Ricardo Mendoza Torres",
+      "video": {
+        "start": 0,
+        "youtubeId": ""
+      }
+    },
+    "denominacion": "Escuela Profesional",
+    "enlaces": {
+      "bolsaTrabajo": "#",
+      "libroReclamaciones": "https://reclamos.servicios.gob.pe/?institution_id=247"
+    },
+    "enlacesInstitucionales": [
+      {
+        "label": "Sistema de Gestión Académica (SGA)",
+        "url": "http://aplicaciones.unitru.edu.pe/"
+      },
+      {
+        "label": "Sistema Único de Virtualización (SUV)",
+        "url": "http://suv2.unitru.edu.pe"
+      },
+      {
+        "label": "Aula Virtual",
+        "url": "https://aulavirtual2.unitru.edu.pe"
+      }
+    ],
+    "facultad": "Facultad de Ciencias Físicas y Matemáticas",
+    "hero": {
+      "ctas": {
+        "primary": {
+          "label": "Ver Plan de Estudios",
+          "to": "/academico/malla-curricular"
+        },
+        "secondary": {
+          "label": "Perfiles académicos",
+          "to": "/academico/perfiles"
+        }
+      },
+      "descripcion": "Prepárate para construir soluciones innovadoras en un sector en constante evolución. Sé parte del futuro digital y transforma el mundo con tu conocimiento.",
+      "eyebrow": "Escuela Profesional de",
+      "titulo": {
+        "linea1": "Ingeniería",
+        "linea2": "Informática"
+      }
+    },
+    "programa": {
+      "nombre": "Escuela Profesional de Informática",
+      "nombreCorto": "Informática"
+    },
+    "tagline": "Desarrolla soluciones innovadoras que impacten al mundo.",
+    "universidad": {
+      "dominio": "inf.unitru.edu.pe",
+      "nombre": "Universidad Nacional de Trujillo",
+      "siglas": "UNT",
+      "url": "https://www.unitru.edu.pe"
+    },
+    "wordmark": {
+      "linea1": "Informática",
+      "linea2": "UNT"
+    }
+  }
+}

@@ -8,7 +8,10 @@ export const director = {
   cargo: "Director de la Escuela Profesional de Informática",
   correo: "informatica@unitru.edu.pe",
   bio: "Magíster, docente del Departamento Académico de Informática de la Universidad Nacional de Trujillo.",
-  foto: null // Reemplaza por la ruta de la foto o deja null para la silueta
+  /** Grados y títulos, uno por línea (se muestran como «Formación académica»). */
+  formacion: [] as string[],
+  foto: null as string | null, // Foto del director (se sube desde el panel); null muestra la silueta
+  fotoPosicion: undefined as string | undefined,
 };
 
 // Director del Departamento Académico de Informática (distinto de la Dirección de
@@ -19,7 +22,9 @@ export const directorDepartamento = {
   cargo: "Director del Departamento Académico de Informática",
   correo: "informatica@unitru.edu.pe",
   bio: "Doctor, docente del Departamento Académico de Informática de la Universidad Nacional de Trujillo.",
-  foto: null
+  formacion: [] as string[],
+  foto: null as string | null,
+  fotoPosicion: undefined as string | undefined,
 };
 
 export const coordinadores = [
@@ -53,4 +58,12 @@ export const organigrama = {
     { nombre: "Unidad de Investigación", cargo: "" },
     { nombre: "Unidad de Posgrado", cargo: "" }
   ]
+};
+
+// Decano de la Facultad de Ciencias Físicas y Matemáticas (dato proporcionado por el usuario, 2026).
+// Se muestra en /organizacion/organos-gobierno#decano.
+export const decano = {
+  nombre: "Dr. Mario Elder Chávez Bacilio",
+  cargo: "Decano",
+  facultad: "Facultad de Ciencias Físicas y Matemáticas"
 };

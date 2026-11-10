@@ -12,6 +12,7 @@ import Inicio from '../pages/Inicio';
 // El resto de páginas se cargan bajo demanda (code-splitting): cada ruta trae
 // su propio chunk solo al visitarla, así la carga inicial es mucho más ligera.
 const Noticias = lazy(() => import('../pages/Noticias'));
+const NoticiaDetalle = lazy(() => import('../pages/NoticiaDetalle'));
 const Contacto = lazy(() => import('../pages/Contacto'));
 const NotFound = lazy(() => import('../pages/NotFound'));
 
@@ -26,8 +27,9 @@ const Perfiles = lazy(() => import('../pages/nosotros/Perfiles'));          // i
 // Módulo: Organización
 const OrganizacionIndex = lazy(() => import('../pages/organizacion/index'));
 const OrganizacionDireccion = lazy(() => import('../pages/organizacion/Direccion')); // escuela + departamento
-const OrganosGobierno = lazy(() => import('../pages/organizacion/OrganosGobierno')); // consejo de facultad + consejeros + representantes
+const OrganosGobierno = lazy(() => import('../pages/organizacion/OrganosGobierno')); // decano + centro federado
 const Comites = lazy(() => import('../pages/organizacion/Comites'));                 // los 5 comités
+const Administrativos = lazy(() => import('../pages/organizacion/Administrativos'));
 
 // Módulo: Académico
 const AcademicoIndex = lazy(() => import('../pages/academico/index'));
@@ -39,7 +41,10 @@ const InvestigacionIndex = lazy(() => import('../pages/investigacion/index'));
 const Lineas = lazy(() => import('../pages/investigacion/Lineas'));
 const Publicaciones = lazy(() => import('../pages/investigacion/Publicaciones'));
 const ProyectosGrupo = lazy(() => import('../pages/investigacion/ProyectosGrupo')); // proyectos + tesis
-const Convenios = lazy(() => import('../pages/investigacion/convenios'));            // reutilizado en Académico
+const Laboratorios = lazy(() => import('../pages/academico/Laboratorios'));
+const Estadisticas = lazy(() => import('../pages/admision/Estadisticas'));
+const Convenios = lazy(() => import('../pages/investigacion/convenios'));
+const Revistas = lazy(() => import('../pages/investigacion/Revistas'));            // reutilizado en Académico
 const Movilidad = lazy(() => import('../pages/academico/Movilidad'));
 
 // Páginas reutilizadas
@@ -87,7 +92,7 @@ export default function AppRouter() {
               <Route path="direccion" element={<OrganizacionDireccion />} />
               <Route path="organos-gobierno" element={<OrganosGobierno />} />
               <Route path="docentes" element={<Docentes />} />
-              <Route path="administrativos" element={<EnConstruccion titulo="Administrativos" />} />
+              <Route path="administrativos" element={<Administrativos />} />
               <Route path="comites" element={<Comites />} />
               <Route path="estructura" element={<MapaProcesos />} />
             </Route>
@@ -100,7 +105,7 @@ export default function AppRouter() {
               <Route path="objetivos" element={<Objetivos />} />
               <Route path="perfiles" element={<Perfiles />} />
               <Route path="malla-curricular" element={<PlanEstudios />} />
-              <Route path="laboratorios" element={<EnConstruccion titulo="Laboratorios" />} />
+              <Route path="laboratorios" element={<Laboratorios />} />
               <Route path="responsabilidad-social" element={<EnConstruccion titulo="Responsabilidad **Social**" />} />
               <Route path="convenios" element={<Convenios />} />
               <Route path="movilidad" element={<Movilidad />} />
@@ -113,17 +118,19 @@ export default function AppRouter() {
               <Route index element={<Lineas />} />
               <Route path="lineas" element={<Lineas />} />
               <Route path="publicaciones" element={<Publicaciones />} />
-              <Route path="revistas" element={<EnConstruccion titulo="Revistas" />} />
+              <Route path="revistas" element={<Revistas />} />
               <Route path="proyectos" element={<ProyectosGrupo />} />
             </Route>
 
             {/* ── Admisión (panel lateral) ── */}
             <Route path="/admision/guia" element={<GuiaPostulante />} />
+            <Route path="/admision/estadisticas" element={<Estadisticas />} />
             <Route path="/admision/resoluciones" element={<Resoluciones />} />
             <Route path="/admision/gestion-formacion-pregrado" element={<GestionFormacionPregrado />} />
 
             {/* Conservadas fuera del menú */}
             <Route path="/noticias" element={<Noticias />} />
+            <Route path="/noticias/:id" element={<NoticiaDetalle />} />
             <Route path="/contacto" element={<Contacto />} />
 
             {/* 404 */}

@@ -13,12 +13,8 @@
 //   - condicion: régimen laboral del docente, "Nombrado" o "Contratado". Se muestra como
 //     etiqueta en la card.
 //
-// Fuente: correos y áreas de investigación tomados de inf.unitru.edu.pe (plana
-// docente publicada); grados académicos y nombres completos verificados contra el
-// "Currículo del Programa de Estudios de Informática" (R.C.U. No. 065-2018/UNT).
-// `foto` se deja en `null` a propósito (silueta placeholder para todos); `investigador`
-// se deja en `false` por defecto (sin fuente confiable por docente) y no se consigna
-// `categoriaInvestigacion`/`condicion`: ajústalos cuando tengas el dato exacto de cada uno.
+// Fuente: tabla `docente` de la base de datos del sitio PHP (docentes publicados),
+// consultada el 2026-11-02. `foto` queda en `null` para todos (silueta placeholder).
 
 export const docentes = [
   {
@@ -28,7 +24,8 @@ export const docentes = [
     cursoPrincipal: "Algoritmos, Complejidad y Lenguajes de Programación",
     especialidades: ["Algoritmos, complejidad y lenguajes de programación", "Optimización combinatoria"],
     foto: null,
-    investigador: false,
+    investigador: true,
+    categoriaInvestigacion: "RENACYT · Nivel VI",
   },
   {
     nombre: "José Gabriel Cruz Silva",
@@ -89,7 +86,8 @@ export const docentes = [
     departamento: "Departamento Académico de Informática",
     cursoPrincipal: "Director del Departamento Académico de Informática",
     foto: null,
-    investigador: false,
+    investigador: true,
+    categoriaInvestigacion: "RENACYT · Nivel VI",
   },
   {
     nombre: "Edwin Ricardo Mendoza Torres",
@@ -146,5 +144,15 @@ export const docentes = [
     cursoPrincipal: "Departamento de Informática",
     foto: null,
     investigador: false,
+  },
+  {
+    nombre: "Wilmer Aufredy Apaza Chávez",
+    grado: "",
+    departamento: "Departamento Académico de Informática",
+    cursoPrincipal: "Departamento de Informática",
+    foto: null,
+    investigador: true,
+    categoriaInvestigacion: "RENACYT · Nivel VII",
+    condicion: "Contratado",
   },
 ];

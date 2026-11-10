@@ -12,7 +12,7 @@ export const informacionContacto = {
 };
 
 // Libro de Reclamaciones oficial. Reemplaza por la URL de tu institución.
-export const libroReclamacionesUrl = '#';
+export let libroReclamacionesUrl = '#';
 
 export const redesSociales = {
   facebook: "https://www.facebook.com/profile.php?id=61569647381199",
@@ -20,3 +20,8 @@ export const redesSociales = {
   youtube: "#",
   twitter: "#"
 };
+
+/** Lo llama el cargador remoto (src/data) para actualizar estos textos con los del panel. */
+export function __aplicar(d: Partial<{ libroReclamacionesUrl: string }>): void {
+  if (d.libroReclamacionesUrl !== undefined) libroReclamacionesUrl = d.libroReclamacionesUrl;
+}

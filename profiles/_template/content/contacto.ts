@@ -16,4 +16,9 @@ export const redesSociales = {
   twitter: '',
 };
 
-export const libroReclamacionesUrl = '';
+export let libroReclamacionesUrl = '';
+
+/** Lo llama el cargador remoto (src/data) para actualizar estos textos con los del panel. */
+export function __aplicar(d: Partial<{ libroReclamacionesUrl: string }>): void {
+  if (d.libroReclamacionesUrl !== undefined) libroReclamacionesUrl = d.libroReclamacionesUrl;
+}

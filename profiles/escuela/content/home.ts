@@ -30,18 +30,10 @@ export interface Ambiente {
 export const ambientes: Ambiente[] = [
   {
     badge: 'Ambiente',
-    titulo: 'Nombre del Ambiente 1',
+    titulo: 'Laboratorios',
     descripcion:
-      'Descripción breve del primer ambiente o laboratorio: con qué cuenta y para qué se usa en la formación. Reemplaza este texto por el de tu programa.',
-    imagen: 'https://picsum.photos/seed/ambiente-1/800/600',
-    alt: 'Nombre del Ambiente 1',
-  },
-  {
-    badge: 'Ambiente',
-    titulo: 'Nombre del Ambiente 2',
-    descripcion:
-      'Descripción breve del segundo ambiente o laboratorio: con qué cuenta y para qué se usa en la formación. Reemplaza este texto por el de tu programa.',
-    imagen: 'https://picsum.photos/seed/ambiente-3/800/600',
-    alt: 'Nombre del Ambiente 2',
+      'Espacios equipados con computadoras donde se desarrollan las prácticas de las experiencias curriculares teórico-práctico-laboratorio de la formación en Informática.',
+    imagen: 'https://picsum.photos/seed/laboratorios/800/600',
+    alt: 'Laboratorios de la Escuela de Informática',
   },
 ];

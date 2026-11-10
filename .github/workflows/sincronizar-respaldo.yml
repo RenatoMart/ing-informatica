@@ -1,0 +1,48 @@
+name: Sincronizar respaldo del sitio
+
+# Baja el contenido publicado en el portal (base de datos) y lo guarda en profiles/<perfil>/respaldo.json.
+# Si cambió algo, hace un commit. Así el respaldo que lleva el sitio nunca queda muy desactualizado.
+on:
+  schedule:
+    - cron: '0 */6 * * *'        # cada 6 horas
+  workflow_dispatch:              # botón «Run workflow» en GitHub
+  repository_dispatch:            # opcional: el backend puede avisar justo después de publicar
+    types: [contenido-actualizado]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sincronizar-respaldo
+  cancel-in-progress: false
+
+jobs:
+  sincronizar:
+    runs-on: ubuntu-latest
+    # Configurar en GitHub → Settings → Secrets and variables → Actions → Variables:
+    #   API_URL        dirección pública del backend (https://api.…)
+    #   ESCUELA_SLUG   identificador de la escuela (p. ej. informatica)
+    #   PERFIL         carpeta de profiles/ (por defecto escuela)
+    if: ${{ vars.API_URL != '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Bajar el perfil del portal
+        run: node scripts/sync-respaldo.mjs
+        env:
+          API_URL: ${{ vars.API_URL }}
+          ESCUELA_SLUG: ${{ vars.ESCUELA_SLUG || 'informatica' }}
+          PERFIL: ${{ vars.PERFIL || 'escuela' }}
+      - name: Guardar los cambios (si los hay)
+        run: |
+          if git diff --quiet -- profiles; then
+            echo "Nada que guardar."
+          else
+            git config user.name "portal-unt-bot"
+            git config user.email "portal-unt-bot@users.noreply.github.com"
+            git add profiles
+            git commit -m "chore: actualizar respaldo del sitio desde el portal"
+            git push
+          fi

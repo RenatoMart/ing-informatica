@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-Institutional site for a university "Programa de Estudios" (educación primaria), built as a **reusable multi-school template**: shared React code in `src/`, per-school data in a `profiles/` folder. Team members clone the repo and edit only their school's profile without touching `src/`. All Spanish-language content (data, comments, docs) — keep that convention when adding files.
+Institutional site for a university "Programa de Estudios" (Escuela Profesional de Informática), built as a **reusable multi-school template**: shared React code in `src/`, per-school data in a `profiles/` folder. Team members clone the repo and edit only their school's profile without touching `src/`. All Spanish-language content (data, comments, docs) — keep that convention when adding files.
 
 ## Commands
 
@@ -19,12 +19,10 @@ npm run lint         # eslint src (warn-only config, does not fail the build)
 
 There is no test suite in this repo (no test runner configured).
 
-Build with a specific school profile or deploy target:
+Build with a specific school profile:
 
 ```bash
 PROFILE=<slug> npm run build          # use profiles/<slug> instead of profiles/escuela
-THEME_SLUG=<slug> npm run build       # WordPress theme folder name (deploy target)
-VERCEL=1 npm run build                # build for Vercel instead of WordPress
 ```
 
 ## Architecture: system vs. profile
@@ -68,12 +66,22 @@ Copy `profiles/_template/` (or `profiles/escuela/`) to `profiles/<slug>/`, fill 
 - `MallaCurricular`/`MallaFlow` (curriculum mesh) and `OrganigramaFlow` (org chart) render their data as graphs using **ReactFlow** + **dagre** for auto-layout, sourced from `@profile/content/malla.ts` / `autoridades.ts`.
 - Path aliases: `@/*` → `src/*`, `@profile`/`@profile/*` → the active profile (see above). Always use these instead of relative `../../` chains across the system/profile boundary.
 
-## Deploy targets (`vite.config.ts`)
+## Content from the portal API (`src/data/`)
 
-- **WordPress (default):** builds to `../wp-content/themes/<THEME_SLUG>/dist/` with base `/wp-content/themes/<THEME_SLUG>/dist/`. `THEME_SLUG` defaults to `educacion-primaria`.
-- **Vercel:** with `VERCEL=1`, builds to `dist/` with base `/`. `vercel.json` rewrites all paths to `index.html` (SPA).
-- `THEME_SLUG` (deploy target folder) and `PROFILE` (which school's data) are independent — don't conflate them.
+- At startup `src/main.tsx` calls `iniciarPerfilRemoto` (`src/data/perfilRemoto.ts`): it fetches `GET {VITE_API_URL}/api/v1/public/escuelas/{VITE_ESCUELA_SLUG}/perfil` (waits up to 1.5 s) and `src/data/hidratar.ts` overwrites **in place** the objects/arrays that `profiles/<slug>/` exports (the same ones the pages already import). The static `profiles/` files are therefore the **fallback**: if the API is down the site still renders with them. Do not add module-level constants derived from profile data — read them at render time, or they will go stale after hydration.
+- The 7 exported strings that cannot be mutated (`mision`, `vision`, `misionUnt`, `visionUnt`, `gradoAcademico`, `tituloProfesional`, `libroReclamacionesUrl`) are `let` with an `__aplicar()` function in their profile file; `siteName` in `src/profile.ts` is a live binding refreshed by `actualizarSiteName()`.
+- To make a new profile export editable from the panel: add it to `aplicarClave` in `src/data/hidratar.ts` and to the matching JSON Schema in the backend repo (`portal-unt-back/internal/content/schemas/`). Icons in `home.accesosRapidos` are names from the allow-list in `src/data/iconos.ts` (must match the backend schema `enum`).
+- **Live preview:** the panel embeds the site in an iframe with `?preview=1`. Only in that mode (and only inside an iframe) the site listens for `postMessage` from origins in `VITE_PANEL_ORIGINS` (`borrador`, `recargar`, `ir`) and re-mounts the app keeping the scroll; `CurriculumVersionSwitch` opens on the first version (real data) instead of "2027".
+- Env vars: see `.env.example` (`VITE_API_URL`, `VITE_ESCUELA_SLUG`, `VITE_PANEL_ORIGINS`). The hosting must allow being framed by the panel (no `X-Frame-Options: DENY`).
+- Not wired yet: `comites` and `paginas` (stored by the backend, still hard-coded in `Comites.tsx` / the router).
+
+## Deploy (`vite.config.ts`)
+
+- `npm run build` outputs a static SPA to `dist/` with base `/`; nothing is written outside the project. Any static host works if it serves `index.html` for unknown routes (`vercel.json` has that rewrite).
 
 ## Linting
 
 ESLint (`eslint.config.js`) is intentionally warn-only (react-hooks rules, jsx-a11y, unused vars ignoring `_`-prefixed names) — it will not fail a build. Type safety is enforced separately via `npm run typecheck`; keep both green before publishing per the README's stated convention.
+
+## Seguridad (backend/panel)
+Las reglas de seguridad AppSec/OWASP (cookies HttpOnly, sin tokens en el frontend, anti-IDOR, DTOs estrictos, bcrypt ≥12, timeouts, CORS estricto) están en `/home/renatomr/GolandProjects/portal-unt-back/CLAUDE.md`: seguirlas siempre que se toque el backend o el panel, y no poner secretos ni lógica de permisos en este sitio.

@@ -62,9 +62,8 @@ export const NAV_LINKS: NavSection[] = [
             name: 'Órganos de Gobierno',
             path: '/organizacion/organos-gobierno',
             navAs: [
-              { name: 'Consejo de Facultad', path: '/organizacion/organos-gobierno#consejo-facultad' },
-              { name: 'Consejeros', path: '/organizacion/organos-gobierno#consejeros' },
-              { name: 'Centro Federado', path: '/organizacion/organos-gobierno#representantes' },
+              { name: 'Decano', path: '/organizacion/organos-gobierno#decano' },
+              { name: 'Centro Federado', path: '/organizacion/organos-gobierno#centro-federado' },
             ],
           },
         ],
@@ -139,13 +138,11 @@ export const NAV_LINKS: NavSection[] = [
         label: 'Recursos',
         items: [
           { name: 'Laboratorios', path: '/academico/laboratorios' },
-          { name: 'Bienestar', path: '#', external: true },
         ],
       },
       {
         label: 'Vinculación',
         items: [
-          { name: 'Responsabilidad social', path: '/academico/responsabilidad-social' },
           { name: 'Convenios', path: '/academico/convenios' },
           { name: 'Movilidad', path: '/academico/movilidad' },
         ],
@@ -194,12 +191,12 @@ export const ADMISION_GROUPS: NavGroup[] = [
     ],
   },
   {
-    label: 'Estadísticas (últimos 5 años)',
+    // Las cifras viven en la página interna /admision/estadisticas (se llena desde el panel).
+    label: 'Estadísticas',
     items: [
-      { name: 'Ingresantes', path: '#', external: true },
-      { name: 'Matriculados', path: '#', external: true },
-      { name: 'Graduados', path: '#', external: true },
-      { name: 'Titulados', path: '#', external: true },
+      { name: 'Matriculados', path: '/admision/estadisticas#matriculados' },
+      { name: 'Egresados', path: '/admision/estadisticas#egresados' },
+      { name: 'Graduados (Bachiller)', path: '/admision/estadisticas#graduados' },
     ],
   },
   {

@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { CalendarDays } from 'lucide-react';
+import { esVistaPrevia } from '@/data/perfilRemoto';
 
 /**
  * Selector de versión de plan curricular (p. ej. 2018 / 2027). Switch segmentado
@@ -21,6 +22,12 @@ export default function CurriculumVersionSwitch({
   versions = ['2018', '2027'],
   className = '',
 }: CurriculumVersionSwitchProps) {
+  // En la vista previa del panel se abre el plan que tiene datos (el primero) en vez de «próximamente».
+  useEffect(() => {
+    if (esVistaPrevia()) onChange(versions[0]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   return (
     <div
       className={`flex flex-wrap items-center gap-3 ${className}`}
