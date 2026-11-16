@@ -450,7 +450,7 @@ export default function Ilustracion404Grifo() {
 .g404 .g-destello { transform-box: fill-box; transform-origin: center; animation: g4-brillar 2.8s ease-in-out infinite }
 @media (prefers-reduced-motion: reduce) { .g404 * { animation: none !important } }
 `}</style>
-      <svg width="100%" height="auto" viewBox="0 -90 636 414" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración: el escudo de la UNT se abre, el grifo despliega las alas, tumba el 404 con un aleteo y sale volando; dos personas lo iluminan con linternas">
+      <svg width="100%" style={{ height: 'auto' }} viewBox="0 -90 636 414" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración: el escudo de la UNT se abre, el grifo despliega las alas, tumba el 404 con un aleteo y sale volando; dos personas lo iluminan con linternas">
         <defs>
           <clipPath id="g4-recorte-c"><circle className="g-recorte" cx="318" cy="172" r="66" /></clipPath>
           <radialGradient id="g4-disco" cx="0.38" cy="0.32" r="0.9"><stop stopColor="#FFFFFF" stopOpacity="0.28" /><stop offset="0.55" stopColor={PRIMARY} stopOpacity="0.92" /><stop offset="1" stopColor={PRIMARY} /></radialGradient>

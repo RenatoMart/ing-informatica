@@ -28,12 +28,12 @@ export default function Breadcrumbs() {
     (basePath.length > 1 ? basePath.charAt(1).toUpperCase() + basePath.slice(2) : '');
 
   return (
-    <div className="bg-primary py-3 w-full">
+    <div className="bg-primary py-0 md:py-3 w-full">
       <div className="container mx-auto px-4 md:px-8">
         <nav className="flex text-[13px] md:text-sm text-white/80 font-body" aria-label="Breadcrumb">
           <ol className="inline-flex items-center space-x-1 md:space-x-2">
             <li className="inline-flex items-center">
-              <Link to="/" className="inline-flex items-center hover:text-white transition-colors">
+              <Link to="/" className="inline-flex items-center min-h-[44px] md:min-h-0 hover:text-white transition-colors">
                 Inicio
               </Link>
             </li>
@@ -43,7 +43,7 @@ export default function Breadcrumbs() {
                 <ChevronRight className="w-4 h-4 text-white/60 mx-1" />
                 <Link
                   to={basePath}
-                  className={`hover:text-white transition-colors ${!subsection ? 'text-white font-semibold' : ''}`}
+                  className={`inline-flex items-center min-h-[44px] md:min-h-0 hover:text-white transition-colors ${!subsection ? 'text-white font-semibold' : ''}`}
                 >
                   {sectionName}
                 </Link>
@@ -54,7 +54,7 @@ export default function Breadcrumbs() {
               <li>
                 <div className="flex items-center">
                   <ChevronRight className="w-4 h-4 text-white/60 mx-1" />
-                  <span className="text-white font-semibold">{subsection.name}</span>
+                  <span className="inline-flex items-center min-h-[44px] md:min-h-0 text-white font-semibold">{subsection.name}</span>
                 </div>
               </li>
             )}

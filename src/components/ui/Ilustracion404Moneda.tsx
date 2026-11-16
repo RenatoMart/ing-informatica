@@ -34,7 +34,7 @@ export default function Ilustracion404Moneda() {
         .ilu404 .ilu-luz { animation: ilu404-flotar 6s ease-in-out infinite reverse }
         @media (prefers-reduced-motion: reduce) { .ilu404, .ilu404 * { animation: none !important } }
       `}</style>
-      <svg width="100%" height="auto" viewBox="0 0 636 324" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración: error 404, página no encontrada">
+      <svg width="100%" style={{ height: 'auto' }} viewBox="0 0 636 324" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Ilustración: error 404, página no encontrada">
         {/* Suelo y colina */}
         <path d="M101.3 255.2C101.3 255.2 111.1 272.6 181.8 280.5C252.5 288.4 288.2 314.9 333.1 322.8C378 330.7 433.6 278.5 481.8 286.5C530 294.4 588.2 264.2 592.8 255.2H101.3Z" fill={INK} />
         <path d="M611.9 251.7H601.4L140.8 251.8C140.8 251.8 136.1 248.1 128.9 241.8C125.8 239.1 122.2 235.9 118.3 232.3C116.9 231 115.4 229.6 113.9 228.2C100.2 215.3 83.6 198.2 70.1 180.1C55.9 161 45.1 140.6 44.8 122.6C44.8 122.2 44.8 121.8 44.8 121.4C45 104 48.4 85.1 56.9 67.7C61.9 57.5 68.5 47.8 77.3 39C100.1 16.2 137.1 0.300011 194.5 0.800011C261.4 1.30001 330.8 26.3 393.5 60.8C406.6 68 419.4 75.7 431.9 83.6C441.1 89.5 450.1 95.5 458.8 101.6C483.1 118.6 505.6 136.4 525.5 153.8C570.6 193.1 602.3 230.4 611.9 251.7Z" fill="url(#ilu-colina)" />

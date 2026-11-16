@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import PageWrapper from '../components/layout/PageWrapper';
 import { SectionTitle } from '../components/ui/SectionTitle';
 import { Card } from '../components/ui/Card';
-import { GraduationCap, ArrowRight, Calendar, ShieldCheck, User, Play } from 'lucide-react';
+import { GraduationCap, ArrowRight, Calendar, ShieldCheck, User, Play, Newspaper } from 'lucide-react';
 import { site, branding } from '@/profile';
 import { noticias } from '@profile/content/noticias';
 import { accesosRapidos, ambientes } from '@profile/content/home';
@@ -338,12 +338,19 @@ export default function Inicio() {
                     <div className="h-1.5 bg-primary w-full" />
                     {/* Imagen de la noticia */}
                     <div className="h-48 w-full overflow-hidden shrink-0">
-                      <img
-                        src={noticia.imagen ?? undefined}
-                        alt={noticia.titulo}
-                        loading="lazy"
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
+                      {noticia.imagen ? (
+                        <img
+                          src={noticia.imagen}
+                          alt=""
+                          loading="lazy"
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                      ) : (
+                        // Sin foto: fondo institucional en lugar de un hueco con la imagen rota.
+                        <div className="flex h-full w-full items-center justify-center bg-gradient-to-br from-primary to-primary/80" aria-hidden="true">
+                          <Newspaper className="h-12 w-12 text-gold/80" />
+                        </div>
+                      )}
                     </div>
                     <div className="p-6 flex flex-col flex-1">
                       <div className="flex items-center gap-2 mb-3">
