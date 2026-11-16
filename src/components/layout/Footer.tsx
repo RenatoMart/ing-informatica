@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, Clock, ExternalLink, BookOpen } from 'lucide-react';
 import { informacionContacto, redesSociales } from '@profile/content/contacto';
-import { socialIcons, socialLabels } from '../icons/social';
+import { socialIcons, socialLabels, redesActivas } from '../icons/social';
 import { site, branding } from '@/profile';
 
 export default function Footer() {
@@ -33,7 +33,7 @@ export default function Footer() {
               </p>
               {/* Social icons */}
               <div className="flex items-center gap-3 flex-wrap">
-                {Object.entries(redesSociales).map(([red, url]) => (
+                {redesActivas(redesSociales).map(([red, url]) => (
                   <a
                     key={red}
                     href={url}
@@ -66,7 +66,7 @@ export default function Footer() {
                   <li key={to}>
                     <Link
                       to={to}
-                      className="text-gray-300 hover:text-white hover:translate-x-1 transition duration-150 text-sm flex items-center gap-1.5"
+                      className="text-gray-300 hover:text-white hover:translate-x-1 transition duration-150 text-sm flex items-center gap-1.5 min-h-[44px] md:min-h-0"
                     >
                       <span className="text-gold text-xs">›</span>
                       {label}

@@ -32,12 +32,19 @@ export const TwitterXIcon = () => (
   </svg>
 );
 
+export const TikTokIcon = () => (
+  <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-1-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43v-7a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1.04-.1z" />
+  </svg>
+);
+
 /** Mapa clave de red → ícono. */
 export const socialIcons: Record<string, React.ReactNode> = {
   facebook: <FacebookIcon />,
   instagram: <InstagramIcon />,
   youtube: <YoutubeIcon />,
   twitter: <TwitterXIcon />,
+  tiktok: <TikTokIcon />,
 };
 
 /** Mapa clave de red → etiqueta legible (para aria-label / title). */
@@ -46,4 +53,13 @@ export const socialLabels: Record<string, string> = {
   instagram: 'Instagram',
   youtube: 'YouTube',
   twitter: 'X (Twitter)',
+  tiktok: 'TikTok',
 };
+
+/**
+ * Redes que de verdad tienen dirección (https://…). Las vacías o con «#» no se muestran: un ícono que
+ * no lleva a ningún lado confunde al visitante.
+ */
+export function redesActivas(redes: Record<string, string | undefined>): [string, string][] {
+  return Object.entries(redes).filter((par): par is [string, string] => typeof par[1] === 'string' && /^https?:\/\/\S+$/i.test(par[1].trim()));
+}
