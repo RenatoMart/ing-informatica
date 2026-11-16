@@ -26,6 +26,7 @@ import * as comitesMod from '@profile/content/comites';
 import * as administrativosMod from '@profile/content/administrativos';
 import { actualizarSiteName } from '@/profile';
 import { ICONOS } from './iconos';
+import { marcarCambio } from './almacen';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 type Mod = Record<string, any>;
@@ -82,9 +83,15 @@ function malla(m: any) {
   lista(mallaMod, 'PREREQUISITES_EDGES', aristas);
 }
 
+// Última versión aplicada de cada sección (texto JSON), para saber si de verdad cambió.
+const huellas = new Map<string, string>();
+
 /** Aplica una sección del perfil (clave de la API) sobre los datos del sitio. */
 export function aplicarClave(clave: string, d: any): void {
   if (d === null || d === undefined) return;
+  // Si la sección llega igual a la última aplicada no se toca nada: ningún componente vuelve a pintarse.
+  const huella = JSON.stringify(d);
+  if (huellas.get(clave) === huella) return;
   switch (clave) {
     case 'site': objeto(siteMod, 'site', d); break;
     case 'branding': objeto(brandingMod, 'branding', d); break;
@@ -165,7 +172,9 @@ export function aplicarClave(clave: string, d: any): void {
       break;
     default: return; // escuela, paginas: no las usa el sitio
   }
+  huellas.set(clave, huella);
   actualizarSiteName();
+  marcarCambio(clave);
 }
 
 /** Aplica el perfil completo que devuelve la API. */

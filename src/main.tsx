@@ -5,22 +5,13 @@ import { iniciarPerfilRemoto } from './data/perfilRemoto';
 import './styles/index.css';
 
 const raiz = ReactDOM.createRoot(document.getElementById('root')!);
-let version = 0;
 
-const montar = () =>
+// La app se monta UNA sola vez. Cuando después cambian los datos (API tardía, vista previa del panel),
+// cada sección avisa su cambio (src/data/almacen.ts) y React vuelve a pintar sin desmontar nada.
+iniciarPerfilRemoto().finally(() =>
   raiz.render(
     <React.StrictMode>
-      <App key={version} />
+      <App />
     </React.StrictMode>,
-  );
-
-// Cuando cambian los datos (API tardía, vista previa del panel) se vuelve a montar la app
-// conservando la posición de scroll.
-const alCambiar = () => {
-  const y = window.scrollY;
-  version += 1;
-  montar();
-  for (const ms of [0, 80, 250]) setTimeout(() => window.scrollTo(0, y), ms);
-};
-
-iniciarPerfilRemoto(alCambiar).finally(montar);
+  ),
+);

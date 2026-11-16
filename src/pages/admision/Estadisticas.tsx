@@ -5,6 +5,7 @@ import PageHero from '../../components/layout/PageHero';
 import EnConstruccion from '../../components/layout/EnConstruccion';
 import AnchoredSection from '../../components/layout/AnchoredSection';
 import { site, siteName } from '@/profile';
+import { useContenido } from '@/data/almacen';
 import {
   estadisticasAnuales,
   ciclosLabels,
@@ -51,7 +52,9 @@ export default function Estadisticas() {
   }, []);
 
   // Datos ordenados cronológicamente para las series temporales.
-  const cronologico = useMemo(() => [...estadisticasAnuales].reverse(), []);
+  const version = useContenido('estadisticas');
+  // eslint-disable-next-line react-hooks/exhaustive-deps -- la lista se reemplaza en sitio: `version` indica cuándo cambió
+  const cronologico = useMemo(() => [...estadisticasAnuales].reverse(), [version]);
   const actual = estadisticasAnuales[0];                       // año más reciente (parcial)
   const ultimoCerrado = estadisticasAnuales.find((e) => e.egresados !== null);
 

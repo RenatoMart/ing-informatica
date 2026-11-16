@@ -13,6 +13,33 @@ const API_BASE: string = (env.VITE_API_URL ?? (env.DEV ? 'http://localhost:8080'
 /** Dirección de la API (las imágenes y archivos /media/… se piden allí). */
 export const urlApi = API_BASE;
 const SLUG: string = env.VITE_ESCUELA_SLUG ?? 'informatica';
+
+/** Resultado de enviar el formulario de contacto. */
+export type EnvioConsulta = 'ok' | 'limite' | 'invalido' | 'sin-conexion';
+
+/**
+ * Envía una consulta del formulario de contacto al portal (aparece en «Consultas» del panel).
+ * `trampa` es un campo oculto que las personas dejan vacío: si llega con texto, es un bot.
+ */
+export async function enviarConsulta(d: { nombre: string; correo: string; asunto: string; mensaje: string; trampa: string }): Promise<EnvioConsulta> {
+  if (!API_BASE) return 'sin-conexion';
+  const ctl = new AbortController();
+  const t = setTimeout(() => ctl.abort(), 20000); // el servidor puede estar despertando
+  try {
+    const r = await fetch(`${API_BASE}/api/v1/public/escuelas/${SLUG}/consultas`, {
+      method: 'POST', signal: ctl.signal, headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ nombre: d.nombre, correo: d.correo, asunto: d.asunto, mensaje: d.mensaje, sitio_web: d.trampa }),
+    });
+    if (r.ok) return 'ok';
+    if (r.status === 429) return 'limite';
+    if (r.status === 422 || r.status === 400) return 'invalido';
+    return 'sin-conexion';
+  } catch {
+    return 'sin-conexion';
+  } finally {
+    clearTimeout(t);
+  }
+}
 const ORIGENES_PANEL: string[] = (env.VITE_PANEL_ORIGINS ?? 'http://localhost:8080,http://localhost:5174,http://127.0.0.1:8080,http://127.0.0.1:5174')
   .split(',').map((s: string) => s.trim()).filter(Boolean);
 const ESPERA_MAXIMA_MS = 1500;
@@ -46,42 +73,36 @@ async function pedirPerfil(sinCache: boolean, limiteMs?: number): Promise<Record
 
 /**
  * Arranque del sitio: espera el perfil hasta ESPERA_MAXIMA_MS; si no llega, el sitio se muestra con
- * el respaldo (respaldo.json, o profiles/ si aún no hay) y se vuelve a intentar en segundo plano. `alCambiar` re-renderiza la app.
+ * el respaldo (respaldo.json, o profiles/ si aún no hay) y se vuelve a intentar en segundo plano.
+ * No hace falta avisar a nadie: `aplicarPerfil` marca las secciones que cambian (almacen.ts) y React
+ * vuelve a pintar solo eso, sin desmontar la página.
  */
-export async function iniciarPerfilRemoto(alCambiar: () => void): Promise<void> {
+export async function iniciarPerfilRemoto(): Promise<void> {
   const previa = esVistaPrevia();
   // Primero el respaldo (lo último publicado cuando se actualizó el repo); si la API responde, lo reemplaza.
   const instantanea = absolutizar(respaldoPublicado as Record<string, any>);
   if (instantanea && Object.keys(instantanea).length > 0) aplicarPerfil(instantanea);
-  const primero = pedirPerfil(previa, ESPERA_MAXIMA_MS);
-  const perfil = await primero;
+  const perfil = await pedirPerfil(previa, ESPERA_MAXIMA_MS);
   if (perfil) aplicarPerfil(perfil);
   else {
     // Sin respuesta a tiempo: se muestra el respaldo y se reintenta una vez sin límite.
-    pedirPerfil(previa).then((p) => { if (p) { aplicarPerfil(p); alCambiar(); } });
+    pedirPerfil(previa).then((p) => { if (p) aplicarPerfil(p); });
   }
-  if (previa) conectarVistaPrevia(alCambiar);
+  if (previa) conectarVistaPrevia();
 }
 
 // ---- Vista previa ----
 
-let pendiente = 0;
-const refrescar = (alCambiar: () => void) => {
-  window.clearTimeout(pendiente);
-  pendiente = window.setTimeout(alCambiar, 60);
-};
-
-function conectarVistaPrevia(alCambiar: () => void): void {
+function conectarVistaPrevia(): void {
   window.addEventListener('message', (e: MessageEvent) => {
     if (!ORIGENES_PANEL.includes(e.origin) || e.source !== window.parent) return;
     const m = e.data;
     if (!m || m.fuente !== 'portal-panel') return;
     if (m.tipo === 'borrador' && typeof m.clave === 'string') {
       aplicarClave(m.clave, absolutizar(m.datos));
-      refrescar(alCambiar);
     } else if (m.tipo === 'recargar') {
-      pedirPerfil(true).then((p) => { if (p) { aplicarPerfil(p); refrescar(alCambiar); } });
-    } else if (m.tipo === 'ir' && typeof m.ruta === 'string' && m.ruta.startsWith('/')) {
+      pedirPerfil(true).then((p) => { if (p) aplicarPerfil(p); });
+    } else if (m.tipo === 'ir' && typeof m.ruta === 'string' && /^\/(?![/\\])/.test(m.ruta)) { // solo rutas internas: nunca «//otro-sitio»
       window.history.pushState(null, '', m.ruta);
       window.dispatchEvent(new PopStateEvent('popstate'));
     }

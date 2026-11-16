@@ -14,6 +14,7 @@ import ReactFlow, {
 import { Download, BookOpen, Clock, Award, X, HelpCircle } from 'lucide-react';
 
 import 'reactflow/dist/style.css';
+import { useContenido } from '@/data/almacen';
 
 import {
   type AreaType,
@@ -83,7 +84,13 @@ const nodeTypes: NodeTypes = { courseNode: CourseNode };
 
 const PLAN_PDF = `${import.meta.env.BASE_URL}Plan_de_Estudios_2025.pdf`;
 
+/** El diagrama guarda sus nodos en estado propio: se reinicia únicamente cuando cambia la malla. */
 export default function MallaFlow() {
+  const version = useContenido('malla');
+  return <MallaFlowInterno key={version} />;
+}
+
+function MallaFlowInterno() {
   const [selectedCourse, setSelectedCourse] = useState<CourseData | null>(null);
   const [isDesktop, setIsDesktop] = useState(false);
   const [showHelp, setShowHelp] = useState(true);

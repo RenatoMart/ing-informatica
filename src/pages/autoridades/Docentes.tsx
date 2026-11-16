@@ -2,6 +2,7 @@ import React, { useMemo, useState } from 'react';
 import { SectionTitle } from '../../components/ui/SectionTitle';
 import DocenteCard from '../../components/personas/DocenteCard';
 import { docentes } from '@profile/content/docentes';
+import { useContenido } from '@/data/almacen';
 import { Search } from 'lucide-react';
 
 // Etiqueta del filtro que muestra solo investigadores (un filtro más, como los
@@ -13,6 +14,8 @@ export default function Docentes() {
   const [query, setQuery] = useState('');
 
   // Filtros disponibles: "Todos" + departamentos + (si hay) "Investigadores", con su nombre real.
+  // La lista de docentes se reemplaza en sitio: `version` indica cuándo cambió.
+  const version = useContenido('docentes');
   const filtros = useMemo(() => {
     const departamentos = [...new Set(docentes.map((d) => d.departamento).filter(Boolean))];
     const valores = docentes.some((d) => d.investigador)
@@ -22,7 +25,8 @@ export default function Docentes() {
       { valor: 'Todos', etiqueta: 'Todos' },
       ...valores.map((valor) => ({ valor, etiqueta: valor })),
     ];
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [version]);
 
   const filtrados = useMemo(() => {
     const q = query.trim().toLowerCase();
@@ -33,7 +37,8 @@ export default function Docentes() {
       const okQuery = !q || d.nombre.toLowerCase().includes(q) || d.cursoPrincipal.toLowerCase().includes(q);
       return okFiltro && okQuery;
     });
-  }, [filtro, query]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [filtro, query, version]);
 
   return (
     <div className="bg-gray-50 py-16 md:py-20">

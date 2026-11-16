@@ -13,6 +13,7 @@ import ReactFlow, {
 import dagre from '@dagrejs/dagre';
 
 import 'reactflow/dist/style.css';
+import { useContenido } from '@/data/almacen';
 
 import { organigrama } from '@profile/content/autoridades';
 
@@ -137,7 +138,13 @@ function OrgOutline({ nodo }: { nodo: NodoOrg }) {
   );
 }
 
+/** El diagrama guarda sus nodos en estado propio: se reinicia únicamente cuando cambia el organigrama. */
 export default function OrganigramaFlow() {
+  const version = useContenido('autoridades');
+  return <OrganigramaFlowInterno key={version} />;
+}
+
+function OrganigramaFlowInterno() {
   const { nodes: rawNodes, edges } = useMemo(() => buildGraph(organigrama as NodoOrg), []);
   const layouted = useMemo(() => layout(rawNodes, edges), [rawNodes, edges]);
   const [nodes, , onNodesChange] = useNodesState(layouted);
