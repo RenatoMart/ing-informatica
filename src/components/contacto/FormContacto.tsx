@@ -2,11 +2,16 @@ import React, { useState } from 'react';
 import { CheckCircle2 } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { validarFormularioContacto, type ContactoFormData, type ContactoErrores } from '../../utils/validators';
+import { enviarConsulta } from '@/data/perfilRemoto';
+import { informacionContacto } from '@profile/content/contacto';
 
 export default function FormContacto() {
   const [formData, setFormData] = useState<ContactoFormData>({ nombre: '', email: '', asunto: '', mensaje: '' });
   const [errores, setErrores] = useState<ContactoErrores>({});
   const [enviado, setEnviado] = useState(false);
+  const [enviando, setEnviando] = useState(false);
+  const [fallo, setFallo] = useState('');
+  const [trampa, setTrampa] = useState(''); // campo oculto anti-bots: las personas no lo ven ni lo llenan
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const name = e.target.name as keyof ContactoFormData;
@@ -17,15 +22,28 @@ export default function FormContacto() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (enviando) return;
     const validacion = validarFormularioContacto(formData);
-    if (validacion.esValido) {
-      setEnviado(true);
-      // Aquí iría la lógica de envío real a un API backend
-    } else {
+    if (!validacion.esValido) {
       setErrores(validacion.errores);
+      return;
     }
+    setFallo('');
+    setEnviando(true);
+    const r = await enviarConsulta({ nombre: formData.nombre.trim(), correo: formData.email.trim(), asunto: formData.asunto.trim(), mensaje: formData.mensaje.trim(), trampa });
+    setEnviando(false);
+    if (r === 'ok') {
+      setEnviado(true);
+      return;
+    }
+    // El mensaje NO se envió: se dice claramente y se conserva lo escrito para reintentar.
+    setFallo(
+      r === 'limite' ? 'Ya recibimos varios mensajes desde tu conexión. Espera unos minutos y vuelve a intentarlo.'
+        : r === 'invalido' ? 'Revisa los datos: el correo debe ser válido y el mensaje tener al menos 5 caracteres.'
+          : `No pudimos enviar tu mensaje en este momento. Inténtalo de nuevo o escríbenos a ${informacionContacto.correo}.`,
+    );
   };
 
   if (enviado) {
@@ -116,7 +134,17 @@ export default function FormContacto() {
         ></textarea>
         {errores.mensaje && <span id="contacto-mensaje-error" role="alert" className="text-xs text-danger mt-1 block">{errores.mensaje}</span>}
       </div>
-      <Button type="submit" className="w-full text-sm py-3">Enviar Mensaje</Button>
+      {/* Campo trampa: oculto para personas y lectores de pantalla; solo lo rellenan los bots. */}
+      <div className="hidden" aria-hidden="true">
+        <label htmlFor="contacto-sitio-web">No llenar este campo</label>
+        <input id="contacto-sitio-web" type="text" name="sitio_web" tabIndex={-1} autoComplete="off" value={trampa} onChange={(e) => setTrampa(e.target.value)} />
+      </div>
+      {fallo && (
+        <p role="alert" className="rounded-lg border border-danger/30 bg-danger/5 p-3 text-sm text-danger">{fallo}</p>
+      )}
+      <Button type="submit" disabled={enviando} aria-busy={enviando} className="w-full text-sm py-3 disabled:cursor-wait disabled:opacity-70">
+        {enviando ? 'Enviando…' : 'Enviar mensaje'}
+      </Button>
     </form>
   );
 }
