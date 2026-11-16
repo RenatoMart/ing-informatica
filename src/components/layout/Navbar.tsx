@@ -18,6 +18,15 @@ export default function Navbar() {
   const [openSection, setOpenSection] = useState<string | null>(null);
   const location = useLocation();
   const menuButtonRef = useRef<HTMLButtonElement>(null);
+  // Menú móvil: solo una sección desplegada a la vez (empieza en la sección donde está el visitante).
+  const [seccionMovil, setSeccionMovil] = useState<string | null>(null);
+  const alternarMenu = () => {
+    if (!isOpen) {
+      const actual = NAV_LINKS.find((l) => l.groups && l.path !== '/' && location.pathname.startsWith(l.path));
+      setSeccionMovil(actual?.name ?? null);
+    }
+    setIsOpen(!isOpen);
+  };
 
   // Cierra el drawer móvil y devuelve el foco al botón que lo abrió.
   const closeMenu = () => {
@@ -222,7 +231,7 @@ export default function Navbar() {
           <button
             ref={menuButtonRef}
             className="lg:hidden text-primary p-2.5 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
-            onClick={() => setIsOpen((o) => !o)}
+            onClick={alternarMenu}
             aria-label="Abrir menú"
             aria-haspopup="dialog"
             aria-controls="menu-movil"
@@ -269,7 +278,7 @@ export default function Navbar() {
                   autoFocus
                   onClick={closeMenu}
                   aria-label="Cerrar menú"
-                  className="p-1.5 -mr-1.5 text-primary rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                  className="flex h-11 w-11 -mr-2.5 items-center justify-center text-primary rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
                 >
                   <X className="w-6 h-6" />
                 </button>
@@ -278,57 +287,75 @@ export default function Navbar() {
               {/* Contenido scrollable */}
               <nav
                 aria-label="Menú principal"
-                className="flex-1 overflow-y-auto overscroll-contain px-5 py-5 flex flex-col gap-5"
+                className="flex-1 overflow-y-auto overscroll-contain px-5 py-3 flex flex-col"
               >
-                {NAV_LINKS.map((link) => (
-                  <div key={link.name} className="flex flex-col">
-                    <NavLink
-                      to={link.path}
-                      end={link.path === '/'}
-                      className={({ isActive }) => clsx(
-                        'font-display font-bold py-1',
-                        isActive ? 'text-gold' : 'text-primary'
-                      )}
-                    >
-                      {link.name}
-                    </NavLink>
-                    {link.groups && (
-                      <div className="mt-2 ml-1 pl-4 border-l border-gray-200 flex flex-col gap-3">
-                        {link.groups.map((grupo) => (
-                          <div key={grupo.label} className="flex flex-col">
-                            <p className="text-[10px] font-black uppercase tracking-wider text-gold mb-1">
-                              {grupo.label}
-                            </p>
-                            <div className="flex flex-col">
-                              {expandNavLinks(grupo.items).map((item) =>
-                                item.external ? (
-                                  <a
-                                    key={item.name}
-                                    href={item.path}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="flex items-center gap-1.5 text-sm text-gray-600 hover:text-primary py-2"
-                                  >
-                                    {item.name}<span className="sr-only"> (abre en pestaña nueva)</span>
-                                    <ExternalLink className="w-3 h-3 opacity-50" />
-                                  </a>
-                                ) : (
-                                  <Link
-                                    key={item.name}
-                                    to={item.path}
-                                    className="text-sm text-gray-600 hover:text-primary py-2"
-                                  >
-                                    {item.name}
-                                  </Link>
-                                )
-                              )}
-                            </div>
-                          </div>
-                        ))}
+                {NAV_LINKS.map((link) => {
+                  const abierta = seccionMovil === link.name;
+                  const idPanel = `menu-movil-${link.name.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+                  return (
+                    <div key={link.name} className="flex flex-col border-b border-gray-100 last:border-b-0">
+                      <div className="flex items-stretch">
+                        <NavLink
+                          to={link.path}
+                          end={link.path === '/'}
+                          className={({ isActive }) => clsx(
+                            'flex min-h-[48px] flex-1 items-center font-display text-lg font-bold',
+                            isActive ? 'text-primary underline decoration-gold decoration-4 underline-offset-8' : 'text-primary'
+                          )}
+                        >
+                          {link.name}
+                        </NavLink>
+                        {link.groups && (
+                          <button
+                            type="button"
+                            onClick={() => setSeccionMovil(abierta ? null : link.name)}
+                            aria-expanded={abierta}
+                            aria-controls={idPanel}
+                            aria-label={`${abierta ? 'Ocultar' : 'Mostrar'} las páginas de ${link.name}`}
+                            className="flex w-12 items-center justify-center rounded text-primary focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                          >
+                            <ChevronDown className={clsx('h-5 w-5 transition-transform duration-200', abierta && 'rotate-180')} aria-hidden="true" />
+                          </button>
+                        )}
                       </div>
-                    )}
-                  </div>
-                ))}
+                      {link.groups && abierta && (
+                        <div id={idPanel} className="mb-3 ml-1 flex flex-col gap-3 border-l border-gray-200 pl-4">
+                          {link.groups.map((grupo) => (
+                            <div key={grupo.label} className="flex flex-col">
+                              <p className="mb-1 text-xs font-black uppercase tracking-wider text-gray-500">
+                                {grupo.label}
+                              </p>
+                              <div className="flex flex-col">
+                                {expandNavLinks(grupo.items).map((item) =>
+                                  item.external ? (
+                                    <a
+                                      key={item.name}
+                                      href={item.path}
+                                      target="_blank"
+                                      rel="noopener noreferrer"
+                                      className="flex min-h-[44px] items-center gap-1.5 text-[15px] text-gray-700 hover:text-primary"
+                                    >
+                                      {item.name}<span className="sr-only"> (abre en pestaña nueva)</span>
+                                      <ExternalLink className="h-3.5 w-3.5 opacity-60" aria-hidden="true" />
+                                    </a>
+                                  ) : (
+                                    <Link
+                                      key={item.name}
+                                      to={item.path}
+                                      className="flex min-h-[44px] items-center text-[15px] text-gray-700 hover:text-primary"
+                                    >
+                                      {item.name}
+                                    </Link>
+                                  )
+                                )}
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  );
+                })}
               </nav>
             </motion.div>
           </div>
